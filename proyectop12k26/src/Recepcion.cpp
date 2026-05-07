@@ -47,8 +47,3 @@ void Recepcion::validarDocente()
     cout << "Modulo Docente en construccion..." << endl;
 }
 
-void Recepcion::validarEmpleado()
-{
-    cout << "\n===== MODULO EMPLEADO =====" << endl;
-    cout << "Modulo Empleado en construccion..." << endl;
-}
