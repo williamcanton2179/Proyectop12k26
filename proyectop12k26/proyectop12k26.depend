@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 2285231082880 <<<<<<< HEAD
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\main.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
 	"usuarios.h"
@@ -11,8 +11,11 @@
 
 1776869130 dc537b6a9e26bca804ea167a026ba36d93c43
 
-1777501103 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
 
 1777179357 n.h"
 
@@ -23,21 +26,21 @@
 	<iostream>
 	<vector>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\proyecto.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\proyecto.cpp
 	"proyecto.h"
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\proyecto.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\cursos.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
-1778124556 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\alumnos.cpp
+1778124556 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\alumnos.cpp
 	"Alumnos.h"
 	"Carrera.h"
 	<iostream>
@@ -52,21 +55,23 @@
 	<iomanip>
 	<conio.h>
 
-1778124556 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\alumnos.h
+1778124556 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 	<vector>
 
 1776869199 n
 
-1776870878 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\proyecto.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\proyecto.cpp
 	"proyecto.h"
 
-1776870878 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1777602286 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
+	<iostream>
+	<vector>
 
-1777602286 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
 	<string>
 	<vector>
 
@@ -77,12 +82,14 @@
 1777501103 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1777331511 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
+	<vector>
 
-1777331511 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
+	<vector>
 
 1776869199 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
@@ -94,14 +101,14 @@
 
 1776869199 05118df0520f93fe5c3798fd2548c7ff9709c
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\facultades.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\facultades.cpp
 	"facultades.h"
 	<iostream>
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\facultades.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\facultades.h
 	<string>
 
-1777501103 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\alumnos.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\alumnos.cpp
 	"Alumnos.h"
 	<iostream>
 	<string>
@@ -110,14 +117,14 @@
 	<thread>
 	<chrono>
 
-1777501103 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\alumnos.h
+1778122530 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 
-1777501103 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\facultades.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\facultades.cpp
 	"facultades.h"
 	<iostream>
 
-1777501103 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\facultades.h
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\facultades.h
 	<string>
 
 1778038394 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\alumnos.cpp
@@ -198,13 +205,13 @@
 	<iostream>
 	"bitacora.h"
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\usuarios.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\bitacora.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\bitacora.h
 	<iostream>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\bitacora.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\bitacora.cpp
 	"bitacora.h"
 	<iostream>
 	<fstream>
@@ -213,23 +220,23 @@
 	<conio.h>
 	<iomanip>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
 	<iostream>
 	<vector>
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\carrera.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\carrera.h
 	<string>
 	<vector>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
 	"inscipcion.h"
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\inscipcion.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\usuarios.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\usuarios.cpp
 	"usuarios.h"
 	<fstream>
 	<cstdlib>

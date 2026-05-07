@@ -15,7 +15,6 @@ class Recepcion
 
 
         void validarDocente();
-        void validarEmpleado();
 };
 
 #endif
