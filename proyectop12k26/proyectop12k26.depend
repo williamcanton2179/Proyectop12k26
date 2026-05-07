@@ -205,13 +205,31 @@
 	<iostream>
 	"bitacora.h"
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\usuarios.h
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\bitacora.h
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\bitacora.h
 	<iostream>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\bitacora.cpp
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\bitacora.cpp
 	"bitacora.h"
 	<iostream>
 	<fstream>
@@ -220,23 +238,44 @@
 	<conio.h>
 	<iomanip>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
 	<iostream>
 	<vector>
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\carrera.h
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\carrera.h
 	<string>
 	<vector>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+	<vector>
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
 	"inscipcion.h"
 
-1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\include\inscipcion.h
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci�n i\proyectop12k26\proyectop12k26\src\usuarios.cpp
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\usuarios.cpp
 	"usuarios.h"
 	<fstream>
 	<cstdlib>

@@ -43,6 +43,7 @@
 		<Unit filename="include/facultades.h" />
 		<Unit filename="include/horarios.h" />
 		<Unit filename="include/inscipcion.h" />
+		<Unit filename="include/maestros.h" />
 		<Unit filename="include/proyecto.h" />
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="main.cpp" />
@@ -56,6 +57,7 @@
 		<Unit filename="src/facultades.cpp" />
 		<Unit filename="src/horarios.cpp" />
 		<Unit filename="src/inscipcion.cpp" />
+		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/proyecto.cpp" />
 		<Unit filename="src/usuarios.cpp" />
 		<Extensions />
