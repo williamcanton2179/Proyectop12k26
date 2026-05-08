@@ -1,24 +1,52 @@
-#include <iostream>
-#include "Carrera.h"                  //Clase creada por David Alegria
+#include "Carrera.h"
+#include <iostream>     //Creado por David Alegria
+#include <vector>
 using namespace std;
 
-void Carreras::ingresarDatos()
+ Carrera::Carrera()
 {
-    cout << "Ingrese codigo de la carrera: ";
-    cin >> codigoCarrera;
-    cin.ignore();
-
-    cout << "Ingrese nombre de la carrera: ";
-    getline(cin, nombreCarrera);
-
-    cout << "Ingrese estado de la carrera: ";
-    getline(cin, estadoCarrera);
+    //ctor
 }
 
-void Carreras::mostrarDatos()
+Carrera::Carrera(string codigoCarrera, string nombreCarrera, bool estadoCarrera)
 {
-    cout << "\n--- DATOS DE LA CARRERA UNIVERSIDAD MARIANO GALVEZ ---" << endl;
-    cout << "Codigo: " << codigoCarrera << endl;
-    cout << "Nombre: " << nombreCarrera << endl;
-    cout << "Estado: " << estadoCarrera << endl;
+    this -> codigoCarrera = codigoCarrera;
+    this -> nombreCarrera = nombreCarrera;
+    this -> estadoCarrera = estadoCarrera;
+
+}
+
+
+vector<Carrera> Carrera::datosCarreras()
+{
+    vector<Carrera> infoCarreras;
+    infoCarreras.push_back(Carrera("9959", "Ingeniera en Sistemas", true));
+    infoCarreras.push_back(Carrera("9975", "Ingeniera Industrial", true));
+    infoCarreras.push_back(Carrera("9973", "Ingeniera Civil", true));
+    return infoCarreras;
+}
+
+string Carrera::getnombreCarrera()
+{
+    return this -> nombreCarrera;
+}
+string Carrera::getcodigoCarrera()
+{
+    return this -> codigoCarrera;
+}
+bool Carrera::getestadoCarrera()
+{
+    return this -> estadoCarrera;
+}
+void Carrera::setnombreCarrera(string nombreCarrera)
+{
+    this -> nombreCarrera = nombreCarrera;
+}
+void Carrera::setcodigoCarrera(string codigoCarrera)
+{
+    this -> codigoCarrera = codigoCarrera;
+}
+void Carrera::setestadoCcarrera(bool estadoCarrera)
+{
+    this -> estadoCarrera = estadoCarrera;
 }

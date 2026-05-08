@@ -4,6 +4,8 @@
 #include <ctime>
 #include <iostream>
 
+using namespace std;
+
 GeneradorConstancias::GeneradorConstancias() {
     nombre = "";
     carnet = "";
@@ -21,6 +23,10 @@ void GeneradorConstancias::setMonto(float m) { monto = m; }
 void GeneradorConstancias::setEstado(int e) { estado = e; }
 void GeneradorConstancias::setTipoPersona(int t) { tipoPersona = t; }
 
+string GeneradorConstancias::getNombre() { return nombre; }
+float GeneradorConstancias::getMonto() { return monto; }
+int GeneradorConstancias::getTipoPersona() { return tipoPersona; }
+
 string GeneradorConstancias::getTextoEstado() {
     if (estado == 1) return "SOLVENTE";
     if (estado == 2) return "PENDIENTE";
@@ -32,7 +38,7 @@ void GeneradorConstancias::imprimirEncabezadoBanco() {
     cout << "==========================================" << endl;
 }
 
-//Constancia del pago del alumno
+// Constancia del pago del alumno
 void GeneradorConstancias::constanciaAlumno() {
     imprimirEncabezadoBanco();
     cout << "COMPROBANTE DE PAGO" << endl;
@@ -44,7 +50,7 @@ void GeneradorConstancias::constanciaAlumno() {
     cout << "==========================================" << endl;
 }
 
-//Constancia del pago del salario del Catedratico
+// Constancia del pago del salario del Catedratico
 void GeneradorConstancias::constanciaDocente() {
     imprimirEncabezadoBanco();
     cout << "CONSTANCIA DE PAGO (SALARIO)" << endl;

@@ -1,18 +1,32 @@
-#ifndef carrera_h
-#define carrera_h
-#include <string>                     //Clase creada por David Alegria
-using namespace std;
+#ifndef CARRERA_H                 //Creado por David Alegria
+#define CARRERA_H
+#include <string>
+#include <vector>
 
-class Carreras
+class Carrera
 {
-private:
-    int codigoCarrera;
-    string nombreCarrera;
-    string estadoCarrera;
+    public:
+        //Constructor
+        Carrera();
+        Carrera(std::string codigoCarrera, std::string nombreCarrera, bool estadoCarrea);
+        //Get
+        std::string getcodigoCarrera();
+        std::string getnombreCarrera();
+        bool getestadoCarrera();
+        //Set
+        void setcodigoCarrera(std::string codigoCarera);
+        void setnombreCarrera(std::string nombreCarerra);
+        void setestadoCcarrera(bool estadoCarrera);
+        //Metodos
+        std::vector<Carrera> datosCarreras();
 
-public:
-    void ingresarDatos();
-    void mostrarDatos();
+
+    protected:
+
+    private:
+        std::string codigoCarrera;
+        std::string nombreCarrera;
+        bool estadoCarrera;
 };
 
-#endif
+#endif // CARRERA_H

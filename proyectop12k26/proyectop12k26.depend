@@ -1,31 +1,114 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
-<<<<<<< HEAD
-1777179357 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
-	<iostream>
-	"Carrera.h"
-	"Inscipcion.h"
-=======
-<<<<<<< HEAD
-1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\main.cpp
-=======
-1777429885 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\main.cpp
->>>>>>> 2c7de67c6c313837300469278fb23eb2394983b4
-	<iostream>
+2285231082880 <<<<<<< HEAD
 
-1776869130 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\proyecto.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+
+1776869199 D
+
+1776869130 dc537b6a9e26bca804ea167a026ba36d93c43
+
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+
+1777179357 n.h"
+
+1777429885 de67c6c313837300469278fb23eb2394983b4
+
+1777478125 8f475dd3958f9bd0ebca4ab579327aea07f58
+	<iostream>
+	<iostream>
+	<vector>
+
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\proyecto.cpp
 	"proyecto.h"
 
-1776869130 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\proyecto.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1776999917 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
+	<vector>
 
-1776999917 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\cursos.h
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1778124556 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	"Carrera.h"
+	<iostream>
+	<fstream>
+	<string>
+	<stdlib.h>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+	<vector>
+	<iomanip>
+	<conio.h>
+
+1778124556 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+	<vector>
+
+1776869199 n
+
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+	"Carrera.h"
+	<iostream>
+	<vector>
+
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+	<string>
+	<vector>
+
+1777501103 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	"inscipcion.h"
+
+1777501103 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1777429971 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\alumnos.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+	<vector>
+
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1776869199 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+
+1776869199 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1776869199 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1776869199 05118df0520f93fe5c3798fd2548c7ff9709c
+
+1778122318 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778122318 c:\users\fcast\onedrive\documentos\tercer semestre\programaciï¿½n i\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\alumnos.cpp
 	"Alumnos.h"
 	<iostream>
 	<string>
@@ -34,51 +117,78 @@
 	<thread>
 	<chrono>
 
-1777429507 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\alumnos.h
+1778122530 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
->>>>>>> main
 
-1776870878 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\proyecto.cpp
-	"proyecto.h"
-
-1776870878 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
-
-<<<<<<< HEAD
-1777179357 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
 	<iostream>
-	"Carrera.h"
 
-1777179809 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\facultades.h
 	<string>
 
-1777179577 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+1778038394 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+
+1778038394 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+
+1778038394 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\carrera.cpp
+	"Carrera.h"
+	<iostream>
+	<vector>
+
+1778038394 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\carrera.h
+	<string>
+	<vector>
+
+1778038394 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+	<vector>
+
+1778038394 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1778038394 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778038394 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1778038394 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
 	"inscipcion.h"
 
-1777179754 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
-	<string>
-=======
-1777304279 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
-	<iostream>
-
-1777304595 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
-	"Cursos.h"
+1778038394 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1777304595 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
-	<string>
-=======
-1776869199 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\main.cpp
-	<iostream>
-
-1776869199 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\src\proyecto.cpp
+1776856810 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\proyecto.cpp
 	"proyecto.h"
 
-1776869199 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\proyecto final\proyectop12k26\proyectop12k26\include\proyecto.h
->>>>>>> 25a05118df0520f93fe5c3798fd2548c7ff9709c
->>>>>>> main
+1776856810 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778078959 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\bitacora.cpp
+1778046963 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+
+1684331731 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\usuarios.h
+	<iostream>
+
+1684328590 c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1684333709 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\bitacora.cpp
 	"bitacora.h"
 	<iostream>
 	<fstream>
@@ -87,24 +197,119 @@
 	<conio.h>
 	<iomanip>
 
-1778078959 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\bitacora.h
+1712765550 source:c:\users\soporte\documents\2.profesional\umg\didactica2k26\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778078959 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
 	<iostream>
 	<vector>
 
-1778078959 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\carrera.h
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\carrera.h
 	<string>
 	<vector>
 
-1778078959 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
 
-1778078959 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\cursos.h
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	"inscipcion.h"
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\inscipcion.h
+	<string>
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1778122328 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1778122328 source:c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\trabajogrupal\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\carrera.cpp
+	"Carrera.h"
+	<iostream>
+	<vector>
+
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\carrera.h
+	<string>
+	<vector>
+
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+	<vector>
+
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
@@ -120,7 +325,7 @@
 
 1778078959 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778078959 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\usuarios.cpp
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\usuarios.cpp
 	"usuarios.h"
 	<fstream>
 	<cstdlib>
@@ -128,10 +333,10 @@
 	<iostream>
 	"bitacora.h"
 
-1778078959 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\usuarios.h
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778191954 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\alumnos.cpp
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\alumnos.cpp
 	"Alumnos.h"
 	"Carrera.h"
 	<iostream>
@@ -146,17 +351,68 @@
 	<iomanip>
 	<conio.h>
 
-1778191954 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\alumnos.h
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 	<vector>
 
-1778201360 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+1778212528 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
 	"GeneradorConstancias.h"
 	<cstdlib>
 	<ctime>
 	<iostream>
 
-1778203344 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+1778212528 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+	<iostream>
+	<string>
+
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	"Alumnos.h"
+
+1778212528 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\bancos.h
+	<string>
+	"GeneradorConstancias.h"
+
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\recepcion.h
+	<iostream>
+	<string>
+	"Alumnos.h"
+
+1778212528 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\bancos.cpp
+	"Bancos.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<random>
+	<string>
+	<fstream>
+	<iomanip>
+
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\horarios.cpp
+	"Horarios.h"
+
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\horarios.h
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	"Cursos.h"
+
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	<fstream>
+	"inscipcion.h"
+
+1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\inscipcion.h
+	<string>
+
+1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\recepcion.cpp
+	"Recepcion.h"
 	<iostream>
 	<string>
 

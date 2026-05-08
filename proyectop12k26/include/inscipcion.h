@@ -1,4 +1,4 @@
-#ifndef INSCIPCION_H
+#ifndef INSCIPCION_H     //Creado por David Alegria
 #define INSCIPCION_H
 
 #include <string>
@@ -10,6 +10,7 @@ private:
     int codigoInscripcion;
     int carnetEstudiante;
     string nombreEstudiante;
+    string correoElectronico;
     string carrera;
     string tipoInscripcion;
     string ciclo;
@@ -18,6 +19,15 @@ private:
     string estadoInscripcion;
 
 public:
+    // CRUD
+    void menu();
+    void insertar();
+    void mostrar();
+    void buscar();
+    void modificar();
+    void eliminar();
+
+    // auxiliares
     void ingresarDatos();
     void mostrarDatos();
 };

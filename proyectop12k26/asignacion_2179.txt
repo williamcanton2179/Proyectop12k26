@@ -1,0 +1,7 @@
+Carnet: 2179
+Cursos Asignados:
+001 - Desarrollo Humano y Profesional
+002 - Metodologia de la Investigacion
+003 - Contabilidad I
+004 - Introduccion a los sistemas de computo
+005 - Logica de Sistemas

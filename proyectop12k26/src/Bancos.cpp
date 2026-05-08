@@ -10,7 +10,7 @@ using namespace std;
 
 Bancos::Bancos()
 {
-    //ctor
+    // constructor
 }
 
 bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
@@ -22,18 +22,19 @@ bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
     this->nombreBanco = nombreBanco;
     this->numeroTarjeta = 0;
 
-    if(nombreBanco == "BAC"){
+    if (nombreBanco == "BAC") {
         numeroTarjeta = 5547961400000000LL + generadorTarjetasCuentas();
     }
-    else if(nombreBanco == "G&T"){
+    else if (nombreBanco == "G&T") {
         numeroTarjeta = 7511451800000000LL + generadorTarjetasCuentas();
     }
-    else if(nombreBanco == "Banco Industrial"){
+    else if (nombreBanco == "Banco Industrial") {
         numeroTarjeta = 9655147700000000LL + generadorTarjetasCuentas();
     }
-    else{
+    else {
         numeroTarjeta = 7414220100000000LL + generadorTarjetasCuentas();
     }
+
 
     string carnetIngresado;
     cout << "\n>>> PROCESO DE CONSTANCIA <<<" << endl;
@@ -49,6 +50,7 @@ bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
 
     miConstancia.entregarConstancia();
     cout << ">>> FIN DE CONSTANCIA <<<\n" << endl;
+
     return guardarCuenta(idCuenta, nombreCliente, saldo, movimiento, numeroTarjeta, nombreBanco);
 }
 
@@ -57,7 +59,7 @@ bool Bancos::guardarCuenta(int idCuenta, string nombreCliente, double saldo, dou
     fstream file;
     file.open("CuentasBancarias.txt", ios::app | ios::out);
 
-    if(file.is_open())
+    if (file.is_open())
     {
         file << left << setw(15) << idCuenta
              << left << setw(20) << nombreCliente
@@ -85,5 +87,5 @@ int Bancos::generadorTarjetasCuentas()
 
 Bancos::~Bancos()
 {
-    //dtor
+    // dtor
 }
