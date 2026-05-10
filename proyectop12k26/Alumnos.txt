@@ -1,0 +1,7 @@
+9959-26-1159       | Mercedes Maria Lopez Gonzalez            | Ingeniera en Sistemas     | mlopez908@miumg.edu.gt                   | 264            
+9959-26-1050       | Byron David Cevallos Trujillo            | Ingeniera en Sistemas     | bcevallos1473@miumg.edu.gt               | 932            
+9959-26-553        | Fernanda Noemi Campos Mendiato           | Ingeniera en Sistemas     | fcampos401@miumg.edu.gt                  | 343            
+9959-26-180        | Jaime Vicente Chuchuca Serrano           | Ingeniera en Sistemas     | jchuchuca1848@miumg.edu.gt               | 809            
+9959-26-505        | Carlos Daniel Villavicencio Persantez    | Ingeniera en Sistemas     | cvillavicencio1514@miumg.edu.gt          | 470            
+9959-26-547        | Jaime Eduardo Cardenas Molina            | Ingeniera en Sistemas     | jcardenas1271@miumg.edu.gt               | 957            
+9959-26-1214       | Diana Lucia Perez Cabrera                | Ingeniera en Sistemas     | dperez753@miumg.edu.gt                   | 121            

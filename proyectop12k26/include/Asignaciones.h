@@ -2,14 +2,15 @@
 #define ASIGNACION_H
 #include <vector>
 #include <string>
-#include "Alumnos.h"
 #include "Cursos.h"
 
 class Asignacion {
 public:
     std::vector<std::string> cursosAsignados;
-    bool validarCarnet(std::string carnet, std::vector<Alumnos> listaAlumnos);
-    void asignarCurso(std::string carnet, std::string codCurso, std::vector<Cursos> catalogo, std::vector<std::string> cursosAprobados);
-    std::vector<std::string> getCursosAsignados();
+
+    // Solo usamos strings para el carnet y el catálogo de Cursos.h
+    bool validarCarnetEnArchivo(std::string carnet);
+    void asignarCurso(std::string carnet, std::string codCurso, std::vector<Cursos> catalogo);
+    void menuAsignacion();
 };
 #endif

@@ -35,10 +35,22 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Alumnos.h" />
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+		<Unit filename="include/Bancos.h" />
+		<Unit filename="include/Cursos.h" />
+		<Unit filename="include/GeneradorConstancias.h" />
+		<Unit filename="include/Recepcion.h" />
+		<Unit filename="include/bitacora.h" />
+>>>>>>> Stashed changes
+=======
 		<Unit filename="include/Bancos.h" />
 		<Unit filename="include/Cursos.h" />
 		<Unit filename="include/Recepcion.h" />
 		<Unit filename="include/bitacora.h" />
+>>>>>>> 42521b77e505a5861fd69c080f5788c9f4c97a17
 		<Unit filename="include/carrera.h" />
 		<Unit filename="include/facultades.h" />
 		<Unit filename="include/horarios.h" />
