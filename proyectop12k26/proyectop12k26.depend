@@ -66,14 +66,15 @@
 
 1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778447887 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
-	<iostream>
-	<vector>
+	<stdlib.h>
 
-1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
-	<string>
-	<vector>
+1778447896 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
 
 1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
