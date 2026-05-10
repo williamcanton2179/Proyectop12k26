@@ -1,4 +1,5 @@
 //Creado por Fernando Castillo - 9959 - 25 - 288
+//Mayo 2026
 #include "Alumnos.h"
 #include "Carrera.h"
 //Biblotecas
@@ -72,17 +73,16 @@ void Alumnos::menuRegistro()
     do{
         //Carreras Disponibles
         system("cls");
-        cout << "--- Seleccione la Carrera ---" << endl;
-        cout << "1. Ingenieria en Sistemas" << endl;
-        cout << "2. Ingenieria Industrial" << endl;
-        cout << "3. Ingenieria Civil" << endl;
-        cout << "¿Que carrera desea escoger?:" << endl;
-        cin >> opcionCarrera;//Obtener el digito
+        cout << "\t\t\t\t\t--- Seleccione la Carrera ---" << endl;
+        cout << "\t\t\t\t\t1. Ingenieria en Sistemas" << endl;
+        cout << "\t\t\t\t\t2. Ingenieria Industrial" << endl;
+        cout << "\t\t\t\t\t3. Ingenieria Civil" << endl;
+        cout << "\n\t\t\t\t¿Que carrera desea escoger?:"; cin >> opcionCarrera;//Obtener el digito
         cin.ignore(1000, '\n');//Ingonra los espaciones del usuario
         //Validacion del menu
         if (opcionCarrera < 1 || opcionCarrera > 3){
             //Capturamos el error del usuario y le mostramos el error
-            cout << "Error. escoga una carrera (1-3)" << endl;
+            cout << "\n\t\t\t\tError. escoga una carrera (1-3)" << endl;
             this_thread::sleep_for(chrono::seconds(2));
         }else {
             //Sino se cumple la condicion recorre el vector
@@ -95,6 +95,7 @@ void Alumnos::menuRegistro()
     creaCorreoPersonal();//La funcion crear un correo
     crearCarnetPersonal(obtenerCarrera[indice].getcodigoCarrera());//En la clase carrera buscara el codigo de la carrera
     this -> carreraAsignada = obtenerCarrera[indice].getnombreCarrera();//En la clase carrera buscara el nombre de la carrera y lo aguardamos en esta variable
+    crearContraseniaUnica();
     registroExitoso();//Muestra que el registro fue exitoso y genera su carnet y correo de uso personal
 }
 
@@ -109,14 +110,13 @@ void Alumnos::registroDatos()
         //Inicio del do-while
         do{
             system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-            cout << "Ingrese sus nombres: " << endl;//Pedir los nombres
-            getline(cin, this -> nombreAlumno);//S
+            cout << "\t\t\t\tIngrese sus nombres: "; getline(cin, this -> nombreAlumno);//Pedir los nombres
             if (this -> nombreAlumno == ""){
-                cout << "Error, el nombre no puede ir vacio" << endl;
+                cout << "\n\t\t\tError, el nombre no puede ir vacio" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
             }else{
                 if (this -> nombreAlumno == " "){
-                    cout << "Error, solo coloco un espacio ingrese sus nombres" << endl;
+                    cout << "\n\t\t\tError, solo coloco un espacio ingrese sus nombres" << endl;
                     this_thread::sleep_for(chrono::seconds(2));
                 }
             }
@@ -125,14 +125,13 @@ void Alumnos::registroDatos()
         //Inicio del do-while
         do{
             system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-            cout << "Ingrese sus apellidos: " << endl;//Pedir los apellidos
-            getline(cin, this -> apellidoAlumno);
+            cout << "\t\t\t\tIngrese sus apellidos: "; getline(cin, this -> apellidoAlumno);//Pedir los apellidos
             if (this -> apellidoAlumno == ""){
-                cout << "Error, el apellido no puede ir vacio" << endl;
+                cout << "\n\t\t\tError, el apellido no puede ir vacio" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
             }else{
                 if (this -> apellidoAlumno == " "){
-                    cout << "Error, el apellido no puede ir vacio" << endl;
+                    cout << "\n\t\t\tError, el apellido no puede ir vacio" << endl;
                     this_thread::sleep_for(chrono::seconds(2));
                 }
             }
@@ -141,18 +140,17 @@ void Alumnos::registroDatos()
         //Inicio del do-while
         do{
             system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-            cout << "Ingrese su sexo (Masculino/Femenino): " << endl;//Pedir su genero
-            getline(cin, this -> sexoAlumno);
+            cout << "\t\t\t\tIngrese su sexo (Masculino/Femenino): "; getline(cin, this -> sexoAlumno);//Pedir su genero
             if (this -> sexoAlumno == ""){
-                cout << "Error, el sexo no puede ir vacio" << endl;
+                cout << "\n\t\t\tError, el sexo no puede ir vacio" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
             }else {
                 if (this -> sexoAlumno == "M" || this -> sexoAlumno == "m"){
-                    cout << "Error, dato no valido" << endl;
+                    cout << "\n\t\t\tError, dato no valido" << endl;
                     this_thread::sleep_for(chrono::seconds(2));
                 }else{
                     if (this -> sexoAlumno == " "){
-                        cout << "Error, solo coloco un espacio ingrese su sexo" << endl;
+                        cout << "\n\t\t\tError, solo coloco un espacio ingrese su sexo" << endl;
                         this_thread::sleep_for(chrono::seconds(2));
                     }
                 }
@@ -162,11 +160,10 @@ void Alumnos::registroDatos()
         //Inicio del do-while
         do{
             system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-            cout << "Ingrese su numero de DPI: " << endl;//Pedir su numero de dpi
-            getline(cin, this -> numeroDpi);
+            cout << "\t\t\t\tIngrese su numero de DPI: "; getline(cin, this -> numeroDpi);//Pedir su numero de dpi
             //Valida digitos del dpi
             if (this -> numeroDpi.size() != 13){
-                cout << "Error, su numero de DPI tiene que tener 13 digitos" << endl;
+                cout << "\n\t\t\tError, su numero de DPI tiene que tener 13 digitos" << endl;
                 validarInformacion = false;
             }else{
                 validarInformacion = true;
@@ -180,10 +177,9 @@ void Alumnos::registroDatos()
         //Inicio del do-while
          do{
             system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-            cout << "Ingrese su dia de nacimiento (1-31): " << endl;//Pedir dia nacimiento
-            cin >> this -> diaNacimiento;
+            cout << "\t\t\t\tIngrese su dia de nacimiento (1-31): "; cin >> this -> diaNacimiento;//Pedir dia nacimiento
             if (this -> diaNacimiento < 1 || this -> diaNacimiento > 31){
-                cout << "Error, dia no valido" << endl;
+                cout << "\n\t\t\tError, dia no valido" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
             }
         }while (!(this -> diaNacimiento >= 1 && this -> diaNacimiento <= 31));//Fin del do-while
@@ -191,10 +187,9 @@ void Alumnos::registroDatos()
         //Inicio del do-while
         do{
             system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-            cout << "Ingrese su mes de nacimiento (1-12): " << endl;//Pedir mes de nacimiento
-            cin >> this -> mesNacimiento;
+            cout << "\t\t\t\tIngrese su mes de nacimiento (1-12): "; cin >> this -> mesNacimiento;//Pedir mes de nacimiento
             if (this -> mesNacimiento < 1 || this -> mesNacimiento > 12){
-                cout << "Error, mes no valido" << endl;
+                cout << "\n\t\t\tError, mes no valido" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
             }
         }while (!(this -> mesNacimiento >= 1 && this -> mesNacimiento <= 12));//Fin del do-while
@@ -202,10 +197,9 @@ void Alumnos::registroDatos()
         //Inicio del do-while
         do{
             system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-            cout << "Ingrese su año de nacimiento (1940-2009): " << endl;//Pedir año de nacimiento
-            cin >> this -> anioNacimiento;
+            cout << "\t\t\t\tIngrese su año de nacimiento (1940-2009): "; cin >> this -> anioNacimiento;//Pedir año de nacimiento
             if (this -> anioNacimiento < 1940 || this -> anioNacimiento > 2009){
-                cout << "Error, mes no valido" << endl;
+                cout << "\n\t\t\tError, mes no valido" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
             }
         }while (!(this -> anioNacimiento >= 1940 && this -> anioNacimiento <= 2009));//Fin del do-while
@@ -217,23 +211,22 @@ void Alumnos::registroDatos()
         system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
         //Se muestra los datos del usuario y le preguntamos si son correctos
         //Si dice que no lo regresamos otra vez para que ingrese sus datos
-        cout << "--- Datos Personales ---" << endl;
-        cout << "Nombres: " << this -> getnombreCompletoAlumno() << endl;//Muestra sus nombres que ingreso
-        cout << "Apellidos: " << this -> getapellidoAlumno() << endl;//Muestra sus apellidos que ingreso
-        cout << "Sexo: " << this -> getsexoAlumno() << endl;//Muestra su genero que ingreso
-        cout << "DPI: " << this -> getnumeroDpi() << endl;//Muestra su dpi
-        cout << "Fecha nacimiento: " << this -> getfechaNacimientoAlumno() << endl;//Muestra su fecha de nacimiento
-        cout << "¿Los datos son correctos (S/N)?: " << endl;//Preguntamos si son correctos
-        cin >> confirmarDatos;
+        cout << "\t\t\t\t\t\t--- Datos Personales ---" << endl;
+        cout << "\n\t\t\t\t\tNombres: " << this -> getnombreAlumno() << endl;//Muestra sus nombres que ingreso
+        cout << "\t\t\t\t\tApellidos: " << this -> getapellidoAlumno() << endl;//Muestra sus apellidos que ingreso
+        cout << "\t\t\t\t\tSexo: " << this -> getsexoAlumno() << endl;//Muestra su genero que ingreso
+        cout << "\t\t\t\t\tDPI: " << this -> getnumeroDpi() << endl;//Muestra su dpi
+        cout << "\t\t\t\t\tFecha nacimiento: " << this -> getfechaNacimientoAlumno() << endl;//Muestra su fecha de nacimiento
+        cout << "\n\t\t\t\t¿Los datos son correctos (S/N)?: "; cin >> confirmarDatos;//Preguntamos si son correctos
         cin.ignore(1000, '\n');
 
     }while (confirmarDatos == 'n' || confirmarDatos == 'N');//Fin del do-while
 
-    cout << "Verificando datos... por favor espere." << endl;
+    cout << "\n\t\t\t\tVerificando datos... por favor espere." << endl;
 	this_thread::sleep_for(chrono::seconds(2));
-	cout << "Generando carnet..." << endl;
+	cout << "\t\t\t\t\tGenerando carnet..." << endl;
 	this_thread::sleep_for(chrono::seconds(2));
-	cout << "Generando correo..." << endl;
+	cout << "\t\t\t\t\tGenerando correo..." << endl;
 	this_thread::sleep_for(chrono::seconds(2));
 }
 
@@ -292,12 +285,20 @@ void Alumnos::obtenerNombreCompleto()
 void Alumnos::registroExitoso()
 {
     system("cls");//Borra informacion del compilador y no llenarla de tanta informacion
-    cout << "--- Universidad UMG - Registro Exitoso ---" << endl;
-    cout << "Alumno: " << this -> getnombreAlumno() << " " << this -> getapellidoAlumno() << endl;
-    cout << "Carnet: " << this -> getcarnetPersonal() << endl;
-    cout << "Correo: " << this -> getcorreoPersonal() << endl;
-    cout << "Carrera: " << this -> getcarreraAsignada() << endl;
+    cout << "\t\t\t\t\t--- Universidad UMG - Registro Exitoso ---" << endl;
+    cout << "\n\t\t\t\t\tAlumno: " << this -> getnombreCompletoAlumno() << endl;
+    cout << "\t\t\t\t\tCarnet: " << this -> getcarnetPersonal() << endl;
+    cout << "\t\t\t\t\tCorreo: " << this -> getcorreoPersonal() << endl;
+    cout << "\t\t\t\t\tCarrera: " << this -> getcarreraAsignada() << endl;
+    cout << "\t\t\t\t\tContraseña: " << this -> getcontraseniaUnica() << endl;
 
+}
+
+//Crea una contraseña aleatorio
+void Alumnos::crearContraseniaUnica()
+{
+    int contraseniaAleaotorio = numeroAleatorio(100, 1000);
+    this -> contraseniaUnica = to_string(contraseniaAleaotorio);
 }
 
 //Menu principal CRUD
@@ -320,7 +321,7 @@ void Alumnos::menuInsertar()
         cout << "\t\t\t\t\t---------------------------------" << endl;
         cout << "\t\t\t\t\t Opciones a Escoger: [1/2/3/4/5/6]" << endl;
         cout << "\t\t\t\t\t---------------------------------" << endl;
-        cout << "¿Que opcion desea escoger?: "; cin >> escogerOpcion;
+        cout << "\n\t\t\t\t¿Que opcion desea escoger?: "; cin >> escogerOpcion;
 
         switch(escogerOpcion)
         {
@@ -356,21 +357,14 @@ void Alumnos::menuInsertar()
 //Crear
 void Alumnos::insertarAlumno()
 {
-        cin.ignore();
+        //cin.ignore();
         system("cls");
         fstream file;
-        cout << "\n------------------------------------------------------------------------------------------------------------";
-        cout << "\n----------------------------------------Agregar Detalles del Alumno-----------------------------------------" << endl;
-        cout << "\t\t\t Ingrese id unico del alumno: "; cin >> idUnico;
-        cin.ignore();
-        cout << "\t\t\t Ingrese nombre del alumno: "; getline(cin, nombreAlumno);
-        cout << "\t\t\t Ingrese carnet del alumno: "; getline(cin, carnetPersonal);
-        cout << "\t\t\t Ingrese correo del alumno: "; getline(cin, correoPersonal);
-        cout << "\t\t\t Ingrese constraseña del alumno: "; getline(cin, contraseniaUnica);
+        menuRegistro();
         file.open("Alumnos.txt", ios::app | ios::out);
-        file << std::left << std::setw(15) << idUnico << std::left << std::setw(15) << nombreAlumno <<
-        std::left << std::setw(15) << carnetPersonal <<
-        std::left << std::setw(30) << correoPersonal <<
+        file << std::left << std::setw(18) << carnetPersonal << " | " << std::left << std::setw(40) << nombreCompletoAlumno << " | " <<
+        std::left << std::setw(25) << carreraAsignada << " | " <<
+        std::left << std::setw(40) << correoPersonal << " | " <<
         std::left << std::setw(15) << contraseniaUnica << "\n";
         file.close();
 }
@@ -391,16 +385,19 @@ void Alumnos::desplegarAlumno()
     }
     else
     {
-        file >> idUnico >> nombreAlumno >> carnetPersonal >> correoPersonal >> contraseniaUnica;
-        while(!file.eof())
+        while(getline(file, carnetPersonal, '|'))
         {
+            getline(file, nombreCompletoAlumno, '|');
+            getline(file, carreraAsignada, '|');
+            getline(file, correoPersonal, '|');
+            getline(file, contraseniaUnica);
+
             total++;
-            cout << "\n\n\t\t\t Id del alumno: " << idUnico << endl;
-            cout << "\t\t\t Nombre del alumno: " << nombreAlumno << endl;
-            cout << "\t\t\t Carnet del alumno: " << carnetPersonal << endl;
+            cout << "\n\n\t\t\t Carnet del alumno: " << carnetPersonal << endl;
+            cout << "\t\t\t Nombre del alumno: " << nombreCompletoAlumno << endl;
+            cout << "\t\t\t Carrera del alumno: " << carreraAsignada  << endl;
             cout << "\t\t\t Correo del alumno: " << correoPersonal << endl;
             cout << "\t\t\t Contraseña del alumno: " << contraseniaUnica << endl;
-            file >> idUnico >> nombreAlumno >> carnetPersonal >> correoPersonal >> contraseniaUnica;
         }
         if (total == 0)
         {
@@ -427,27 +424,42 @@ void Alumnos::modificarAlumno()
     }
     else
     {
-        cout << "\n Ingrese el id del alumno que quiere modificar: "; cin >> participanteId;
+        cout << "\n Ingrese el carnet del alumno que quiere modificar (0000-00-00): "; cin >> participanteId;
+        cin.ignore();
         file1.open("Record.txt", ios::app | ios::out);
-        file >> idUnico >> nombreAlumno >> carreraAsignada >> carnetPersonal >> correoPersonal >> contraseniaUnica;
-        while(!file.eof())
+        while(getline(file, carnetPersonal, '|'))
         {
-            cout << "\t\t\t Ingrese nombre del alumno: "; getline(cin, nombreAlumno);
-            cout << "\t\t\t Ingrese carnet del alumno: "; getline(cin, carnetPersonal);
-            cout << "\t\t\t Ingrese correo del alumno: "; getline(cin, correoPersonal);
-            cout << "\t\t\t Ingrese constraseña del alumno: "; getline(cin, contraseniaUnica);
-            file1 << std::left << std::setw(15) << idUnico << std::left << std::setw(15) << nombreAlumno <<
-            std::left << std::setw(15) << carnetPersonal <<
-            std::left << std::setw(30) << correoPersonal <<
-            std::left << std::setw(15) << contraseniaUnica << "\n";
-            found++;
+            getline(file, nombreCompletoAlumno, '|');
+            getline(file, carreraAsignada, '|');
+            getline(file, correoPersonal, '|');
+            getline(file, contraseniaUnica);
+            //Borra los espacios sobrantes
+            carnetPersonal = carnetPersonal.substr(0, carnetPersonal.find_last_not_of(" ") + 1);
+            nombreCompletoAlumno = nombreCompletoAlumno.substr(0, nombreCompletoAlumno.find_last_not_of(" ") + 1);
+            carreraAsignada = carreraAsignada.substr(0, carreraAsignada.find_last_not_of(" ") + 1);
+            correoPersonal = correoPersonal.substr(0, correoPersonal.find_last_not_of(" ") + 1);
+            contraseniaUnica = contraseniaUnica.substr(0, contraseniaUnica.find_last_not_of(" ") + 1);
+
+            if(participanteId == carnetPersonal)
+            {
+                 cout << "\t\t\t Ingrese carnet del alumno: "; getline(cin, carnetPersonal);
+                cout << "\t\t\t Ingrese nombre del alumno: "; getline(cin, nombreCompletoAlumno);
+                cout << "\t\t\t Ingrese carrera del alumno: "; getline(cin, carreraAsignada);
+                cout << "\t\t\t Ingrese correo del alumno: "; getline(cin, correoPersonal);
+                cout << "\t\t\t Ingrese contraseña del alumno: "; getline(cin, contraseniaUnica);
+                found++;
+
+            }
+                file1 << std::left << std::setw(18) << carnetPersonal << " | " << std::left << std::setw(40) << nombreCompletoAlumno << " | " <<
+                std::left << std::setw(25) << carreraAsignada << " | " <<
+                std::left << std::setw(40) << correoPersonal << " | " <<
+                std::left << std::setw(15) << contraseniaUnica << "\n";
         }
-        file >> idUnico >> nombreAlumno >> carnetPersonal >> correoPersonal >> contraseniaUnica;
+        file1.close();
+        file.close();
+        remove("Alumnos.txt");
+        rename("Record.txt", "Alumnos.txt");
     }
-    file1.close();
-    file.close();
-    remove("Alumnos.txt");
-    rename("Record.txt", "Alumnos.txt");
 }
 
 //Buscar
@@ -467,27 +479,34 @@ void Alumnos::buscarAlumno()
     {
         string participanteId = "";
         cout << "\n----------------------------------------Datos del Alumno Buscado-----------------------------------------" << endl;
-        cout << "\n Ingrese el id del alumno que quiere buscar: "; cin >> participanteId;
-        file >> idUnico >> nombreAlumno >> carnetPersonal >> correoPersonal >> contraseniaUnica;
-        while(!file.eof())
+        cout << "\n Ingrese el carnet del alumno que quiere buscar (0000-00-00): "; cin >> participanteId;
+        while(getline(file, carnetPersonal, '|'))
         {
-            if (participanteId == idUnico)
+            getline(file, nombreCompletoAlumno, '|');
+            getline(file, carreraAsignada, '|');
+            getline(file, correoPersonal, '|');
+            getline(file, contraseniaUnica);
+            //Borra los espacios sobrantes
+            carnetPersonal = carnetPersonal.substr(0, carnetPersonal.find_last_not_of(" ") + 1);
+            nombreCompletoAlumno = nombreCompletoAlumno.substr(0, nombreCompletoAlumno.find_last_not_of(" ") + 1);
+            carreraAsignada = carreraAsignada.substr(0, carreraAsignada.find_last_not_of(" ") + 1);
+            correoPersonal = correoPersonal.substr(0, correoPersonal.find_last_not_of(" ") + 1);
+            contraseniaUnica = contraseniaUnica.substr(0, contraseniaUnica.find_last_not_of(" ") + 1);
+            if (participanteId == carnetPersonal)
             {
-                cout << "\n\n\t\t\t Id del alumno: " << idUnico << endl;
-                cout << "\t\t\t Nombre del alumno: " << nombreAlumno << endl;
-                cout << "\t\t\t Carnet del alumno: " << carnetPersonal << endl;
+                cout << "\n\t\t\t Carnet del alumno: " << carnetPersonal << endl;
+                cout << "\t\t\t Nombre del alumno: " << nombreCompletoAlumno << endl;
+                cout << "\t\t\t Carrera del alumno: " << carreraAsignada << endl;
                 cout << "\t\t\t Correo del alumno: " << correoPersonal << endl;
                 cout << "\t\t\t Contraseña del alumno: " << contraseniaUnica << endl;
                 found++;
             }
-            file >> idUnico >> nombreAlumno >> carnetPersonal >> correoPersonal >> contraseniaUnica;
         }
         if (found == 0)
         {
-            cout << "\t\t\t Alumno encontrado...";
+            cout << "\t\t\t Alumno no encontrado...";
         }
         file.close();
-
     }
 }
 
@@ -505,23 +524,27 @@ void Alumnos::borrarAlumno()
         cout << "\n\t\t\t\t No hay información..." << endl;
         file.close();
     }else{
-        cout << "\n Ingrese el id del alumno que quiere borrar: "; cin >> participanteId;
+        cout << "\n Ingrese el carnet del alumno que quiere borrar (0000-00-00): "; cin >> participanteId;
         file1.open("Record.txt", ios::app | ios::out);
-        file >> idUnico >> nombreAlumno >> carnetPersonal >> correoPersonal >> contraseniaUnica;
-        while(!file.eof()){
-            if (participanteId != idUnico){
-                file1 << std::left << std::setw(15) << idUnico << std::left << std::setw(15) << nombreAlumno <<
-                        std::left << std::setw(15) << carnetPersonal <<
-                        std::left << std::setw(30) << correoPersonal <<
+        while(getline(file, carnetPersonal, '|')){
+                getline(file, nombreCompletoAlumno, '|');
+                getline(file, carreraAsignada, '|');
+                getline(file, correoPersonal, '|');
+                getline(file, contraseniaUnica);
+                //Borra los espacios sobrantes
+                carnetPersonal = carnetPersonal.substr(0, carnetPersonal.find_last_not_of(" ") + 1);
+            if (participanteId != carnetPersonal){
+                file1 << std::left << std::setw(18) << carnetPersonal << " | " << std::left << std::setw(40) << nombreCompletoAlumno << " | " <<
+                        std::left << std::setw(25) << carreraAsignada << " | " <<
+                        std::left << std::setw(40) << correoPersonal << " | " <<
                         std::left << std::setw(15) << contraseniaUnica << "\n";
             }else{
                 found++;
                 cout << "\n\t\t\t\t Borrado de informacion exitoso";
             }
-            file >> idUnico >> nombreAlumno >> carnetPersonal >> correoPersonal >> contraseniaUnica;
         }
         if (found == 0){
-            cout << "\n\t\t\t\t Id alumno no econtrado...";
+            cout << "\n\t\t\t\t Carnet de alumno no econtrado...";
         }
         file1.close();
         file.close();
@@ -580,6 +603,11 @@ string Alumnos::getcarreraAsignada()
 {
     return this -> carreraAsignada;
 }
+string Alumnos::getcontraseniaUnica()
+{
+    return this -> contraseniaUnica;
+}
+
 //Setters
 void Alumnos::setnombreCompletoAlumno(string nombreCompletoAlumno)
 {
@@ -628,4 +656,8 @@ void Alumnos::setcarnetPersonal(string carnetPersonal)
 void Alumnos::setcarreraAsignada(string carreraAsignada)
 {
     this -> carreraAsignada = carreraAsignada;
+}
+void Alumnos::setcontraseniaUnica(string contraseniaUnica)
+{
+    this -> contraseniaUnica = contraseniaUnica;
 }
