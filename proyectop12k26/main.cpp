@@ -3,6 +3,8 @@
 
 #include "usuarios.h"
 #include "bitacora.h"
+#include "menuRegistro.h"
+#include "MenuAsignaciones.h"
 
 using namespace std;
 
@@ -61,13 +63,16 @@ void menuGeneral()
         switch(choice)
         {
         case 1:
-            cout << "Aqui se colocara el modulo de registro" << endl;
-            cin.get();
+            {
+            menuRegistro registro;
+            registro.menuPrincipalRegistro();
+            }
             break;
-
         case 2:
-            cout << "Aqui se colocara el modulo de asignacion" << endl;
-            cin.get();
+            {
+            MenuAsignaciones asignaciones;
+            asignaciones.ejecutarMenu();
+            }
             break;
 
         case 3:

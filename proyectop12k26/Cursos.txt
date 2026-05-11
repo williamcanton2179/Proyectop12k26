@@ -1,0 +1,4 @@
+001            |   Algebra Superior                       |   Ninguno       
+002            |   Historia y Comunicacion Cientifica     |   Ninguno       
+003            |   Desarrollo Humano y Profesional        |   Ninguno       
+004            |   Contabilidad I                         |   Ninguno       
