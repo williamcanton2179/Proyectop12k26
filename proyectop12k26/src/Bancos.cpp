@@ -5,12 +5,60 @@
 #include <string>
 #include <fstream>
 #include <iomanip>
+#include <sstream>
 
 using namespace std;
 
 Bancos::Bancos()
 {
     // constructor
+}
+
+bool Bancos::InfoPagoPlanilla(string nombreBancoReq, string nombreClienteReq, int idCuentaReq)
+{
+    fstream file;
+    int idArch;
+    string clienteArch, bancoArch;
+    double saldoArch, movArch;
+    long long tarjetaArch;
+    bool encontrado = false;
+
+    file.open("CuentasBancarias.txt", ios::in);
+
+    if (file.is_open())
+    {
+        while (file >> idArch >> clienteArch >> saldoArch >> movArch >> tarjetaArch >> bancoArch)
+        {
+            if (idArch == idCuentaReq)
+            {
+                this->idCuenta = idArch;
+                this->nombreCliente = clienteArch;
+                this->saldo = saldoArch;
+                this->nombreBanco = bancoArch;
+                this->numeroTarjeta = tarjetaArch;
+
+                encontrado = true;
+                break;
+            }
+        }
+        file.close();
+    }
+
+    if (encontrado)
+    {
+        cout << "Cuenta encontrada: " << this->nombreCliente << endl;
+        return true;
+    }
+    else
+    {
+        cout << "Error: No se encontro el ID de cuenta." << endl;
+        return false;
+    }
+}
+
+bool Bancos::procesoPagoPlanilla(int idCuentaReq, double monto, double saldoCuenta)
+{
+
 }
 
 bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
