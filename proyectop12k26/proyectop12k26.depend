@@ -784,17 +784,7 @@
 	<string>
 	"Cursos.h"
 
-1778510005 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuregistro.h
-
-1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuasignaciones.h
-	"Asignaciones.h"
-
-1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\asignaciones.h
-	<vector>
-	<string>
-	"Cursos.h"
-
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\asignaciones.cpp
 	"Asignaciones.h"
 	<iostream>
 	<fstream>
@@ -802,18 +792,138 @@
 	<vector>
 	<iomanip>
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\asignaciones.h
+	<vector>
+	<string>
+	"Cursos.h"
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\cursos.h
+	<string>
+	<vector>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\bancos.cpp
+	"Bancos.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<random>
+	<string>
+	<fstream>
+	<iomanip>
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\bancos.h
+	<string>
+	"GeneradorConstancias.h"
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+	<iostream>
+	<string>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\bitacora.h
+	<iostream>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\carrera.cpp
+	"Carrera.h"
+	<stdlib.h>
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\carrera.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\cursos.cpp
+	"Cursos.h"
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\facultades.cpp
+	"facultades.h"
+	<iostream>
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\facultades.h
+	<string>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+	"GeneradorConstancias.h"
+	<cstdlib>
+	<ctime>
+	<iostream>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\horarios.cpp
+	"Horarios.h"
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\horarios.h
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	"Cursos.h"
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\inscipcion.cpp
+	<iostream>
+	<fstream>
+	"inscipcion.h"
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\inscipcion.h
+	<string>
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
 	"MenuAsignaciones.h"
 	<iostream>
 
-1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\menuasignaciones.h
+	"Asignaciones.h"
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\menuregistro.cpp
 	"menuRegistro.h"
 	"Alumnos.h"
 	"maestros.h"
 	<iostream>
 	<conio.h>
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\menuregistro.h
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+	<vector>
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\maestros.h
+	<string>
+	<vector>
+	<fstream>
+	<iomanip>
+	"Carrera.h"
+	"Cursos.h"
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\recepcion.cpp
+	"Recepcion.h"
+	<iostream>
+	<string>
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\recepcion.h
+	<iostream>
+	<string>
+	"Alumnos.h"
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\tesoreria.cpp
 	"Tesoreria.h"
 	"Bancos.h"
 	"Recepcion.h"
@@ -821,5 +931,25 @@
 	<iostream>
 	<string>
 
-1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\tesoreria.h
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\tesoreria.h
+
+1778511127 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
+1778511127 c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\include\usuarios.h
+	<iostream>
+
+1778511361 source:c:\users\danie\documents\actividades programacion\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"Tesoreria.h"
+	"usuarios.h"
+	"bitacora.h"
+	"menuRegistro.h"
+	"MenuAsignaciones.h"
 
