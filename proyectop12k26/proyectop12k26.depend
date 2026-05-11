@@ -373,8 +373,11 @@
 	<iostream>
 	<vector>
 
-1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\carrera.h
-	<string>
+1778512558 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\carrera.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
 	<vector>
 
 1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\cursos.cpp
@@ -412,7 +415,7 @@
 1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
 
-1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\alumnos.cpp
+1778440211 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\alumnos.cpp
 	"Alumnos.h"
 	"Carrera.h"
 	<iostream>
@@ -427,7 +430,7 @@
 	<iomanip>
 	<conio.h>
 
-1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\alumnos.h
+1778440211 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\alumnos.h
 	<string>
 	<vector>
 
@@ -441,15 +444,11 @@
 	<iostream>
 	<string>
 
-1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\main.cpp
+1778440211 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
 	"usuarios.h"
 	"bitacora.h"
-	"Bancos.h"
-	"Recepcion.h"
-	"GeneradorConstancias.h"
-	"Alumnos.h"
 
 1778212528 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\bancos.h
 	<string>
@@ -628,6 +627,8 @@
 	<iostream>
 	<string>
 
+1778440211 ated upstream
+
 1778442934 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
@@ -680,6 +681,10 @@
 	<iostream>
 
 1778442934 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\src\maestros.cpp
+
+1778440211 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\maestros.cpp
+
+1778511361 shed changes
 	"maestros.h"
 	"Carrera.h"
 	"Cursos.h"
@@ -690,14 +695,16 @@
 	<fstream>
 	<iomanip>
 	<sstream>
-
-1778442934 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\maestros.h
 	<string>
 	<vector>
 	<fstream>
 	<iomanip>
 	"Carrera.h"
 	"Cursos.h"
+
+1778442934 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\maestros.h
+
+1778440211 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\maestros.h
 
 1778195348 c:\users\fcast\onedrive\documentos\tercer semestre\programaciÓn i\proyectop12k26\proyectop12k26\include\recepcion.h
 	<iostream>
@@ -952,4 +959,6 @@
 	"bitacora.h"
 	"menuRegistro.h"
 	"MenuAsignaciones.h"
+
+1778511361 aciones.h"
 
