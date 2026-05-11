@@ -1,6 +1,7 @@
 #include <iostream>
 #include<fstream>
 
+#include "Tesoreria.h"
 #include "usuarios.h"
 #include "bitacora.h"
 #include "menuRegistro.h"
@@ -81,8 +82,10 @@ void menuGeneral()
             break;
 
         case 4:
-            cout << "Aqui se colocara el modulo de tesoreria" << endl;
-            cin.get();
+            {
+            Tesoreria tesoreria;
+            tesoreria.menu();
+            }
             break;
 
         case 5:
