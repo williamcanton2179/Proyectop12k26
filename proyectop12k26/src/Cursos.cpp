@@ -3,6 +3,10 @@
 #include "Cursos.h"
 #include <string>
 #include <vector>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <conio.h>
 using namespace std;
 
 //Constructor
@@ -89,6 +93,238 @@ vector<Cursos> Cursos::catalagoCursosIngSistemas()
     datosCursos.push_back(Cursos("Proyecto de Graduacion II", "049", "043", true));
     datosCursos.push_back(Cursos("Seguridad y Auditoria de Sistemas", "050","175 Crs.", true));
     return datosCursos;
+}
+
+//CRUD
+//Menu Principal del CRUD
+void Cursos::menuCurso()
+{
+    int opcionUsuario = 0;
+    char agregarCurso;
+    do{
+        system("cls");
+        cout << "\t\t\t-------------------------------" << endl;
+        cout << "\t\t\t |   SISTEMA GESTION CURSOS  |" << endl;
+        cout << "\t\t\t-------------------------------" << endl;
+        cout << "\t\t\t 1. Ingresar Cursos" << endl;
+        cout << "\t\t\t 2. Desplegar Cursos" << endl;
+        cout << "\t\t\t 3. Modificar Cursos" << endl;
+        cout << "\t\t\t 4. Buscar Cursos" << endl;
+        cout << "\t\t\t 5. Borrar Cursos" << endl;
+        cout << "\t\t\t 6. Exit" << endl;
+
+        cout << "\t\t\t-------------------------------" << endl;
+        cout << "\t\t\tOpcion a escoger:[1/2/3/4/5/6]" << endl;
+        cout << "\t\t\t-------------------------------" << endl;
+        cout << "Ingresa tu Opcion: "; cin >> opcionUsuario;
+
+        switch(opcionUsuario)
+        {
+        case 1:
+            do
+            {
+                insertarCurso();
+                cout <<"\n\t\t\t Agregar otro curso(S,N): "; cin>> agregarCurso;
+            }while(agregarCurso == 'S' || agregarCurso == 's' );
+            break;
+        case 2:
+            desplegarCurso();
+            break;
+        case 3:
+            modificarCurso();
+            break;
+        case 4:
+            buscarCurso();
+            break;
+        case 5:
+            borrarCurso();
+            break;
+        case 6:
+            exit(0);
+        default:
+            cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+        }
+        getch();
+    }while(opcionUsuario != 6);
+}
+
+//Insertar
+void Cursos::insertarCurso()
+{
+    cin.ignore();
+    system("cls");
+	fstream file;
+	cout << "\n------------------------------------------------------------------------------------------------------------------------";
+	cout << "\n-------------------------------------------------Agregar detalles Persona ---------------------------------------------" << endl;
+	cout << "\t\t\tIngresa codigo del Curso: "; getline(cin, codigoCurso);
+	cout << "\t\t\tIngresa nombre del Curso: "; getline(cin, nombreCurso);
+	cout << "\t\t\tIngresa pre-requisito del curso: "; getline(cin, preRequisitoDeCurso);
+	file.open("Cursos.txt", ios::app | ios::out);
+	file << std::left<<std::setw(15) << codigoCurso << "| " <<std::left << std::setw(40) << nombreCurso << "| " << std::left << std::setw(15) << preRequisitoDeCurso << "\n";
+	file.close();
+}
+
+//Desplegar
+void Cursos::desplegarCurso()
+{
+    cin.ignore();
+    system("cls");
+    fstream file;
+    int total = 0;
+    cout << "\n----------------------------------------Tabla de Detalles de Cursos-----------------------------------------" << endl;
+    file.open("Cursos.txt", ios::in);
+    if (!file)
+    {
+        cout << "\n\t\t\t\t No hay información...";
+        file.close();
+    }
+    else
+    {
+        while(getline(file, codigoCurso, '|'))
+        {
+            getline(file, nombreCurso, '|');
+            getline(file, preRequisitoDeCurso);
+
+            total++;
+            cout << "\n\n\t\t\t Codigo del curso: " << codigoCurso << endl;
+            cout << "\t\t\t Nombre del curso " << nombreCurso << endl;
+            cout << "\t\t\t Pre-requisito del curso: " << preRequisitoDeCurso  << endl;
+        }
+        if (total == 0)
+        {
+            cout << "\t\t\t No hay información...";
+        }
+    }
+    file.close();
+}
+
+//Modificar
+void Cursos::modificarCurso()
+{
+    cin.ignore();
+    system("cls");
+    fstream file,file1;
+    string participanteId = "";
+    int found = 0;
+    cout << "\n----------------------------------------Modificar Detalles Cursos-----------------------------------------" << endl;
+    file.open("Cursos.txt", ios::in);
+    if(!file)
+    {
+        cout << "\t\t\t No hay información...";
+        file.close();
+    }
+    else
+    {
+        cout << "\n Ingrese el codigo del curso (000): "; cin >> participanteId;
+        cin.ignore();
+        file1.open("Record.txt", ios::app | ios::out);
+        while(getline(file, codigoCurso, '|'))
+        {
+            getline(file, nombreCurso, '|');
+            getline(file, preRequisitoDeCurso);
+            //Borra los espacios sobrantes
+            codigoCurso = codigoCurso.substr(0, codigoCurso.find_last_not_of(" ") + 1);
+            nombreCurso = nombreCurso.substr(0, nombreCurso.find_last_not_of(" ") + 1);
+            preRequisitoDeCurso = preRequisitoDeCurso.substr(0, preRequisitoDeCurso.find_last_not_of(" ") + 1);
+
+            if(participanteId == codigoCurso)
+            {
+                cout << "\t\t\tIngresa codigo del Curso: "; getline(cin, codigoCurso);
+                cout << "\t\t\tIngresa nombre del Curso: "; getline(cin, nombreCurso);
+                cout << "\t\t\tIngresa pre-requisito del curso: "; getline(cin, preRequisitoDeCurso);
+                found++;
+
+            }
+                file1 << std::left<<std::setw(15) << codigoCurso << "| " << std::left << std::setw(40) << nombreCurso << "| " << std::left << std::setw(15) << preRequisitoDeCurso << "\n";
+        }
+        file1.close();
+        file.close();
+        remove("Cursos.txt");
+        rename("Record.txt", "Cursos.txt");
+    }
+
+}
+
+//Buscar
+void Cursos::buscarCurso()
+{
+    cin.ignore();
+    system("cls");
+    fstream file;
+    int found = 0;
+    file.open("Cursos.txt", ios::in);
+    if(!file)
+    {
+        cout << "\n----------------------------------------Datos del Curso Buscado-----------------------------------------" << endl;
+        cout << "\t\t\t No hay información...";
+    }
+    else
+    {
+        string participanteId = "";
+        cout << "\n----------------------------------------Datos del Curso Buscado-----------------------------------------" << endl;
+        cout << "\n Ingrese el codigo del curso que quiere buscar (000): "; cin >> participanteId;
+        while(getline(file, codigoCurso, '|'))
+        {
+            getline(file, nombreCurso, '|');
+            getline(file, preRequisitoDeCurso);
+            //Borra los espacios sobrantes
+            codigoCurso = codigoCurso.substr(0, codigoCurso.find_last_not_of(" ") + 1);
+            nombreCurso = nombreCurso.substr(0, nombreCurso.find_last_not_of(" ") + 1);
+            preRequisitoDeCurso = preRequisitoDeCurso.substr(0, preRequisitoDeCurso.find_last_not_of(" ") + 1);
+            if (participanteId == codigoCurso)
+            {
+                cout << "\n\n\t\t\t Codigo del curso: " << codigoCurso << endl;
+                cout << "\t\t\t Nombre del curso " << nombreCurso << endl;
+                cout << "\t\t\t Pre-requisito del curso: " << preRequisitoDeCurso  << endl;
+                found++;
+            }
+        }
+        if (found == 0)
+        {
+            cout << "\t\t\t Curso no encontrado...";
+        }
+        file.close();
+    }
+
+}
+
+//Borrar
+void Cursos::borrarCurso()
+{
+    cin.ignore();
+    system("cls");
+    fstream file,file1;
+    string participanteId = "";
+    int found = 0;
+    cout << "\n----------------------------------------Detalles del Curso a Borrar-----------------------------------------" << endl;
+    file.open("Cursos.txt", ios::in);
+    if(!file){
+        cout << "\n\t\t\t\t No hay información..." << endl;
+        file.close();
+    }else{
+        cout << "\n Ingrese el codigo del curso que quiere borrar (000): "; cin >> participanteId;
+        file1.open("Record.txt", ios::app | ios::out);
+        while(getline(file, codigoCurso, '|')){
+                getline(file, nombreCurso, '|');
+                getline(file, preRequisitoDeCurso);
+                //Borra los espacios sobrantes
+                codigoCurso = codigoCurso.substr(0, codigoCurso.find_last_not_of(" ") + 1);
+            if (participanteId != codigoCurso){
+                file1 << std::left<<std::setw(15) << codigoCurso << "| " <<std::left << std::setw(40   ) << nombreCurso << "| " << std::left << std::setw(15) << preRequisitoDeCurso << "\n";
+            }else{
+                found++;
+                cout << "\n\t\t\t\t Borrado de informacion exitoso";
+            }
+        }
+        if (found == 0){
+            cout << "\n\t\t\t\t codigo del curso no econtrado...";
+        }
+        file1.close();
+        file.close();
+        remove("Cursos.txt");
+        rename("Record.txt", "Cursos.txt");
+    }
+
 }
 
 //Getters
