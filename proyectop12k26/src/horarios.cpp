@@ -1,282 +1,314 @@
 // Antony Marcelo Yllescas Figueroa
 // 9959-25-6813
-
 #include "Horarios.h"
 
-// Constructor vacío
 Horarios::Horarios()
 {
-    this->dia = "";
-    this->nombreCurso = "";
-    this->horaInicio = "";
-    this->horaFin = "";
+    this->dia="";
+    this->nombreCurso="";
+    this->horaInicio="";
+    this->horaFin="";
 }
 
-// Constructor con parámetros
-Horarios::Horarios(string dia,
-                   string nombreCurso,
-                   string horaInicio,
-                   string horaFin)
+Horarios::Horarios(string dia,string nombreCurso,string horaInicio,string horaFin)
 {
-    this->dia = dia;
-    this->nombreCurso = nombreCurso;
-    this->horaInicio = horaInicio;
-    this->horaFin = horaFin;
+    this->dia=dia;
+    this->nombreCurso=nombreCurso;
+    this->horaInicio=horaInicio;
+    this->horaFin=horaFin;
 }
 
-// GENERAR HORARIO
-vector<Horarios> Horarios::generar(
-    vector<Cursos> cursos,
-    bool pagoValidado
-)
+vector<Horarios> Horarios::generar(vector<Cursos> cursos,bool pagoValidado,bool finDeSemana)
 {
     vector<Horarios> lista;
 
-    // VALIDAR PAGO
     if(!pagoValidado)
     {
-        cout << "__________________________________" << endl;
-        cout << " ERROR: CONSTANCIA NO VALIDADA " << endl;
-        cout << "__________________________________\n" << endl;
+        cout<<"__________________________________"<<endl;
+        cout<<" CONSTANCIA NO VALIDADA "<<endl;
+        cout<<"__________________________________"<<endl;
 
         return lista;
     }
 
-    vector<string> dias =
+    vector<string> dias;
+
+    if(finDeSemana)
     {
-        "Lunes",
-        "Martes",
-        "Miercoles",
-        "Jueves",
-        "Viernes"
-    };
+        dias={"Sabado","Domingo"};
+    }
+    else
+    {
+        dias={"Lunes","Martes","Miercoles","Jueves","Viernes"};
+    }
 
-    int indiceCurso = 0;
+    int indiceCurso=0;
 
-    for (int d = 0; d < dias.size(); d++)
+    for(int d=0;d<dias.size();d++)
     {
         int cantidadClases;
 
-        // Lunes y miércoles
-        if (dias[d] == "Lunes" || dias[d] == "Miercoles")
+        if(finDeSemana)
         {
-            cantidadClases = 3;
+            cantidadClases=3;
         }
-
-        // Martes y jueves
-        else if (dias[d] == "Martes" || dias[d] == "Jueves")
-        {
-            cantidadClases = 2;
-        }
-
-        // Viernes
         else
         {
-            cantidadClases = 3;
+            if(dias[d]=="Lunes"||dias[d]=="Miercoles")
+            {
+                cantidadClases=3;
+            }
+            else
+            {
+                cantidadClases=2;
+            }
         }
 
-        int hora = 7;
-        int minuto = 0;
+        int hora=7;
 
-        for (int c = 0; c < cantidadClases; c++)
+        for(int c=0;c<cantidadClases;c++)
         {
-            if (indiceCurso >= cursos.size())
+            if(indiceCurso>=cursos.size())
             {
                 break;
             }
 
-            // DESCANSO
-            if (hora == 10 && minuto == 0)
-            {
-                minuto += 30;
-            }
+            int inicio=hora;
 
-            int inicioHora = hora;
-            int inicioMin = minuto;
+            int fin=inicio+2;
 
-            // CLASE DE 1 HORA Y MEDIA
-            minuto += 90;
+            string hInicio=(inicio<10?"0":"")+to_string(inicio)+":00";
 
-            while (minuto >= 60)
-            {
-                hora++;
-                minuto -= 60;
-            }
+            string hFin=(fin<10?"0":"")+to_string(fin)+":00";
 
-            int finHora = hora;
-            int finMin = minuto;
-
-            // FORMATO HORA INICIO
-            string hInicio =
-                (inicioHora < 10 ? "0" : "") +
-                to_string(inicioHora) + ":" +
-                (inicioMin == 0 ? "00" : to_string(inicioMin));
-
-            // FORMATO HORA FINAL
-            string hFin =
-                (finHora < 10 ? "0" : "") +
-                to_string(finHora) + ":" +
-                (finMin == 0 ? "00" : to_string(finMin));
-
-            // AGREGAR HORARIO
-            lista.push_back(
-                Horarios(
-                    dias[d],
-                    cursos[indiceCurso].getnombreCurso(),
-                    hInicio,
-                    hFin
-                )
-            );
+            lista.push_back(Horarios(dias[d],cursos[indiceCurso].getnombreCurso(),hInicio,hFin));
 
             indiceCurso++;
+
+            hora=fin+1;
         }
     }
 
-    cout << "\nHorario generado correctamente.\n" << endl;
+    cout<<"Horario generado correctamente."<<endl;
 
     return lista;
 }
 
-// MOSTRAR HORARIO
 void Horarios::mostrar(vector<Horarios> lista)
 {
-    cout << "______________________________________" << endl;
-    cout << "       HORARIO DEL ESTUDIANTE         " << endl;
-    cout << "______________________________________\n" << endl;
+    cout<<"______________________________________"<<endl;
 
-    for (size_t i = 0; i < lista.size(); i++)
+    cout<<"       HORARIO DEL ESTUDIANTE         "<<endl;
+
+    cout<<"______________________________________"<<endl;
+
+    for(size_t i=0;i<lista.size();i++)
     {
-        cout << lista[i].dia << " | "
-             << lista[i].nombreCurso << " | "
-             << lista[i].horaInicio << " - "
-             << lista[i].horaFin << endl;
+        cout<<i+1
+            <<". "
+            <<lista[i].dia
+            <<" | "
+            <<lista[i].nombreCurso
+            <<" | "
+            <<lista[i].horaInicio
+            <<" - "
+            <<lista[i].horaFin
+            <<endl;
     }
 }
 
-// GUARDAR ARCHIVO
+void Horarios::modificar(vector<Horarios>& lista)
+{
+    if(lista.empty())
+    {
+        cout<<"No hay horarios."<<endl;
+
+        return;
+    }
+
+    mostrar(lista);
+
+    int opcion;
+
+    cout<<"Seleccione clase a modificar: ";
+
+    cin>>opcion;
+
+    if(opcion<1||opcion>lista.size())
+    {
+        cout<<"Opcion invalida."<<endl;
+
+        return;
+    }
+
+    cout<<"1. Cambiar hora"<<endl;
+
+    cout<<"2. Cambiar dia"<<endl;
+
+    int tipo;
+
+    cin>>tipo;
+
+    if(tipo==1)
+    {
+        cout<<"Nueva hora inicio: ";
+
+        cin>>lista[opcion-1].horaInicio;
+
+        cout<<"Nueva hora fin: ";
+
+        cin>>lista[opcion-1].horaFin;
+    }
+    else if(tipo==2)
+    {
+        cout<<"Nuevo dia: ";
+
+        cin>>lista[opcion-1].dia;
+    }
+    else
+    {
+        cout<<"Opcion invalida."<<endl;
+
+        return;
+    }
+
+    cout<<"Horario modificado correctamente."<<endl;
+}
+
 void Horarios::guardarEnArchivo(vector<Horarios> lista)
 {
     ofstream archivo("HorarioSemanal.txt");
 
-    if (!archivo)
+    if(!archivo)
     {
-        cout << "\nError al crear archivo.\n" << endl;
+        cout<<"Error al crear archivo."<<endl;
         return;
     }
-
-    archivo << "______________________________________" << endl;
-    archivo << "       HORARIO DEL ESTUDIANTE         " << endl;
-    archivo << "______________________________________\n" << endl;
-
-    for (size_t i = 0; i < lista.size(); i++)
+    archivo<<"HORARIO DEL ESTUDIANTE"<<endl;
+    for(size_t i=0;i<lista.size();i++)
     {
-        archivo << lista[i].dia << " | "
-                << lista[i].nombreCurso << " | "
-                << lista[i].horaInicio << " - "
-                << lista[i].horaFin << endl;
+        archivo
+            <<lista[i].dia
+            <<" | "
+            <<lista[i].nombreCurso
+            <<" | "
+            <<lista[i].horaInicio
+            <<" - "
+            <<lista[i].horaFin
+            <<endl;
     }
-
     archivo.close();
-
-    cout << "\nHorario guardado correctamente.\n" << endl;
+    cout<<"Horario guardado correctamente."<<endl;
 }
-
-// MENU
 void Horarios::menu()
 {
     int opcion;
-
-    bool pagoValidado = false;
-
+    bool pagoValidado=false;
+    bool finDeSemana=false;
     GeneradorConstancias constancia;
-
+    Asignacion asignacion;
     Cursos catalogo;
-
-    vector<Cursos> cursos;
-
     vector<Horarios> horario;
-
     do
     {
-        cout << "______________________________________" << endl;
-        cout << "     SISTEMA UNIVERSITARIO UMG        " << endl;
-        cout << "______________________________________" << endl;
-
-        cout << "1. Validar constancia" << endl;
-        cout << "2. Generar horario" << endl;
-        cout << "3. Mostrar horario" << endl;
-        cout << "4. Guardar horario" << endl;
-        cout << "5. Salir" << endl;
-
-        cout << "\nSeleccione una opcion: ";
-        cin >> opcion;
-
+        cout<<"______________________________________"<<endl;
+        cout<<"     SISTEMA UNIVERSITARIO UMG        "<<endl;
+        cout<<"______________________________________"<<endl;
+        cout<<"1. Validar constancia"<<endl;
+        cout<<"2. Realizar asignaciones"<<endl;
+        cout<<"3. Elegir jornada"<<endl;
+        cout<<"4. Generar horario"<<endl;
+        cout<<"5. Mostrar horario"<<endl;
+        cout<<"6. Modificar horario"<<endl;
+        cout<<"7. Guardar horario"<<endl;
+        cout<<"8. Salir"<<endl;
+        cout<<"Seleccione opcion: ";
+        cin>>opcion;
         switch(opcion)
         {
-
-        // VALIDAR CONSTANCIA
         case 1:
         {
             int boleta;
-
-            cout << "\nIngrese numero de boleta: ";
-            cin >> boleta;
-
+            cout<<"Ingrese numero de boleta: ";
+            cin>>boleta;
             if(constancia.validarConstancia(boleta))
             {
-                pagoValidado = true;
-
-                cout << "\nCONSTANCIA VALIDADA.\n" << endl;
+                pagoValidado=true;
+                cout<<"CONSTANCIA VALIDADA."<<endl;
             }
             else
             {
-                pagoValidado = false;
-
-                cout << "\nCONSTANCIA INVALIDA.\n" << endl;
+                pagoValidado=false;
+                cout<<"CONSTANCIA INVALIDA."<<endl;
             }
-
             break;
         }
-
-        // GENERAR HORARIO
         case 2:
         {
-            cursos = catalogo.catalagoCursosIngSistemas();
-
-            horario = generar(
-                cursos,
-                pagoValidado
-            );
-
+            asignacion.menuAsignacion();
             break;
         }
-
-        // MOSTRAR
         case 3:
         {
-            mostrar(horario);
-
+            int jornada;
+            cout<<"1. Entre semana"<<endl;
+            cout<<"2. Fin de semana"<<endl;
+            cin>>jornada;
+            if(jornada==2)
+            {
+                finDeSemana=true;
+            }
+            else
+            {
+                finDeSemana=false;
+            }
             break;
         }
-
-        // GUARDAR
         case 4:
         {
-            guardarEnArchivo(horario);
+            vector<Cursos> catalogoCompleto=catalogo.catalagoCursosIngSistemas();
+
+            vector<Cursos> cursosSeleccionados;
+
+            for(int i=0;i<asignacion.cursosAsignados.size();i++)
+            {
+                for(int j=0;j<catalogoCompleto.size();j++)
+                {
+                    if(asignacion.cursosAsignados[i]==catalogoCompleto[j].getnombreCurso())
+                    {
+                        cursosSeleccionados.push_back(catalogoCompleto[j]);
+                    }
+                }
+            }
+            horario=generar(cursosSeleccionados,pagoValidado,finDeSemana);
 
             break;
         }
-        // SALIR
         case 5:
         {
-            cout << "\nSaliendo...\n" << endl;
+            mostrar(horario);
+            break;
+        }
+        case 6:
+        {
+            modificar(horario);
+            break;
+        }
+        case 7:
+        {
+            guardarEnArchivo(horario);
+            break;
+        }
+        case 8:
+        {
+            cout<<"Saliendo..."<<endl;
             break;
         }
         default:
         {
-            cout << "\nOpcion invalida.\n" << endl;
+            cout<<"Opcion invalida."<<endl;
         }
         }
     }
-    while(opcion != 5);
+    while(opcion!=8);
 }
