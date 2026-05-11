@@ -7,15 +7,17 @@
 	"usuarios.h"
 	"bitacora.h"
 
-1778208985 D
+1778447887 D
 
 1776869130 dc537b6a9e26bca804ea167a026ba36d93c43
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
 	"usuarios.h"
 	"bitacora.h"
+	"menuRegistro.h"
+	"MenuAsignaciones.h"
 
 1777179357 n.h"
 
@@ -66,15 +68,21 @@
 
 1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\proyecto.h
 
-1778447887 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778511402 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\carrera.cpp
+	"Carrera.h"
+	<stdlib.h>
+	<vector>
+
+1778447896 147324c7544890fb42d70478972bd17848a4f
 	"Carrera.h"
 	<stdlib.h>
 
-1778447896 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
+1778511381 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\carrera.h
 	<iostream>
 	<fstream>
 	<iomanip>
 	<conio.h>
+	<vector>
 
 1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\inscipcion.cpp
 	<iostream>
@@ -84,12 +92,16 @@
 1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<conio.h>
 
-1778122531 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
+1778510005 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
@@ -771,4 +783,43 @@
 	<vector>
 	<string>
 	"Cursos.h"
+
+1778510005 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuregistro.h
+
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuasignaciones.h
+	"Asignaciones.h"
+
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\asignaciones.h
+	<vector>
+	<string>
+	"Cursos.h"
+
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+	"Asignaciones.h"
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<iomanip>
+
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
+	"MenuAsignaciones.h"
+	<iostream>
+
+1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+	"menuRegistro.h"
+	"Alumnos.h"
+	"maestros.h"
+	<iostream>
+	<conio.h>
+
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
+	"Tesoreria.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<string>
+
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\tesoreria.h
 
