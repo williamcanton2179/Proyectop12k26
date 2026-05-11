@@ -1,32 +1,28 @@
-#ifndef CARRERA_H                 //Creado por David Alegria
-#define CARRERA_H
-#include <string>
-#include <vector>
+#ifndef CARRERA_H
+#define CARRERA_H        //Creado por David Alegria 9959-23-11277
+
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <conio.h>
+using namespace std;
 
 class Carrera
 {
-    public:
-        //Constructor
-        Carrera();
-        Carrera(std::string codigoCarrera, std::string nombreCarrera, bool estadoCarrea);
-        //Get
-        std::string getcodigoCarrera();
-        std::string getnombreCarrera();
-        bool getestadoCarrera();
-        //Set
-        void setcodigoCarrera(std::string codigoCarera);
-        void setnombreCarrera(std::string nombreCarerra);
-        void setestadoCcarrera(bool estadoCarrera);
-        //Metodos
-        std::vector<Carrera> datosCarreras();
-
-
-    protected:
-
     private:
-        std::string codigoCarrera;
-        std::string nombreCarrera;
+        string codigoCarrera;
+        string nombreCarrera;
         bool estadoCarrera;
+
+    public:
+        Carrera();
+
+        void menu();
+        void insertar();
+        void desplegar();
+        void modificar();
+        void buscar();
+        void borrar();
 };
 
 #endif // CARRERA_H
