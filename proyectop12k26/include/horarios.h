@@ -1,5 +1,5 @@
-// Antony Marcelo Yllescas Figueroa
-// 9959-25-6813
+// Antony Marcelo Yllescas Figueroa-
+// 9959-25-6813-
 #ifndef HORARIOS_H
 #define HORARIOS_H
 
