@@ -4,13 +4,21 @@
 #include <string>
 #include "Cursos.h"
 
+struct RegistroAsignacion {
+    std::string carnet;
+    std::vector<std::string> codigosCursos;
+};
+
 class Asignacion {
 public:
     std::vector<std::string> cursosAsignados;
 
-    // Solo usamos strings para el carnet y el catálogo de Cursos.h
     bool validarCarnetEnArchivo(std::string carnet);
-    void asignarCurso(std::string carnet, std::string codCurso, std::vector<Cursos> catalogo);
     void menuAsignacion();
+
+    // --- NUEVAS FUNCIONES CRUD ---
+    void mostrarAsignaciones();     // Leer (Read)
+    void editarAsignacion();        // Actualizar (Update)
+    void eliminarAsignacion();      // Eliminar (Delete)
 };
 #endif
