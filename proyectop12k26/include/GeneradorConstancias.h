@@ -7,36 +7,35 @@
 using namespace std;
 
 class GeneradorConstancias {
-    public:
-        GeneradorConstancias();
-        virtual ~GeneradorConstancias();
+private:
+    string nombre;
+    string carnet;
+    float monto;
+    int estado;
+    int tipoPersona;
 
-        // Setters
-        void setNombre(string n);
-        void setCarnet(string c);
-        void setMonto(float m);
-        void setEstado(int e);
-        void setTipoPersona(int t);
+    void imprimirEncabezadoBanco();
+    void constanciaAlumno();
+    void constanciaDocente();
 
-        // Getters
-        string getNombre();
-        string getCarnet();
-        float getMonto();
-        int getTipoPersona();
-        string getTextoEstado();
+public:
+    GeneradorConstancias();
+    ~GeneradorConstancias();
 
-        void entregarConstancia();
+    void setNombre(string n);
+    void setCarnet(string c);
+    void setMonto(float m);
+    void setEstado(int e);
+    void setTipoPersona(int t);
 
-    private:
-        string nombre;
-        string carnet;
-        float monto;
-        int estado;
-        int tipoPersona;
+    string getNombre();
+    string getCarnet();
+    float getMonto();
+    int getTipoPersona();
+    string getTextoEstado();
 
-        void imprimirEncabezadoBanco();
-        void constanciaAlumno();
-        void constanciaDocente();
+    void entregarConstancia();
+    bool validarConstancia(int numeroBoleta);
 };
 
 #endif
