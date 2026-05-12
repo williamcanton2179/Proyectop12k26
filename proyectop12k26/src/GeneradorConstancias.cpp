@@ -1,3 +1,4 @@
+//Creado por Axel Andrino - 9959-25-8978
 #include "GeneradorConstancias.h"
 #include <cstdlib>
 #include <ctime>
