@@ -11,9 +11,10 @@
 
 1776869130 dc537b6a9e26bca804ea167a026ba36d93c43
 
-1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
+1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\main.cpp
 	<iostream>
 	<fstream>
+	"Tesoreria.h"
 	"usuarios.h"
 	"bitacora.h"
 	"menuRegistro.h"
@@ -461,7 +462,7 @@
 	<iostream>
 	<string>
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bancos.cpp
+1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bancos.cpp
 	"Bancos.h"
 	"GeneradorConstancias.h"
 	<iostream>
@@ -469,6 +470,7 @@
 	<string>
 	<fstream>
 	<iomanip>
+	<sstream>
 
 1778184652 
 
@@ -1102,4 +1104,51 @@
 	<iomanip>
 	"Carrera.h"
 	"Cursos.h"
+
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+	"Asignaciones.h"
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<iomanip>
+
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\asignaciones.h
+	<vector>
+	<string>
+	"Cursos.h"
+
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
+	"MenuAsignaciones.h"
+	<iostream>
+
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuasignaciones.h
+	"Asignaciones.h"
+
+1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+	"menuRegistro.h"
+	"Alumnos.h"
+	"maestros.h"
+	<iostream>
+	<conio.h>
+
+1778510005 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menuregistro.h
+
+1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
+	"Tesoreria.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	<iostream>
+	<string>
+
+1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\tesoreria.h
+
+1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
+	"menu inscripcion .h"
+	"inscipcion.h"
+	<iostream>
+	<conio.h>
+
+1778544021 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menu inscripcion .h
 
