@@ -2,12 +2,11 @@
 #include "validacionpagos0.h"
 #include "validacionpagos0.cpp"
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 void ModuloPagos::ejecutar()
 {
-    //double resultado = 1020.00;
-    //double pagoalumno;
     int opcion;
     int opcion2;
     int numeroT;
@@ -17,7 +16,7 @@ void ModuloPagos::ejecutar()
     validacionpagos0 asignaciones; //primer objeto de la clase
     // se usan las funciones en los objetos
 
-    asignaciones.cargarCursosDesdeArchivo("asignacion_2179.txt");
+    asignaciones.cargarCursosDesdeArchivo("Asignaciones.txt");
 
    cout <<"---ASIGNACION DE CURSOS---" << endl;
    cout <<"1.Cursos asignados y tu carnet" << endl;
