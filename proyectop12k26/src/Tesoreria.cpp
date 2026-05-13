@@ -91,37 +91,16 @@ void Tesoreria::menu()
                 break;
             }
 
-            case 3:
-            {
-                string nombre;
-                float monto;
-                int tipoPersona;
+           case 3:
+{
+    system("cls");
+    cout << "===== GENERADOR DE CONSTANCIAS =====" << endl;
 
-                system("cls");
+    constancia.insertar();
 
-                cout << "===== GENERADOR DE CONSTANCIAS =====" << endl;
-
-                cout << "Ingrese nombre: ";
-                getline(cin, nombre);
-
-                cout << "Ingrese monto: ";
-                cin >> monto;
-
-                cout << "Tipo de persona (1=Alumno / 2=Docente): ";
-                cin >> tipoPersona;
-                cin.ignore();
-
-                constancia.setNombre(nombre);
-                constancia.setMonto(monto);
-                constancia.setTipoPersona(tipoPersona);
-
-                cout << endl;
-
-                constancia.entregarConstancia();
-
-                system("pause");
-                break;
-            }
+    system("pause");
+    break;
+}
 
             case 4:
                 cout << "\nRegresando al menu principal..." << endl;

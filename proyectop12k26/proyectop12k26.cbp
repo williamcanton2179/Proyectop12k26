@@ -51,7 +51,6 @@
 		<Unit filename="include/inscipcion.h" />
 		<Unit filename="include/maestros.h" />
 		<Unit filename="include/menu inscripcion .h" />
-		<Unit filename="include/menuNotas.h" />
 		<Unit filename="include/menuRegistro.h" />
 		<Unit filename="include/proyecto.h" />
 		<Unit filename="include/reportes.h" />
@@ -74,7 +73,6 @@
 		<Unit filename="src/inscipcion.cpp" />
 		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/menu inscripcion .cpp" />
-		<Unit filename="src/menuNotas.cpp" />
 		<Unit filename="src/menuRegistro.cpp" />
 		<Unit filename="src/proyecto.cpp" />
 		<Unit filename="src/reportes.cpp" />
