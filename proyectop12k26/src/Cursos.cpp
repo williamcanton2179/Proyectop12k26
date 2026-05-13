@@ -148,6 +148,7 @@ void Cursos::menuCurso()
     }while(opcionUsuario != 6);
 }
 
+//Insertar cursos
 void Cursos::insertarCurso()
 {
     cin.ignore();
@@ -168,6 +169,7 @@ void Cursos::insertarCurso()
 	file.close();
 }
 
+//Desplegar cursos
 void Cursos::desplegarCurso()
 {
     cin.ignore();
@@ -207,6 +209,7 @@ void Cursos::desplegarCurso()
     file.close();
 }
 
+//Modificar cursos
 void Cursos::modificarCurso()
 {
     cin.ignore();
@@ -263,6 +266,7 @@ void Cursos::modificarCurso()
 
 }
 
+//Buscar cursos
 void Cursos::buscarCurso()
 {
     cin.ignore();
@@ -315,6 +319,7 @@ void Cursos::buscarCurso()
 
 }
 
+//Borrar cursos
 void Cursos::borrarCurso()
 {
     cin.ignore();
