@@ -14,6 +14,10 @@ class validacionpagos0
         void informaciondecursos();
         void pagoAlumno1(double pago1, double preciocurso);
         void tipodePago(int Tipotarjeta,int numeroTarjeta, std::string nombre, std::string fecha, int codigoSeguridad);
+        void leerInformacion(int tarjetaBuscada, int Tipotarjeta);
+        void modificarInformacion(int tarjetaBuscada, int Tipotarjeta);
+        void menuGestionPagos(int tarjetaBuscada, int Tipotarjeta);
+        void borrar(int tarjetabuscada, int Tipotarjeta);
         //void ejecutarMenuPrincipal();
         virtual ~validacionpagos0();
 
