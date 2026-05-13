@@ -3,38 +3,32 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
 class GeneradorConstancias {
 private:
-    string nombre;
-    string carnet;
+    string id, nombre, carnet;
     float monto;
-    int estado;
     int tipoPersona;
 
     void imprimirEncabezadoBanco();
-    void constanciaAlumno();
-    void constanciaDocente();
 
 public:
     GeneradorConstancias();
     ~GeneradorConstancias();
 
-    void setNombre(string n);
-    void setCarnet(string c);
-    void setMonto(float m);
-    void setEstado(int e);
-    void setTipoPersona(int t);
+void recibirDatos(string n, string c, float m, int t);
+    void menu();
+    void insertar();
+    void desplegar();
+    void buscar();
+    void borrar();
+    void seleccionarEImprimir();
+    void disenoConstancia();
 
-    string getNombre();
-    string getCarnet();
-    float getMonto();
-    int getTipoPersona();
-    string getTextoEstado();
 
-    void entregarConstancia();
     bool validarConstancia(int numeroBoleta);
 };
 
