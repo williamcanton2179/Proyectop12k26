@@ -1,4 +1,19 @@
-001            |   Algebra Superior                       |   Ninguno       
-002            |   Historia y Comunicacion Cientifica     |   Ninguno       
-003            |   Desarrollo Humano y Profesional        |   Ninguno       
-004            |   Contabilidad I                         |   Ninguno       
+001            |Desarrollo Humano y Profesional         |Ninguno        |204.00         
+002            |Metodologia de la Investigacion         |Ninguno        |204.00         
+003            |Contabilidad I                          |Ninguno        |204.00         
+004            |Introduccion a los sitemas de computo   |Ninguno        |204.00         
+005            |Logica de Sistemas                      |Ninguno        |204.00         
+006            |Precalculo                              |Ninguno        |204.00         
+007            |Algebra Lineal                          |Ninguno        |204.00         
+008            |Algoritmos                              |Ninguno        |204.00         
+009            |Contabilidad II                         |Ninguno        |204.00         
+011            |Fisica I                                |006            |204.00         
+012            |Programacion I                          |008            |204.00         
+013            |Calculo I                               |006            |204.00         
+014            |Proceso Administrativo                  |Ninguno        |204.00         
+015            |Derecho Informatico                     |Ninguno        |204.00         
+016            |Microeconomia                           |Ninguno        |204.00         
+017            |Programacion II                         |012            |204.00         
+018            |Calculo II                              |013            |204.00         
+019            |Estadistica I                           |Ninguno        |204.00         
+020            |Fisica II                               |011            |204.00         

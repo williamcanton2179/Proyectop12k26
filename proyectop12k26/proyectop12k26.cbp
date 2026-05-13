@@ -37,10 +37,12 @@
 		<Unit filename="include/Alumnos.h" />
 		<Unit filename="include/Asignaciones.h" />
 		<Unit filename="include/Bancos.h" />
+		<Unit filename="include/ConfiguracionEvaluacion.h" />
 		<Unit filename="include/Cursos.h" />
 		<Unit filename="include/GeneradorConstancias.h" />
 		<Unit filename="include/MenuAsignaciones.h" />
 		<Unit filename="include/Recepcion.h" />
+		<Unit filename="include/RegistrarNotas.h" />
 		<Unit filename="include/Tesoreria.h" />
 		<Unit filename="include/bitacora.h" />
 		<Unit filename="include/carrera.h" />
@@ -49,17 +51,21 @@
 		<Unit filename="include/inscipcion.h" />
 		<Unit filename="include/maestros.h" />
 		<Unit filename="include/menu inscripcion .h" />
+		<Unit filename="include/menuNotas.h" />
 		<Unit filename="include/menuRegistro.h" />
 		<Unit filename="include/proyecto.h" />
+		<Unit filename="include/reportes.h" />
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Alumnos.cpp" />
 		<Unit filename="src/Asignaciones.cpp" />
 		<Unit filename="src/Bancos.cpp" />
+		<Unit filename="src/ConfiguracionEvaluacion.cpp" />
 		<Unit filename="src/Cursos.cpp" />
 		<Unit filename="src/GeneradorConstancias.cpp" />
 		<Unit filename="src/MenuAsignaciones.cpp" />
 		<Unit filename="src/Recepcion.cpp" />
+		<Unit filename="src/RegistrarNotas.cpp" />
 		<Unit filename="src/Tesoreria.cpp" />
 		<Unit filename="src/bitacora.cpp" />
 		<Unit filename="src/carrera.cpp" />
@@ -68,8 +74,10 @@
 		<Unit filename="src/inscipcion.cpp" />
 		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/menu inscripcion .cpp" />
+		<Unit filename="src/menuNotas.cpp" />
 		<Unit filename="src/menuRegistro.cpp" />
 		<Unit filename="src/proyecto.cpp" />
+		<Unit filename="src/reportes.cpp" />
 		<Unit filename="src/usuarios.cpp" />
 		<Extensions />
 	</Project>

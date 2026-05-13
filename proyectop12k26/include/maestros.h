@@ -38,6 +38,8 @@ public:
     void asignarCurso();
     void asignarHorario();
     double calcularSalario();
+    void guardarSalarioEnArchivo();
+    void mostrarTodosLosSalarios();
     bool verificarCodigo(int codigoIngresado);
     void mostrarResultados();
     void mostrarCarreras();
@@ -56,6 +58,7 @@ public:
 
     void setId(string id);
     void setDpi(string dpi);
+
 };
 
 #endif
