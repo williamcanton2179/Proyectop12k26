@@ -174,7 +174,7 @@ bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
         numeroTarjeta = 7414220100000000LL + generadorTarjetasCuentas();
     }
 
-
+//Parte de constancias
     string carnetIngresado;
     cout << "\n>>> PROCESO DE CONSTANCIA <<<" << endl;
     cout << "Ingrese el carnet para el comprobante: ";
