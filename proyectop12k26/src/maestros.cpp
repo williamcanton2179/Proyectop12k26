@@ -515,7 +515,47 @@ double Maestros::calcularSalario()
     else if (sede == "Sede San Jose Pinula")
         bonoSede = 200;
 
-    return salarioBase + bonoSede + bonoCursos;
+    double salarioTotal = salarioBase+ bonoSede + bonoCursos;
+
+    guardarSalarioEnArchivo();
+
+    return salarioTotal;
+}
+void Maestros::guardarSalarioEnArchivo(){
+    ofstream archivoSalario;
+    archivoSalario.open("Salarios_Maestros.txt", ios::app);
+
+    if (archivoSalario.is_open()) {
+        double salarioTotal = calcularSalario();
+
+        archivoSalario << "Maestro: " << nombre << " " << apellido << " | ";
+        archivoSalario << "ID: " << id << " | ";
+        archivoSalario << "Carrera: " << carreraAsignada.getnombreCarrera() << " | ";
+        archivoSalario << "Sede: " << sede << " | ";
+        archivoSalario << "Salario: Q" << salarioTotal << endl;
+
+        archivoSalario.close();
+
+        cout << "\n\t\t\t¡Salario guardado en 'Salarios_Maestros.txt'!" << endl;
+    } else {
+        cout << "\n\t\t\tError: No se pudo abrir el archivo" << endl;
+    }
+}
+void Maestros::mostrarTodosLosSalarios(){
+    system("cls");
+    cout << "\n =====Historial de Salario =====" << endl;
+
+    ifstream archivoSalario("Salario_Maestros.txt");
+    if(!archivoSalario.is_open()){
+        cout << "\n\t\t No hay registros de salarios aún." << endl;
+    } else{
+        string linea;
+        while (getline(archivoSalario, linea)){
+            cout << linea << endl;
+        }
+        archivoSalario.close();
+    }
+    system("pause");
 }
 
 void Maestros::ingresarNotas()
