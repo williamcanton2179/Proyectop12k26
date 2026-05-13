@@ -85,7 +85,7 @@ void Tesoreria::menu()
                 // El alumno debe venir desde Registro general del sistema
                 cout << "\nNOTA: Integrar con modulo Registro para datos reales." << endl;
 
-                recepcion.validarDocente();
+                recepcion.menu();
 
                 system("pause");
                 break;
