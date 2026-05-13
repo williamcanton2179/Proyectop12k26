@@ -93,7 +93,7 @@
 1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1778510005 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
@@ -102,7 +102,7 @@
 	<iomanip>
 	<conio.h>
 
-1778510005 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
@@ -457,7 +457,7 @@
 
 1778208985 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\recepcion.h
 
-1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
 	<iostream>
 	<string>
 
@@ -477,16 +477,22 @@
 	"Bancos.h"
 	"GeneradorConstancias.h"
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
 	"GeneradorConstancias.h"
 	<cstdlib>
 	<ctime>
 	<iostream>
 
-1778184652 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\horarios.cpp
+1778511933 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
 
-1778184652 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\horarios.h
+1778511933 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\horarios.h
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	"Cursos.h"
+	"GeneradorConstancias.h"
 
 1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
@@ -505,7 +511,7 @@
 
 1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\recepcion.cpp
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\maestros.cpp
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\maestros.cpp
 	"maestros.h"
 	"Carrera.h"
 	"Cursos.h"
@@ -517,7 +523,7 @@
 	<iomanip>
 	<sstream>
 
-1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\maestros.h
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\maestros.h
 	<string>
 	<vector>
 	<fstream>
@@ -1120,7 +1126,7 @@
 	"Carrera.h"
 	"Cursos.h"
 
-1778439977 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
 	"Asignaciones.h"
 	<iostream>
 	<fstream>
@@ -1128,7 +1134,7 @@
 	<vector>
 	<iomanip>
 
-1778439977 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\asignaciones.h
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\asignaciones.h
 	<vector>
 	<string>
 	"Cursos.h"
@@ -1461,4 +1467,58 @@
 
 1778512174 c:\users\intecapabner\documents\lab progra1\programacion 1\programacion_1_umg\prototipop12p2026\proyectofinal\proyectop12k26\proyectop12k26\include\usuarios.h
 	<iostream>
+
+1778544021 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menu inscripcion .cpp
+	"menu inscripcion .h"
+	"inscipcion.h"
+	<iostream>
+	<conio.h>
+
+1778544021 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menu inscripcion .h
+
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\configuracionevaluacion.cpp
+	<iostream>
+	"ConfiguracionEvaluacion.h"
+
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\configuracionevaluacion.h
+	<string>
+	<vector>
+	"Cursos.h"
+
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\menunotas.cpp
+	"menuNotas.h"
+	<iostream>
+
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\menunotas.h
+	<vector>
+	<string>
+	"usuarios.h"
+	"Alumnos.h"
+	"ConfiguracionEvaluacion.h"
+	"RegistrarNotas.h"
+	"reportes.h"
+
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\registrarnotas.h
+	<string>
+	<vector>
+	"ConfiguracionEvaluacion.h"
+	"Alumnos.h"
+	"bitacora.h"
+	"reportes.h"
+
+1778548552 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\reportes.h
+	<string>
+	<fstream>
+
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\registrarnotas.cpp
+	<iostream>
+	"RegistrarNotas.h"
+
+1778548552 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\reportes.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<iomanip>
+	<cstdio>
+	"reportes.h"
 
