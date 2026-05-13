@@ -240,7 +240,7 @@ void validacionpagos0::borrar(int tarjetabuscada, int Tipotarjeta){
     file2.close();
         file.close();
         remove(nombreArchivo.c_str());
-        rename("Record.txt", nombreArchivo.c_str());
+        rename("temporal0.txt", nombreArchivo.c_str());
 
         if (found == 0) {
             cout << "\n\t\t\tNo se encontro ningun pago de " << mesBorrar << " para esta tarjeta.";
@@ -268,6 +268,10 @@ void validacionpagos0::menuGestionPagos(int tarjetaBuscada, int Tipotarjeta){
         }
         if(opcion == 3){
             borrar(tarjetaBuscada,Tipotarjeta);
+        }
+        if(opcion==4){
+            cout<<"Cerrando programa"<<endl;
+            exit(0);
         }
 
     }while(opcion !=4);

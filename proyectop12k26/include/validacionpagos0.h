@@ -9,7 +9,7 @@ class validacionpagos0
     public:
         //declaracion de metodos para cursos y precios
         validacionpagos0();
-        void cargarCursosDesdeArchivo(std::string nombreArchivo = "asignacion_2179.txt");
+        void cargarCursosDesdeArchivo(std::string nombreArchivo = "Asignaciones.txt");
         //void asignarCursos(std::string nombrecurso); //double preciocurso);
         void informaciondecursos();
         void pagoAlumno1(double pago1, double preciocurso);
