@@ -2536,7 +2536,7 @@
 	<string>
 	"Cursos.h"
 
-1778548859 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\cursos.h
+1778689282 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
@@ -2597,7 +2597,7 @@
 	<vector>
 	"Cursos.h"
 
-1778548859 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778689282 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
@@ -2649,7 +2649,7 @@
 
 1778544663 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\menu inscripcion .h
 
-1778686528 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+1778686886 source:c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\src\menuregistro.cpp
 	"menuRegistro.h"
 	"menu inscripcion .h"
 	"Alumnos.h"
@@ -2726,7 +2726,7 @@
 1778544663 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\modulopagos.h
 	"validacionpagos0.h"
 
-1778685943 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\validacionpagos0.h
+1778686886 c:\users\fcast\onedrive\documentos\tercer semestre\programaci”n i\proyectop12k26\proyectop12k26\include\validacionpagos0.h
 	<string>
 	<vector>
 

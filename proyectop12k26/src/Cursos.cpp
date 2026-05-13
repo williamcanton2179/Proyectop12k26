@@ -19,79 +19,79 @@ Cursos::Cursos()
 }
 
 //Constructor Sobrecargado
-Cursos::Cursos(string nombreCurso, string codigoCurso, string preRequisitoDeCurso, bool estadoCurso)
+Cursos::Cursos(string nombreCurso, string codigoCurso, string preRequisitoDeCurso, double costoCurso, bool estadoCurso)
 {
     this -> nombreCurso = nombreCurso;
     this -> codigoCurso = codigoCurso;
     this -> preRequisitoDeCurso = preRequisitoDeCurso;
+    this -> costoCurso = costoCurso;
     this -> estadoCurso = estadoCurso;
 }
 
 //Crear vector
 vector<Cursos> Cursos::catalagoCursosIngSistemas()
 {
-    //Se lleno el vector con todos los cursos de ingeniera en sistemas
     vector<Cursos> datosCursos;
     //Primer Ciclo
-    datosCursos.push_back(Cursos("Desarrollo Humano y Profesional", "001", "Ninguno", true));
-    datosCursos.push_back(Cursos("Metodologia de la Investigacion", "002", "Ninguno", true));
-    datosCursos.push_back(Cursos("Contabilidad I", "003", "Ninguno", true));
-    datosCursos.push_back(Cursos("Introduccion a los sistemas de computo", "004", "Ninguno", true));
-    datosCursos.push_back(Cursos("Logica de Sistemas", "005", "Ninguno", true));
+    datosCursos.push_back(Cursos("Desarrollo Humano y Profesional", "001", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Metodologia de la Investigacion", "002", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Contabilidad I", "003", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Introduccion a los sistemas de computo", "004", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Logica de Sistemas", "005", "Ninguno", 204.00, true));
     //Segundo Ciclo
-    datosCursos.push_back(Cursos("Precalculo", "006", "Ninguno", true));
-    datosCursos.push_back(Cursos("Algebra Lineal", "007", "Ninguno", true));
-    datosCursos.push_back(Cursos("Algoritmos", "008", "Ninguno", true));
-    datosCursos.push_back(Cursos("Contabilidad II", "009","Ninguno", true));
-    datosCursos.push_back(Cursos("Matematica Discreta", "010", "Ninguno", true));
+    datosCursos.push_back(Cursos("Precalculo", "006", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Algebra Lineal", "007", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Algoritmos", "008", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Contabilidad II", "009","Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Matematica Discreta", "010", "Ninguno", 204.00, true));
     //Tercer Ciclo
-    datosCursos.push_back(Cursos("Fisica I", "011", "006", true));
-    datosCursos.push_back(Cursos("Programacion I", "012", "008", true));
-    datosCursos.push_back(Cursos("Calculo I", "013", "006", true));
-    datosCursos.push_back(Cursos("Proceso Administrativo", "014", "Ninguno", true));
-    datosCursos.push_back(Cursos("Derecho Informatico", "015","Ninguno", true));
+    datosCursos.push_back(Cursos("Fisica I", "011", "006", 204.00, true));
+    datosCursos.push_back(Cursos("Programacion I", "012", "008", 204.00, true));
+    datosCursos.push_back(Cursos("Calculo I", "013", "006", 204.00, true));
+    datosCursos.push_back(Cursos("Proceso Administrativo", "014", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Derecho Informatico", "015","Ninguno", 204.00, true));
     //Cuarto Ciclo
-    datosCursos.push_back(Cursos("Microeconomia", "016", "Ninguno", true));
-    datosCursos.push_back(Cursos("Programacion II", "017", "012", true));
-    datosCursos.push_back(Cursos("Calculo II", "018", "013", true));
-    datosCursos.push_back(Cursos("Estadistica I", "019", "Ninguno", true));
-    datosCursos.push_back(Cursos("Fisica II", "020","011", true));
+    datosCursos.push_back(Cursos("Microeconomia", "016", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Programacion II", "017", "012", 204.00, true));
+    datosCursos.push_back(Cursos("Calculo II", "018", "013", 204.00, true));
+    datosCursos.push_back(Cursos("Estadistica I", "019", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Fisica II", "020","011", 204.00, true));
     //Quinto Ciclo
-    datosCursos.push_back(Cursos("Metodos Numericos", "021", "70 Crs.", true));
-    datosCursos.push_back(Cursos("Programacion III", "022", "017", true));
-    datosCursos.push_back(Cursos("Emprendedores de Negocios", "023", "Ninguno", true));
-    datosCursos.push_back(Cursos("Electronica Analogia", "024", "020", true));
-    datosCursos.push_back(Cursos("Estadistica II", "025","019", true));
+    datosCursos.push_back(Cursos("Metodos Numericos", "021", "70 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Programacion III", "022", "017", 204.00, true));
+    datosCursos.push_back(Cursos("Emprendedores de Negocios", "023", "Ninguno", 204.00, true));
+    datosCursos.push_back(Cursos("Electronica Analogia", "024", "020", 204.00, true));
+    datosCursos.push_back(Cursos("Estadistica II", "025","019", 204.00, true));
     //Sexto Ciclo
-    datosCursos.push_back(Cursos("Investigacion de Operaciones", "026", "80 Crs.", true));
-    datosCursos.push_back(Cursos("Base de Datos I", "027", "022", true));
-    datosCursos.push_back(Cursos("Automatas y Lenguaje Formales", "028", "80 Crs.", true));
-    datosCursos.push_back(Cursos("Sistemas Operativos I", "029", "80 Crs.", true));
-    datosCursos.push_back(Cursos("Electronica Digital", "030","024", true));
+    datosCursos.push_back(Cursos("Investigacion de Operaciones", "026", "80 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Base de Datos I", "027", "022", 204.00, true));
+    datosCursos.push_back(Cursos("Automatas y Lenguaje Formales", "028", "80 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Sistemas Operativos I", "029", "80 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Electronica Digital", "030","024", 204.00, true));
     //Septimo Ciclo
-    datosCursos.push_back(Cursos("Base de Datos II", "031", "027", true));
-    datosCursos.push_back(Cursos("Analisis de Sistemas I", "032", "100 Crs.", true));
-    datosCursos.push_back(Cursos("Sistemas Operativos II", "033", "029", true));
-    datosCursos.push_back(Cursos("Arquitectura de Computadoras I", "034", "100 Crs", true));
-    datosCursos.push_back(Cursos("Compiladores", "035", "028", true));
+    datosCursos.push_back(Cursos("Base de Datos II", "031", "027", 204.00, true));
+    datosCursos.push_back(Cursos("Analisis de Sistemas I", "032", "100 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Sistemas Operativos II", "033", "029", 204.00, true));
+    datosCursos.push_back(Cursos("Arquitectura de Computadoras I", "034", "100 Crs", 204.00, true));
+    datosCursos.push_back(Cursos("Compiladores", "035", "028", 204.00, true));
     //Octavo Ciclo
-    datosCursos.push_back(Cursos("Desarrollo Web", "036", "031", true));
-    datosCursos.push_back(Cursos("Analisis de Sistemas II", "037", "032", true));
-    datosCursos.push_back(Cursos("Redes de Computadora I", "038", "125 Crs.", true));
-    datosCursos.push_back(Cursos("Etica Profesional", "039", "100 Crs.", true));
-    datosCursos.push_back(Cursos("Arquitectura de Computadoras II", "040","034", true));
+    datosCursos.push_back(Cursos("Desarrollo Web", "036", "031", 204.00, true));
+    datosCursos.push_back(Cursos("Analisis de Sistemas II", "037", "032", 204.00, true));
+    datosCursos.push_back(Cursos("Redes de Computadora I", "038", "125 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Etica Profesional", "039", "100 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Arquitectura de Computadoras II", "040","034", 204.00 ,true));
     //Noveno Ciclo
-    datosCursos.push_back(Cursos("Administracion de Tecnologias de Informacion", "041", "150 Crs.", true));
-    datosCursos.push_back(Cursos("Ingenieria de Software", "042", "150 Crs.", true));
-    datosCursos.push_back(Cursos("Proyecto de Graduacion I", "043", "150 Crs.", true));
-    datosCursos.push_back(Cursos("Redes de Computadoras II", "044", "038", true));
-    datosCursos.push_back(Cursos("Inteligencia Artificial", "045","150 Crs.", true));
+    datosCursos.push_back(Cursos("Administracion de Tecnologias de Informacion", "041", "150 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Ingenieria de Software", "042", "150 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Proyecto de Graduacion I", "043", "150 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Redes de Computadoras II", "044", "038", 204.00, true));
+    datosCursos.push_back(Cursos("Inteligencia Artificial", "045","150 Crs.", 204.00, true));
     //Decimo Ciclo
-    datosCursos.push_back(Cursos("Telecomunicaciones", "046", "175 Crs.", true));
-    datosCursos.push_back(Cursos("Seminario de Tecnoligias de Informacion", "047", "175 Crs.", true));
-    datosCursos.push_back(Cursos("Aseguramiento de la Calidad de Software", "048", "175 Crs.", true));
-    datosCursos.push_back(Cursos("Proyecto de Graduacion II", "049", "043", true));
-    datosCursos.push_back(Cursos("Seguridad y Auditoria de Sistemas", "050","175 Crs.", true));
+    datosCursos.push_back(Cursos("Telecomunicaciones", "046", "175 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Seminario de Tecnoligias de Informacion", "047", "175 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Aseguramiento de la Calidad de Software", "048", "175 Crs.", 204.00, true));
+    datosCursos.push_back(Cursos("Proyecto de Graduacion II", "049", "043", 204.00, true));
+    datosCursos.push_back(Cursos("Seguridad y Auditoria de Sistemas", "050","175 Crs.", 204.00, true));
     return datosCursos;
 }
 
