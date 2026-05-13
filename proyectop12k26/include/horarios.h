@@ -9,7 +9,7 @@
 #include <fstream>
 
 #include "Cursos.h"
-#include "Asignacion.h"
+#include "Asignaciones.h"
 #include "GeneradorConstancias.h"
 
 using namespace std;
