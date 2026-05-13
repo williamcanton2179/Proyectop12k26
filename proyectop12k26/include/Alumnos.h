@@ -1,3 +1,5 @@
+//Creado por Fernando Castillo - 9959 - 25 - 288
+//Mayo 2026
 #ifndef ALUMNOS_H
 #define ALUMNOS_H
 #include <string>
@@ -7,7 +9,7 @@
 class Alumnos
 {
     public:
-        //Contructor
+        //Contructores
         Alumnos();
         Alumnos(std::string nombreCompletoAlumno, std::string sexoAlumno, std::string numeroDpi, std::string correoPersonal, std::string carnetPersonal, std::string carreraAsignada);
         //Getters
@@ -23,6 +25,7 @@ class Alumnos
         std::string getfechaNacimientoAlumno();
         std::string getcarnetPersonal();
         std::string getcarreraAsignada();
+        std::string getcontraseniaUnica();
         //Setters
         void setnombreAlumno(std::string nombreAlumno);
         void setapellidoAlumno(std::string apellidoAlumno);
@@ -36,6 +39,7 @@ class Alumnos
         void setcarnetPersonal(std::string carnetPersonal);
         void setnombreCompletoAlumno(std::string nombreCompletoAlumno);
         void setcarreraAsignada(std::string carreraAsignada);
+        void setcontraseniaUnica(std::string contraseniaUnica);
         //Metodos
         void registroDatos();
         void menuRegistro();
@@ -45,6 +49,7 @@ class Alumnos
         void crearCarnetPersonal(std::string codigoCarrera);
         void obtenerNombreCompleto();
         void registroExitoso();
+        void crearContraseniaUnica();
         std::vector<Alumnos> alumnosPrueba();
         //Metodos CRUD
         void menuInsertar();
@@ -77,7 +82,6 @@ class Alumnos
         static const int ANIO_ACTUAL = 26;
         //Numeros Aleatorios
         int numeroAleatorio(int minimo, int maximo);
-
 };
 
 #endif // ALUMNOS_H

@@ -1,5 +1,5 @@
 #include "maestros.h" // Creado por Abner Muñoz 9959-25-13959
-#include "carrera.h"
+#include "Carrera.h"
 #include "Cursos.h"
 #include <iostream>
 #include <cstdlib>
@@ -355,13 +355,13 @@ void Maestros::asignarHorario()
 void Maestros::mostrarCarreras()
 {
     cout << "\nCarreras disponibles:" << endl;
-    carrera objCarrera;
-    vector<carrera> carreras = objCarrera.datoscarreras();
+    Carrera objCarrera;
+    vector<Carrera> carreras = objCarrera.datosCarreras();
 
     for (int i = 0; i < carreras.size(); i++) {
-        if (carreras[i].getestadocarrera()) {
-            cout << i + 1 << ". " << carreras[i].getnombrecarrera()
-                 << " (Codigo: " << carreras[i].getcodigocarrera() << ")" << endl;
+        if (carreras[i].getestadoCarrera()) {
+            cout << i + 1 << ". " << carreras[i].getnombreCarrera()
+                 << " (Codigo: " << carreras[i].getcodigoCarrera() << ")" << endl;
         }
     }
 }
@@ -405,11 +405,8 @@ void Maestros::asignarCurso()
         return;
     }
 
-    vector<string> lineas;
-    file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
-
-    while (!file.eof()) {
-        if (temp_codigo == codigoIngresado) {
+    while (file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo>> temp_sede >> temp_cursos){
+        if (temp_codigo == temp_cursos){
             encontrado = true;
             id = temp_id;
             nombre = temp_nombre;
@@ -418,7 +415,6 @@ void Maestros::asignarCurso()
             codigo = temp_codigo;
             break;
         }
-        file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
     }
     file.close();
 
@@ -433,20 +429,20 @@ void Maestros::asignarCurso()
     cout << "\nSeleccione la carrera: ";
     cin >> opcionCarrera;
 
-    carrera objCarrera;
-    vector<carrera> carreras = objCarrera.datoscarreras();
+    Carrera objCarrera;
+    vector<Carrera> carreras = objCarrera.datosCarreras();
 
     if (opcionCarrera >= 1 && opcionCarrera <= carreras.size()) {
         carreraAsignada = carreras[opcionCarrera - 1];
-        cout << "\nCarrera seleccionada: " << carreraAsignada.getnombrecarrera() << endl;
+        cout << "\nCarrera seleccionada: " << carreraAsignada.getnombreCarrera() << endl;
 
-        mostrarCursosPorCarrera(carreraAsignada.getcodigocarrera());
+        mostrarCursosPorCarrera(carreraAsignada.getcodigoCarrera());
 
         int opcionCurso;
         cout << "\nSeleccione el curso: ";
         cin >> opcionCurso;
 
-        if (carreraAsignada.getcodigocarrera() == "9959") {
+        if (carreraAsignada.getcodigoCarrera() == "9959") {
             Cursos cursoTemp;
             vector<Cursos> cursos = cursoTemp.catalagoCursosIngSistemas();
 
@@ -460,14 +456,14 @@ void Maestros::asignarCurso()
 
                 cout << "\n=== RESUMEN DE ASIGNACION ===" << endl;
                 cout << "Maestro: " << nombre << " " << apellido << endl;
-                cout << "Carrera: " << carreraAsignada.getnombrecarrera() << endl;
+                cout << "Carrera: " << carreraAsignada.getnombreCarrera() << endl;
                 cout << "Curso: " << cursoSeleccionado.getnombreCurso() << endl;
                 cout << "Sede: " << sede << endl;
                 cout << "Salario mensual: Q" << calcularSalario() << endl;
 
                 fstream fileOut, tempFile;
                 fileOut.open("Maestros.txt", ios::in);
-                tempFile.open("Temp.txt", ios::app | ios::out);
+                tempFile.open("Temp.txt", ios::out);
 
                 string t_id, t_nombre, t_apellido, t_dpi, t_sede;
                 int t_codigo, t_cursos;
@@ -481,7 +477,7 @@ void Maestros::asignarCurso()
                                 << left << setw(20) << t_apellido
                                 << left << setw(15) << t_dpi
                                 << left << setw(10) << t_codigo
-                                << left << setw(20) << carreraAsignada.getnombrecarrera()
+                                << left << setw(20) << carreraAsignada.getnombreCarrera()
                                 << left << setw(10) << cursosAsignados.size() << "\n";
                     } else {
                         tempFile << left << setw(15) << t_id
@@ -519,7 +515,47 @@ double Maestros::calcularSalario()
     else if (sede == "Sede San Jose Pinula")
         bonoSede = 200;
 
-    return salarioBase + bonoSede + bonoCursos;
+    double salarioTotal = salarioBase+ bonoSede + bonoCursos;
+
+    guardarSalarioEnArchivo();
+
+    return salarioTotal;
+}
+void Maestros::guardarSalarioEnArchivo(){
+    ofstream archivoSalario;
+    archivoSalario.open("Salarios_Maestros.txt", ios::app);
+
+    if (archivoSalario.is_open()) {
+        double salarioTotal = calcularSalario();
+
+        archivoSalario << "Maestro: " << nombre << " " << apellido << " | ";
+        archivoSalario << "ID: " << id << " | ";
+        archivoSalario << "Carrera: " << carreraAsignada.getnombreCarrera() << " | ";
+        archivoSalario << "Sede: " << sede << " | ";
+        archivoSalario << "Salario: Q" << salarioTotal << endl;
+
+        archivoSalario.close();
+
+        cout << "\n\t\t\t¡Salario guardado en 'Salarios_Maestros.txt'!" << endl;
+    } else {
+        cout << "\n\t\t\tError: No se pudo abrir el archivo" << endl;
+    }
+}
+void Maestros::mostrarTodosLosSalarios(){
+    system("cls");
+    cout << "\n =====Historial de Salario =====" << endl;
+
+    ifstream archivoSalario("Salario_Maestros.txt");
+    if(!archivoSalario.is_open()){
+        cout << "\n\t\t No hay registros de salarios aún." << endl;
+    } else{
+        string linea;
+        while (getline(archivoSalario, linea)){
+            cout << linea << endl;
+        }
+        archivoSalario.close();
+    }
+    system("pause");
 }
 
 void Maestros::ingresarNotas()
@@ -620,7 +656,7 @@ void Maestros::mostrarResultados()
     cout << "Nombre: " << nombre << " " << apellido << endl;
     cout << "DPI: " << dpi << endl;
     cout << "Codigo: " << codigo << endl;
-    cout << "Carrera: " << carreraAsignada.getnombrecarrera() << endl;
+    cout << "Carrera: " << carreraAsignada.getnombreCarrera() << endl;
     mostrarCursosAsignados();
     cout << "Sede: " << sede << endl;
     cout << "Salario: Q" << calcularSalario() << endl;
@@ -659,7 +695,7 @@ string Maestros::getDpi()
     return dpi;
 }
 
-carrera Maestros::getCarreraAsignada()
+Carrera Maestros::getCarreraAsignada()
 {
     return carreraAsignada;
 }

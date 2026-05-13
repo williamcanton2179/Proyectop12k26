@@ -2,14 +2,23 @@
 #define ASIGNACION_H
 #include <vector>
 #include <string>
-#include "Alumnos.h"
 #include "Cursos.h"
+
+struct RegistroAsignacion {
+    std::string carnet;
+    std::vector<std::string> codigosCursos;
+};
 
 class Asignacion {
 public:
     std::vector<std::string> cursosAsignados;
-    bool validarCarnet(std::string carnet, std::vector<Alumnos> listaAlumnos);
-    void asignarCurso(std::string carnet, std::string codCurso, std::vector<Cursos> catalogo, std::vector<std::string> cursosAprobados);
-    std::vector<std::string> getCursosAsignados();
+
+    bool validarCarnetEnArchivo(std::string carnet);
+    void menuAsignacion();
+
+    // --- NUEVAS FUNCIONES CRUD ---
+    void mostrarAsignaciones();     // Leer (Read)
+    void editarAsignacion();        // Actualizar (Update)
+    void eliminarAsignacion();      // Eliminar (Delete)
 };
 #endif

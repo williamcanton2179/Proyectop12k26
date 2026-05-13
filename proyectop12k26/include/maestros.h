@@ -5,7 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <iomanip>
-#include "carrera.h"
+#include "Carrera.h"
 #include "Cursos.h"
 
 using namespace std;
@@ -21,7 +21,7 @@ private:
     int diasSemana;
     int horasClase;
     vector<Cursos> cursosAsignados;
-    carrera carreraAsignada;
+    Carrera carreraAsignada;
 
 public:
     Maestros();
@@ -38,6 +38,8 @@ public:
     void asignarCurso();
     void asignarHorario();
     double calcularSalario();
+    void guardarSalarioEnArchivo();
+    void mostrarTodosLosSalarios();
     bool verificarCodigo(int codigoIngresado);
     void mostrarResultados();
     void mostrarCarreras();
@@ -51,11 +53,12 @@ public:
     string getApellido();
     string getId();
     string getDpi();
-    carrera getCarreraAsignada();
+    Carrera getCarreraAsignada();
     vector<Cursos> getCursosAsignados();
 
     void setId(string id);
     void setDpi(string dpi);
+
 };
 
 #endif

@@ -1,56 +1,27 @@
 #include "MenuAsignaciones.h"
+#include "ModuloPagos.h" // Se agrega el encabezado de modulos
 #include <iostream>
-#include <fstream>
-#include <vector>
 
 using namespace std;
 
 void MenuAsignaciones::ejecutarMenu() {
-    string carnet;
-    cout << "--- SISTEMA DE ASIGNACIONES ---" << endl;
-    cout << "Ingrese su carnet: ";
-    cin >> carnet;
+    int opcion;
+    do {
+        cout << "\n--- MENU DE MODULOS ---" << endl;
+        cout << "1. Asignarse (Mi programa)" << endl;
+        cout << "2. Realizar Pagos (Modulo de Pagos)" << endl; // Nueva opción para conectar los módulos
+        cout << "3. Volver" << endl;
+        cout << "Opcion: ";
+        cin >> opcion;
 
-    Cursos gestor;
-    vector<Cursos> catalogoCompleto = gestor.catalagoCursosIngSistemas();
-
-    vector<Cursos> primerCiclo;
-    for(int i = 0; i < 5; i++) {
-        primerCiclo.push_back(catalogoCompleto[i]);
-    }
-
-    cout << "\nCursos disponibles del Primer Ciclo:" << endl;
-    for(size_t i = 0; i < primerCiclo.size(); i++) {
-        cout << "[" << primerCiclo[i].getcodigoCurso() << "] " << primerCiclo[i].getnombreCurso() << endl;
-    }
-
-    int cantidad;
-    cout << "\n¿Cuantos cursos desea asignarse?: ";
-    cin >> cantidad;
-    if(cantidad > 5) cantidad = 5;
-
-    vector<Cursos> asignados;
-    for(int i = 0; i < cantidad; i++) {
-        string cod;
-        cout << "Ingrese el codigo del curso " << i+1 << ": ";
-        cin >> cod;
-        for(size_t j = 0; j < primerCiclo.size(); j++) {
-            if(primerCiclo[j].getcodigoCurso() == cod) {
-                asignados.push_back(primerCiclo[j]);
-            }
+        if (opcion == 1) {
+            Asignacion miAsig;
+            miAsig.menuAsignacion();
         }
-    }
-
-    ofstream archivo("asignacion_" + carnet + ".txt");
-    if (archivo.is_open()) {
-        archivo << "Carnet: " << carnet << endl;
-        archivo << "Cursos Asignados:" << endl;
-        for(size_t i = 0; i < asignados.size(); i++) {
-            archivo << asignados[i].getcodigoCurso() << " - " << asignados[i].getnombreCurso() << endl;
+        // Se añade la lógica para llamar al módulo de pagos
+        else if (opcion == 2) {
+            ModuloPagos pagos;
+            pagos.ejecutar(); // Llama a la función principal de modulos
         }
-        archivo.close();
-        cout << "\nArchivo generado: asignacion_" << carnet << ".txt" << endl;
-    } else {
-        cout << "Error al crear el archivo." << endl;
-    }
+    } while(opcion != 3); // Se ajusta para que el 3 sea la salida
 }

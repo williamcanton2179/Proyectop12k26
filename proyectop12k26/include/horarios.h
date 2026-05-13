@@ -1,3 +1,5 @@
+// Antony Marcelo Yllescas Figueroa-
+// 9959-25-6813-
 #ifndef HORARIOS_H
 #define HORARIOS_H
 
@@ -5,29 +7,29 @@
 #include <vector>
 #include <string>
 #include <fstream>
+
 #include "Cursos.h"
-//antony marcelo yllescas figueroa
-// 9959 25 6813
+#include "Asignaciones.h"
+#include "GeneradorConstancias.h"
+
 using namespace std;
 
 class Horarios
 {
 private:
-    // defimos parametros
+    string dia;
     string nombreCurso;
     string horaInicio;
     string horaFin;
 
 public:
-    //se definio lo publico
     Horarios();
-    Horarios(string nombreCurso, string horaInicio, string horaFin);
-
-    static vector<Horarios> generar(vector<Cursos> cursos, string jornada, bool pagoRealizado);
+    Horarios(string dia,string nombreCurso,string horaInicio,string horaFin);
+    static vector<Horarios> generar(vector<Cursos> cursos,bool pagoValidado,bool finDeSemana);
     static void mostrar(vector<Horarios> lista);
-
-    // archivo
     static void guardarEnArchivo(vector<Horarios> lista);
+    static void modificar(vector<Horarios>& lista);
+    static void menu();
 };
 
 #endif
