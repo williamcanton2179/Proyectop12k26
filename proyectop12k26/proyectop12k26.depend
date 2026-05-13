@@ -320,6 +320,7 @@
 	<iostream>
 	"bitacora.h"
 
+<<<<<<< HEAD
 1778122531 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\bitacora.cpp
 
 1778208985 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\bitacora.cpp
@@ -1864,6 +1865,8 @@
 
 1778511361 f170631a5b73fc9d8aa4ed1647885cfde6d3a
 
+=======
+>>>>>>> 8cab37c2ee1d44df9874fe4ab53bb3c2f1ad90fc
 1778112504 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\bitacora.cpp
 	"bitacora.h"
 	<iostream>
@@ -1876,21 +1879,21 @@
 1778112504 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\bitacora.h
 	<iostream>
 
-1778023245 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\carrera.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\carrera.cpp
 	"Carrera.h"
 	<iostream>
 	<vector>
 
-1778023245 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\carrera.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\carrera.h
 	<string>
 	<vector>
 
-1778023245 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
 
-1778023245 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\cursos.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
@@ -1901,10 +1904,73 @@
 1777478994 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\facultades.h
 	<string>
 
-1778431581 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\horarios.cpp
+1777478994 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\proyecto.cpp
+	"proyecto.h"
+
+1777478994 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\proyecto.h
+
+1778112504 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+	"bitacora.h"
+
+1778112504 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\usuarios.h
+	<iostream>
+
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\main.cpp
+	<iostream>
+	<fstream>
+	"usuarios.h"
+	"bitacora.h"
+	"Bancos.h"
+	"Recepcion.h"
+	"GeneradorConstancias.h"
+	"Alumnos.h"
+
+1778642946 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\bancos.h
+	<string>
+	"GeneradorConstancias.h"
+
+1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\recepcion.h
+	<iostream>
+	<string>
+	"Alumnos.h"
+
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\alumnos.h
+	<string>
+	<vector>
+
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+	<iostream>
+	<string>
+
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\alumnos.cpp
+	"Alumnos.h"
+	"Carrera.h"
+	<iostream>
+	<fstream>
+	<string>
+	<stdlib.h>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+	<vector>
+	<iomanip>
+	<conio.h>
+
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+	"GeneradorConstancias.h"
+	<cstdlib>
+	<ctime>
+
+1778642880 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
 
-1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\horarios.h
+1778642880 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\horarios.h
 	<iostream>
 	<vector>
 	<string>
@@ -1919,16 +1985,12 @@
 1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1777478994 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\proyecto.cpp
-	"proyecto.h"
-
-1777478994 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\proyecto.h
-
 1778431581 source:c:\users\moise\documents\proyectop12k26\proyectop12k26\src\recepcion.cpp
 	"Recepcion.h"
 	<iostream>
 	<string>
 
+<<<<<<< HEAD
 1778431581 c:\users\moise\documents\proyectop12k26\proyectop12k26\include\recepcion.h
 	<iostream>
 	<string>
@@ -2346,3 +2408,5 @@
 	<iomanip>
 	<sstream>
 
+=======
+>>>>>>> 8cab37c2ee1d44df9874fe4ab53bb3c2f1ad90fc

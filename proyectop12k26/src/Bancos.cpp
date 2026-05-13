@@ -61,6 +61,144 @@ bool Bancos::procesoPagoPlanilla(int idCuentaReq, double monto, double saldoCuen
 
 }
 
+bool Bancos::InfoTransferencia(string nombreCliente, long long numeroTarjeta, int numeroCarnet)
+{
+    fstream file;
+    int idArch;
+    long long tarjetaArch;
+    string clienteArch, bancoArch;
+    double saldoArch, movimientoArch;
+    bool encontrado = false;
+
+    file.open("CuentasBancarias.txt", ios::in);
+
+    if(file.is_open())
+    {
+        while (file >> idArch >> clienteArch >> saldoArch >> movimientoArch >> tarjetaArch >> bancoArch)
+        {
+            if(tarjetaArch == numeroTarjeta && clienteArch == nombreCliente)
+            {
+                this->idCuenta = idArch;
+                this->saldo=saldoArch;
+                this->nombreBanco = bancoArch;
+                encontrado = true;
+                break;
+            }
+        }
+        file.close();
+    }
+    this->movimiento=montoCobro(numeroCarnet);
+    if(encontrado)
+    {
+        cout<<"Cuenta encontrada con exito."<<endl;
+        cout<<"Cliente: "<<nombreCliente<<endl;
+        cout<<"cuenta No. "<<this->idCuenta<<endl;
+        if (procesoTransferencia(numeroTarjeta, this->movimiento))
+        {
+            cout<<"transaccion exitosa"<<endl;
+            return true;
+        }else{
+            cout<<"error con la transferencia"<<endl;
+            return false;
+        }
+    }
+    else{
+        cout<<"Error, La cuenta no se ha encontrado"<<endl;
+        return false;
+    }
+}
+
+
+bool Bancos::InfoPagoPlanilla(string nombreCliente, int idCuenta, int codigoCatedratico)
+{
+    fstream file;
+    int idArch;
+    string clienteArch, bancoArch;
+    double saldoArch, movArch;
+    long long tarjetaArch;
+    bool encontrado = false;
+
+    file.open("CuentasBancarias.txt", ios::in);
+
+    if (file.is_open())
+    {
+        while (file >> idArch >> clienteArch >> saldoArch >> movArch >> tarjetaArch >> bancoArch)
+        {
+            if (idArch == idCuenta && clienteArch == nombreCliente)
+            {
+                this->nombreCliente = clienteArch;
+                encontrado = true;
+                break;
+            }
+        }
+        file.close();
+    }
+    this->movimiento = montoPago(codigoCatedratico);
+    if (encontrado)
+    {
+        cout << "Cuenta encontrada: " << this->nombreCliente << endl;
+        if (procesoPagoPlanilla(idCuenta, this->movimiento))
+        {
+            cout<<"pago realizado con exito"<<endl;
+            return true;
+        }
+        else{
+            cout<<"Error. El pago no pudo realizarse con exito"<<endl;
+            return false;
+        }
+    }
+    else
+    {
+        cout << "Error: No se encontro el ID de cuenta." << endl;
+        return false;
+    }
+}
+
+bool Bancos::procesoTransferencia(long long numeroTarjeta, double monto)
+{
+    fstream file;
+    int idArch;
+    long long tarjetaArch;
+    string clienteArch, bancoArch;
+    double saldoArch, movimientoArch;
+    bool transaccion = false;
+
+    file.open("CuentasBancarias.txt", ios::in);
+
+    if(file.is_open())
+    {
+        while (file >> idArch >> clienteArch >> saldoArch >> movimientoArch >> tarjetaArch >> bancoArch)
+        {
+            if(tarjetaArch == numeroTarjeta && monto<=saldoArch)
+            {
+                ///modificar el saldo en el archivo bancos
+                transaccion = true;;
+                break;
+            }
+            else
+            {
+                transaccion = false;
+            }
+        }
+        file.close();
+    }
+}
+
+bool Bancos::procesoPagoPlanilla(int idCuentaReq, double monto)
+{
+    //pendiente
+}
+
+double Bancos::montoCobro(int Carnet)
+{
+    //pendiente
+}
+
+double Bancos::montoPago(int codigo)
+{
+    //pendiente
+}
+
 bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
 {
     this->idCuenta = generadorTarjetasCuentas();
@@ -90,15 +228,18 @@ bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
     cin >> carnetIngresado;
 
     GeneradorConstancias miConstancia;
+    miConstancia.setNombre(nombreCliente);
+    miConstancia.setCarnet(carnetIngresado);
+    miConstancia.setMonto(monto);
+    miConstancia.setTipoPersona(1);
+    miConstancia.setEstado(1);
 
-    miConstancia.recibirDatos(nombreCliente, carnetIngresado, monto, 1);
-    miConstancia.disenoConstancia();
-
-    cout << ">>> FIN DE CONSTANCIA <<<\n" << endl;
+    miConstancia.entregarConstancia();
     cout << ">>> FIN DE CONSTANCIA <<<\n" << endl;
 
     return guardarCuenta(idCuenta, nombreCliente, saldo, movimiento, numeroTarjeta, nombreBanco);
 }
+
 
 bool Bancos::guardarCuenta(int idCuenta, string nombreCliente, double saldo, double movimiento, long long numeroTarjeta, string nombreBanco)
 {
