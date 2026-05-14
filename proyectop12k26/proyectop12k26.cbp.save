@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="proyectop12k26" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/proyectop12k26" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/proyectop12k26" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Alumnos.h" />
+		<Unit filename="include/Asignaciones.h" />
+		<Unit filename="include/Bancos.h" />
+		<Unit filename="include/ConfiguracionEvaluacion.h" />
+		<Unit filename="include/Cursos.h" />
+		<Unit filename="include/GeneradorConstancias.h" />
+		<Unit filename="include/MenuAsignaciones.h" />
+		<Unit filename="include/Recepcion.h" />
+		<Unit filename="include/RegistrarNotas.h" />
+		<Unit filename="include/Tesoreria.h" />
+		<Unit filename="include/bitacora.h" />
+		<Unit filename="include/carrera.h" />
+		<Unit filename="include/facultades.h" />
+		<Unit filename="include/horarios.h" />
+		<Unit filename="include/inscipcion.h" />
+		<Unit filename="include/maestros.h" />
+		<Unit filename="include/menu inscripcion .h" />
+		<Unit filename="include/menuRegistro.h" />
+		<Unit filename="include/proyecto.h" />
+		<Unit filename="include/reportes.h" />
+		<Unit filename="include/usuarios.h" />
+		<Unit filename="include/validacionpagos0.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Alumnos.cpp" />
+		<Unit filename="src/Asignaciones.cpp" />
+		<Unit filename="src/Bancos.cpp" />
+		<Unit filename="src/ConfiguracionEvaluacion.cpp" />
+		<Unit filename="src/Cursos.cpp" />
+		<Unit filename="src/GeneradorConstancias.cpp" />
+		<Unit filename="src/MenuAsignaciones.cpp" />
+		<Unit filename="src/ModuloPagos.cpp" />
+		<Unit filename="src/Recepcion.cpp" />
+		<Unit filename="src/RegistrarNotas.cpp" />
+		<Unit filename="src/Tesoreria.cpp" />
+		<Unit filename="src/bitacora.cpp" />
+		<Unit filename="src/carrera.cpp" />
+		<Unit filename="src/facultades.cpp" />
+		<Unit filename="src/horarios.cpp" />
+		<Unit filename="src/inscipcion.cpp" />
+		<Unit filename="src/maestros.cpp" />
+		<Unit filename="src/menu inscripcion .cpp" />
+		<Unit filename="src/menuRegistro.cpp" />
+		<Unit filename="src/proyecto.cpp" />
+		<Unit filename="src/reportes.cpp" />
+		<Unit filename="src/usuarios.cpp" />
+		<Unit filename="src/validacionpagos0.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
