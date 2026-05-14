@@ -1,5 +1,5 @@
-#ifndef INSCIPCION_H     //Creado por David Alegria
-#define INSCIPCION_H
+#ifndef INSCRIPCION_H      //Creado por David Alegria
+#define INSCRIPCION_H
 
 #include <string>
 using namespace std;
@@ -7,18 +7,30 @@ using namespace std;
 class Inscripcion
 {
 private:
+
+    // DATOS INSCRIPCION
     int codigoInscripcion;
-    int carnetEstudiante;
+
+    // CARNET
+    string carnetEstudiante;
+
+    // DATOS DEL ALUMNO
     string nombreEstudiante;
     string correoElectronico;
     string carrera;
-    string tipoInscripcion;
+
+    // DATOS DE INSCRIPCION
     string ciclo;
     string jornada;
     string fechaInscripcion;
     string estadoInscripcion;
 
+    // VARIABLES AUXILIARES
+    string codigoInscripcionStr;
+    string carnetStr;
+
 public:
+
     // CRUD
     void menu();
     void insertar();
@@ -26,10 +38,6 @@ public:
     void buscar();
     void modificar();
     void eliminar();
-
-    // auxiliares
-    void ingresarDatos();
-    void mostrarDatos();
 };
 
 #endif
