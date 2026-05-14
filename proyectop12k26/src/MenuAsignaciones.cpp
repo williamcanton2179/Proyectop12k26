@@ -1,5 +1,7 @@
 #include "MenuAsignaciones.h"
-#include "ModuloPagos.h" // Se agrega el encabezado de modulos
+#include "ModuloPagos.h"
+#include "Horarios.h"
+#include "modulomenurespaldo.h"
 #include <iostream>
 
 using namespace std;
@@ -9,8 +11,10 @@ void MenuAsignaciones::ejecutarMenu() {
     do {
         cout << "\n--- MENU DE MODULOS ---" << endl;
         cout << "1. Asignarse (Mi programa)" << endl;
-        cout << "2. Realizar Pagos (Modulo de Pagos)" << endl; // Nueva opción para conectar los módulos
-        cout << "3. Volver" << endl;
+        cout << "2. Realizar Pagos (Modulo de Pagos)" << endl;
+        cout << "3. Gestionar Horarios (Modulo Horarios)" << endl;
+        cout << "4. Gestionar Respaldos (Modulo Respaldo)" << endl;
+        cout << "5. Volver" << endl;
         cout << "Opcion: ";
         cin >> opcion;
 
@@ -18,10 +22,15 @@ void MenuAsignaciones::ejecutarMenu() {
             Asignacion miAsig;
             miAsig.menuAsignacion();
         }
-        // Se añade la lógica para llamar al módulo de pagos
         else if (opcion == 2) {
             ModuloPagos pagos;
-            pagos.ejecutar(); // Llama a la función principal de modulos
+            pagos.ejecutar();
         }
-    } while(opcion != 3); // Se ajusta para que el 3 sea la salida
+        else if (opcion == 3) {
+            Horarios::menu();
+        }
+        else if (opcion == 4) {
+            ejecutarModuloRespaldo();
+        }
+    } while(opcion != 5);
 }

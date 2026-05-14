@@ -181,15 +181,13 @@ bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
     cin >> carnetIngresado;
 
     GeneradorConstancias miConstancia;
-    miConstancia.setNombre(nombreCliente);
-    miConstancia.setCarnet(carnetIngresado);
-    miConstancia.setMonto(monto);
-    miConstancia.setTipoPersona(1);
-    miConstancia.setEstado(1);
+    miConstancia.recibirDatos(nombreCliente, carnetIngresado, monto, 1);
 
-    miConstancia.entregarConstancia();
+    miConstancia.disenoConstancia();
+    cout << endl;
+    system("pause");
+
     cout << ">>> FIN DE CONSTANCIA <<<\n" << endl;
-
     return guardarCuenta(idCuenta, nombreCliente, saldo, movimiento, numeroTarjeta, nombreBanco);
 }
 

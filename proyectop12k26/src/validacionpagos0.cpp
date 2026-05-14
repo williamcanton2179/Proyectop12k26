@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <iomanip>
+#include <sstream>
 using namespace std;
 
 
@@ -10,25 +12,41 @@ validacionpagos0::validacionpagos0()
     //ctor
 }
 
-//void  validacionpagos0::asignarCursos(std::string nombrecurso) // double preciocurso)
-//{
-   // cursos.push_back(nombrecurso);
-    //precios.push_back(preciocurso);
-//
-
-
 void validacionpagos0::cargarCursosDesdeArchivo(std::string nombreArchivo){
     ifstream archivo(nombreArchivo);
-    string nombreCurso;
+    string lineacompleta;
+
      if (archivo.is_open()) {
         cursos.clear();
-        while (getline(archivo, nombreCurso)) {
-            if (!nombreCurso.empty()) {
+        precios1.clear();
+        while (getline(archivo, lineacompleta)) {
+            if (lineacompleta.empty()|| lineacompleta[0] == '='||lineacompleta.find("REGISTRO")!=string::npos) {
+                continue;
+            }
+            stringstream ss(lineacompleta);
+            string codigo, nombreCurso, precioTexto;
+            if(getline(ss, codigo, '|')&& getline(ss, nombreCurso, '|')&& getline(ss,precioTexto)){
+
+                size_t primero=nombreCurso.find_first_not_of(" ");
+                size_t ultimo= nombreCurso.find_last_not_of(" ");
+                if (primero != string::npos && ultimo != string::npos) {
+                    nombreCurso = nombreCurso.substr(primero, (ultimo - primero + 1));
+                }
+
+
+            size_t posNumero= precioTexto.find_first_of("0123456789");
+
+            if(posNumero != string::npos){
+                string numeroLimpio = precioTexto.substr(posNumero);
+                double precioDouble = stod(numeroLimpio);
+
                 cursos.push_back(nombreCurso);
+                precios1.push_back(precioDouble);
+                }
             }
         }
         archivo.close();
-        cout << "Cursos cargados desde " << nombreArchivo << " con exito." << endl;
+        cout << "Cursos y precios cargados de forma exitosa." << endl;
     } else {
         cout << "Error: No se encontro el archivo " << nombreArchivo << endl;
     }
@@ -59,7 +77,7 @@ void validacionpagos0::pagoAlumno1(double pago1, double precioscurso)
     cout <<"¡Pago validado con exito!¡Exitos en tus estudios!" << endl;
 }
 
-void validacionpagos0::tipodePago(int Tipotarjeta, int numeroTarjeta, std::string nombre, std::string fecha, int codigoSeguridad)
+void validacionpagos0::tipodePago(int Tipotarjeta, int &numeroTarjeta, std::string &nombre, std::string &fecha, int &codigoSeguridad)
 {
             char continuar;
             string mesColegiatura;
@@ -112,7 +130,6 @@ void validacionpagos0::tipodePago(int Tipotarjeta, int numeroTarjeta, std::strin
     }while (continuar=='s'||continuar=='S');
 
 cout <<"Proceso de pagos finalizado."<<endl;
-menuGestionPagos(numeroTarjeta, Tipotarjeta);
 }
 
 
@@ -270,12 +287,18 @@ void validacionpagos0::menuGestionPagos(int tarjetaBuscada, int Tipotarjeta){
             borrar(tarjetaBuscada,Tipotarjeta);
         }
         if(opcion==4){
-            cout<<"Cerrando programa"<<endl;
-            exit(0);
+            cout<<"Regresar al menu anterior"<<endl;
+        }
+        else{
+            cout << "Opcion no valida. Intente de nuevo." << endl;
+            system("pause");
         }
 
     }while(opcion !=4);
 }
+
+
+
 
 
 validacionpagos0::~validacionpagos0()

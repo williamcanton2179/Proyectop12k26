@@ -1,12 +1,11 @@
 #include "ModuloPagos.h"
-#include "validacionpagos0.h"
-#include "validacionpagos0.cpp"
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 void ModuloPagos::ejecutar()
 {
+    double resultado = 1020.00;
+    double pagoalumno;
     int opcion;
     int opcion2;
     int numeroT;
@@ -34,6 +33,9 @@ void ModuloPagos::ejecutar()
         cin >> opcion2;
         system("cls");
         asignaciones.tipodePago(opcion2,numeroT,nombrealumno,date,codseguro);
+        cout << "Pago de colegiatura: "<< endl;
+        cin >> pagoalumno;
+        asignaciones.pagoAlumno1(pagoalumno, resultado);
      }
 
 }

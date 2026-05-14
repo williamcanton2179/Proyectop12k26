@@ -1,0 +1,1531 @@
+commit 10cbac43d0bde64260eb974649b4914f49875c93
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 13 19:29:35 2026 -0600
+
+    Pull Request Fase III
+
+commit 018bc7eda5c3dceaf97e8806a7aec12bce518e15
+Merge: 6cc0d06 d03e144
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 10:44:16 2026 -0600
+
+    Merge pull request #79 from williamcanton2179/Arreglo-Mdoulo-Pagos
+    
+    Arreglo de pagos
+
+commit 6cc0d06e329cdb13a2d6b08ef53347e2a64ee1ce
+Merge: 68bb24f 6e98ad0
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 10:44:00 2026 -0600
+
+    Merge pull request #78 from damadop-commits/arreglando_constancia_9959_25_8978
+    
+    Arreglo
+
+commit 6e98ad091606d5782cea2f2d2bf5d4d70839e09d
+Merge: dcfed8a 68bb24f
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 10:43:42 2026 -0600
+
+    Merge branch 'main' into arreglando_constancia_9959_25_8978
+
+commit dcfed8a71501f6570822afa24809944071684d04
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Wed May 13 10:04:41 2026 -0600
+
+    Arreglo
+
+commit d03e144e1a3155f06b16bb821015f22ca9237e39
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Wed May 13 09:55:52 2026 -0600
+
+    Arreglo de pagos
+
+commit 68bb24f2f61e7f38c9b0d5efca7084437b880db5
+Merge: 790e293 7a108ad
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:45:01 2026 -0600
+
+    Merge pull request #77 from damadop-commits/clase_Constancia_Bancaria_9959-25-8978
+    
+    Arreglo de Bancos
+
+commit 7a108adef0378fcc3017280ea39f3de043b9a194
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Wed May 13 09:42:45 2026 -0600
+
+    Arreglo de Bancos
+
+commit 790e293a0a6b0d097c9faf35095e86a457d9d95c
+Merge: c07cab5 a7fec20
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:39:18 2026 -0600
+
+    Merge pull request #76 from David-Alegria/modificando_menu_registro_9959_25_288
+    
+    Agregando opcion inscripcion
+
+commit c07cab59c916d0b693f6c43e3b0952409e42abbb
+Merge: 4828cc3 8cedc17
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:38:57 2026 -0600
+
+    Merge pull request #75 from williamcanton2179/Arreglos3-9959-23-1290
+    
+    Arreglos3 9959 23 1290
+
+commit a7fec20c9ced1b3c51ecd604f485aac38ddead3f
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Wed May 13 09:36:55 2026 -0600
+
+    Agregando opcion inscripcion
+
+commit 8cedc17094c601a13af6efdd57a7ddfe1b3d26f2
+Merge: 1c8bb4a 271a8ec
+Author: Josue-Molina <jmolinar8@miumg.edu.gt>
+Date:   Wed May 13 09:23:46 2026 -0600
+
+    Merge branch 'main' of https://github.com/williamcanton2179/Proyectop12k26 into Arreglos3-9959-23-1290
+
+commit 4828cc377b82b795be55dc4f155967b335c53ad2
+Merge: 6596514 29b15e7
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:22:41 2026 -0600
+
+    Merge pull request #74 from williamcanton2179/limpieza-respaldo
+    
+    Eliminar carpeta Respaldo y sus fuentes
+
+commit 1c8bb4a443ebe6e364a3f9ea29b6558609cd3c80
+Author: Josue-Molina <jmolinar8@miumg.edu.gt>
+Date:   Wed May 13 09:19:40 2026 -0600
+
+    Arreglos en la logica y archivostxt
+
+commit 29b15e778e394dd76730762096204bdbfdd52d1b
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Wed May 13 09:17:44 2026 -0600
+
+    Eliminar carpeta Respaldo y sus fuentes
+
+commit 6596514534472357144b6372e891650a08ba85f9
+Merge: 271a8ec 4c17962
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:15:40 2026 -0600
+
+    Merge pull request #73 from damadop-commits/actualizando_funciones_banco_9959_25_18795
+    
+    corrigiendo clase bancos 9959-25-18795
+
+commit 271a8ec9144fe1834ef1a95ab0142384fadc4634
+Merge: 08928b2 6773d57
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:14:42 2026 -0600
+
+    Merge pull request #72 from williamcanton2179/Respaldo_jonathan
+    
+    Respaldo jonathan 9959-25-7858
+
+commit 4c179629aaff23097b1a1954107b46ebf7be512a
+Author: Moises De Leon <mdeleonp25@miumg.edu.gt>
+Date:   Wed May 13 09:13:42 2026 -0600
+
+    corrigiendo clase bancos 9959-25-18795
+
+commit 6773d57bb559fcd5514719229726915f10ae7053
+Author: Jonathan Chamalé <chamaledelcidjonathaneladio@gmail.com>
+Date:   Wed May 13 09:12:16 2026 -0600
+
+    Modificacion de archivo
+
+commit 08928b22840cfd6dd18fd56a93c5002eaf22b4f3
+Merge: 8cab37c 4409e2c
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:10:30 2026 -0600
+
+    Merge pull request #71 from David-Alegria/main
+    
+    Actualizacion
+
+commit 4409e2c53a37694e01627c08c6b863d53f6f8cb0
+Merge: 920fd05 8cab37c
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed May 13 09:06:31 2026 -0600
+
+    actualizacion
+
+commit 920fd05b258b72c49c9b215fcbdfff23b9ce93c5
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed May 13 09:04:28 2026 -0600
+
+    correcion
+
+commit 8cab37c2ee1d44df9874fe4ab53bb3c2f1ad90fc
+Merge: e00f170 a8c5265
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:00:26 2026 -0600
+
+    Merge pull request #69 from damadop-commits/modificando_funciones_bancos_9959_25_18795
+    
+    Modificando funciones bancos 9959 25 18795
+
+commit a8c526540b20721879ce6b31dcd4d62a94822af3
+Merge: 6998540 e00f170
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 09:00:06 2026 -0600
+
+    Merge branch 'main' into modificando_funciones_bancos_9959_25_18795
+
+commit ad895857d335dc884050e4d13c24e2b466ecab32
+Merge: e88997d e00f170
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed May 13 08:59:00 2026 -0600
+
+    actualizacion
+
+commit e00f170631a5b73fc9d8aa4ed1647885cfde6d3a
+Merge: e3295d4 6a4ed33
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 08:56:52 2026 -0600
+
+    Merge pull request #68 from damadop-commits/Recepcion_pagos_modificado_9959_25_2015
+    
+    Arreglando errores de tesoreria
+
+commit 6a4ed33da07e80d0b5d1f72dfc86a7d955045e56
+Merge: f92ef09 e3295d4
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 08:56:34 2026 -0600
+
+    Merge branch 'main' into Recepcion_pagos_modificado_9959_25_2015
+
+commit 15642041c4e165605b6a498555795bc6f34b2244
+Author: Jonathan Chamalé <chamaledelcidjonathaneladio@gmail.com>
+Date:   Wed May 13 08:55:57 2026 -0600
+
+    Carpeta de respaldo
+
+commit e3295d4ec0a11482d31d5fb50852c83ae8b03491
+Merge: 05716fc b6561cc
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 08:55:19 2026 -0600
+
+    Merge pull request #67 from williamcanton2179/antony-yllescas
+    
+    Correccion de horarios 9959-25-6813
+
+commit 05716fc129133f3a035efecb1f077deb9611c6ae
+Merge: e24eda1 8fac5bc
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 08:54:55 2026 -0600
+
+    Merge pull request #66 from williamcanton2179/ImplementacionModuloPagos
+    
+    Integracion de ModuloPagos 9959-25-8558
+
+commit e24eda1f16d293a2ae122ca8e3a15c669a64b693
+Merge: 9c2fc81 3d2526b
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 13 08:54:33 2026 -0600
+
+    Merge pull request #65 from williamcanton2179/Arreglos-9959-23-1290
+    
+    Arreglos 9959-23-1290
+
+commit e88997d1f689d7d85e1f3c9ce325ff5a161d0a16
+Merge: d1732ec 9c2fc81
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed May 13 08:44:17 2026 -0600
+
+    actualizacion
+
+commit d1732ec8fed29600d9666e38244517c5cf220cc1
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed May 13 08:39:49 2026 -0600
+
+    actualizacion
+
+commit f92ef09b9b9809f8e82e3348ed521ea8e24bd27f
+Author: Katheryn Reyes <kreyesb5@miumg.edu.gt>
+Date:   Wed May 13 08:21:10 2026 -0600
+
+    Arreglando errores de tesoreria
+
+commit b6561cc2e4b950e6b0fc16cf620de77c922ef9db
+Author: 11antony <yllescasantony636@gmail.com>
+Date:   Wed May 13 06:48:23 2026 -0600
+
+    Correccion de horarios
+
+commit 8fac5bc23b30dcd637e1d571ff5213d53170e5af
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Tue May 12 23:21:16 2026 -0600
+
+    Integracion de ModuloPagos
+
+commit 3d2526b766fa66a8cf0166514eefa05a4aab96df
+Author: Josue-Molina <jmolinar8@miumg.edu.gt>
+Date:   Tue May 12 23:20:06 2026 -0600
+
+    Arreglos
+
+commit 9c2fc81c1a2c93cc0b4c482cdaf5b928f8c20ba2
+Merge: 357d268 81e18c0
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:33:37 2026 -0600
+
+    Merge pull request #64 from williamcanton2179/Respaldo_jonathan
+    
+    Archivos de respaldo 1.0
+
+commit 357d2683678948b78b71fae546f866b2f8b0ca6a
+Merge: 0740885 c37e5c4
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:33:22 2026 -0600
+
+    Merge pull request #63 from williamcanton2179/9959-25-6813
+    
+    9959 25 6813
+
+commit c37e5c4ed3c218123b5c9f28c99215c10a7fb15d
+Merge: 1784b6a 0740885
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:33:09 2026 -0600
+
+    Merge branch 'main' into 9959-25-6813
+
+commit 0740885800ffd9d1477e7aa8389d2a615ec9ccd5
+Merge: 98cbb77 dfc1261
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:31:13 2026 -0600
+
+    Merge pull request #61 from williamcanton2179/CRUD-pagos-limpio-v2
+    
+    Crud pagos limpio v2
+
+commit dfc1261491c09fedc9743df104cd9ae0368c0f18
+Merge: 71468b7 98cbb77
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:31:03 2026 -0600
+
+    Merge branch 'main' into CRUD-pagos-limpio-v2
+
+commit 98cbb776da1fdd809725eed005829b170b408c63
+Merge: eefec86 85a3b11
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:30:28 2026 -0600
+
+    Merge pull request #53 from damadop-commits/Recepcion_pagos_modificado_9959_25_2015
+    
+    Modulo de recepcion actualizado
+
+commit 85a3b1138bcd1d4db185a36794300767a0d4c530
+Merge: cf04372 eefec86
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:30:19 2026 -0600
+
+    Merge branch 'main' into Recepcion_pagos_modificado_9959_25_2015
+
+commit eefec8661c09e9ded3928811770ef98300d27166
+Merge: 3f31d0b 4586112
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:29:42 2026 -0600
+
+    Merge pull request #52 from damadop-commits/clase_Constancia_Bancaria_9959-25-8978
+    
+    Clase constancia bancaria 9959 25 8978
+
+commit 45861126736d26d7c2a4556783749b15540755a7
+Merge: c3e129d 3f31d0b
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 12 22:29:31 2026 -0600
+
+    Merge branch 'main' into clase_Constancia_Bancaria_9959-25-8978
+
+commit 69985402e7fe58e31fa7ba05a4990d22ad095b98
+Author: Moises De Leon <mdeleonp25@miumg.edu.gt>
+Date:   Tue May 12 21:43:44 2026 -0600
+
+    modificando funciones pago y transferencia
+
+commit 1784b6ae42b070feed4d21c07d9cb719c1464c40
+Merge: 58200d8 3f31d0b
+Author: williamcanton2179 <williamcanton2179@gmail.com>
+Date:   Mon May 11 23:57:36 2026 -0600
+
+    Merge branch 'main' into 9959-25-6813
+
+commit 58200d81b83165b5338079f4ad0d535f3209af54
+Author: 11antony <11antony@users.noreply.github.com>
+Date:   Mon May 11 23:54:46 2026 -0600
+
+    Sincronizando archivos y restaurando GeneradorConstancias
+
+commit 71468b77ea45838c20d5580931bcf8cfe92463c6
+Merge: 50cc956 3f31d0b
+Author: williamcanton2179 <williamcanton2179@gmail.com>
+Date:   Mon May 11 23:40:48 2026 -0600
+
+    Merge branch 'main' into CRUD-pagos-limpio-v2
+
+commit 50cc9560e16318ef79931332e622b0a8e77708d9
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Mon May 11 23:36:13 2026 -0600
+
+    Sincronizando archivos de configuracion con el main oficial
+
+commit 6a9b4e782576bdf5f98375a3bc69ce88750cac30
+Author: jmolinar8 <jmolinar8@users.noreply.github.com>
+Date:   Mon May 11 23:14:01 2026 -0600
+
+    Limpieza de archivos de configuracion y temporales
+
+commit e259aaa8d9fe6c5a4f173375a2452a1043cf1a1a
+Author: 11antony <yllescasantony636@gmail.com>
+Date:   Mon May 11 22:46:57 2026 -0600
+
+    actualizacion
+
+commit 9aeb0cbda59f7ba0f5238a49d1dffdca385c7a04
+Author: Josue-Molina <jmolinar8@miumg.edu.gt>
+Date:   Mon May 11 21:59:19 2026 -0600
+
+    Implementacion de CRUD completo en validacion de pagos
+
+commit cf04372252c2c17832d7b6cc5ab1b94819cbbc60
+Author: Katheryn Reyes <kreyesb5@miumg.edu.gt>
+Date:   Mon May 11 19:59:36 2026 -0600
+
+    Modulo de recepcion actualizado
+
+commit c3e129d339ed169f3c642bee18999a5d984f06d1
+Merge: d488e2a b8cb3ee
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Mon May 11 19:09:37 2026 -0600
+
+    Merge branch 'clase_Constancia_Bancaria_9959-25-8978' of https://github.com/damadop-commits/Proyectop12k26 into clase_Constancia_Bancaria_9959-25-8978
+
+commit 3f31d0bf7da8be75d8f590b94c90e98baeeab262
+Merge: 2f34af2 8f7643a
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:08:49 2026 -0600
+
+    Merge pull request #51 from David-Alegria/2_mantenimiento_clase_maestros_9959_25_13959
+    
+    2 mantenimiento clase maestros 9959 25 13959
+
+commit 8f7643a4571c0833351c03d589610711a7536d08
+Merge: 8a4a495 2f34af2
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:08:36 2026 -0600
+
+    Merge branch 'main' into 2_mantenimiento_clase_maestros_9959_25_13959
+
+commit d488e2ab0039dd4a79d41bf00266448873cf59fe
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Mon May 11 19:08:00 2026 -0600
+
+    Constancia - 9959-25-8978
+
+commit 2f34af27ec86efd3d1d34b99bc8a6e370849d622
+Merge: 66db5d5 9b76334
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:07:54 2026 -0600
+
+    Merge pull request #50 from David-Alegria/Ultimo_CRUD_cursos_9959_25_288
+    
+    Ultimo crud cursos 9959 25 288
+
+commit 9b76334cdf4b08973941c27bcb328d97fa8bb2ef
+Merge: fb4d6f4 66db5d5
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:07:42 2026 -0600
+
+    Merge branch 'main' into Ultimo_CRUD_cursos_9959_25_288
+
+commit 66db5d509e4b36f46db23657199992e797aac694
+Merge: 162cec7 ad231f4
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:07:07 2026 -0600
+
+    Merge pull request #49 from williamcanton2179/MenuAsignaciones-Crud-9959258558
+    
+    Entrega Fase III: CRUD completo de Asignaciones y limpieza de codigo
+
+commit 162cec78111db1aaed64a0074cd113a089b71a52
+Merge: 904e516 3f9edb6
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:06:52 2026 -0600
+
+    Merge pull request #48 from Javito2007/main
+    
+    Sistema Notas
+
+commit 904e51673e7853462bb87da9bfbdbd1bdaf66dce
+Merge: edd8c63 b8cb3ee
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:06:37 2026 -0600
+
+    Merge pull request #47 from damadop-commits/clase_Constancia_Bancaria_9959-25-8978
+    
+    Clase constancia bancaria 9959 25 8978
+
+commit b8cb3ee29c0018deebb125bb08b0b64602ea26e5
+Merge: 7e701b6 edd8c63
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 19:06:26 2026 -0600
+
+    Merge branch 'main' into clase_Constancia_Bancaria_9959-25-8978
+
+commit 4103949355b0d5c25ec6f04e938de36b6e525afc
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Mon May 11 19:03:30 2026 -0600
+
+    Arreglo de Constancias
+
+commit 8a4a4956ad62c4e2a701a6ce7b89138446a9ec6a
+Author: Abner Muñoz <abnerxmaa@gmail.com>
+Date:   Mon May 11 18:40:29 2026 -0600
+
+    Segundo mantenimiento final clase maestros 9959_25_13959
+
+commit fb4d6f4bd2f332c8bd4008cc44ab47d2e3ae1c35
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Mon May 11 18:33:52 2026 -0600
+
+    Agregando costo curso al CRUD
+
+commit 05c6b7f1861839976d49543a22500700a7467021
+Merge: 1300b60 d843d75
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Mon May 11 18:12:12 2026 -0600
+
+    Segundo Actualizacion
+
+commit 1300b608e60f51ea8dcc8adbe776f38f978ff6bf
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Mon May 11 18:10:22 2026 -0600
+
+    Actualizando
+
+commit d843d75c48aded85b14eb3e9559d04024e43353a
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 18:04:16 2026 -0600
+
+    arreglando cambios
+
+commit 17144d6fcad92ddbbdbf41964e0056d0626c7395
+Author: 11antony <yllescasantony636@gmail.com>
+Date:   Mon May 11 17:14:56 2026 -0600
+
+    actualizacion de horarios
+
+commit ad231f44db786779d59455c837e0b53d028c19c1
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Mon May 11 16:09:23 2026 -0600
+
+    Entrega Fase III: CRUD completo de Asignaciones y limpieza de codigo
+
+commit 81e18c011ada19878414944b9a4537e16b25a84b
+Author: Jonathan Chamalé <chamaledelcidjonathaneladio@gmail.com>
+Date:   Mon May 11 15:04:41 2026 -0600
+
+    Archivos de respaldo 1.0
+
+commit 3f9edb6a5ec3ebf7f23ae2a9a2aec885b62bae95
+Author: JhonnyFlores <Jhonny.fl2006@gmail.com>
+Date:   Mon May 11 11:51:23 2026 -0600
+
+    SistemasdeNotas
+
+commit 681a2b0eeace5d3189fbaadd9e890b00214e2ed0
+Author: JhonnyFlores <Jhonny.fl2006@gmail.com>
+Date:   Mon May 11 10:48:01 2026 -0600
+
+    Actualizacion_De_Porgramas
+
+commit 7e701b6e2daac61aebfee27394b5e29294e4d955
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Mon May 11 10:31:48 2026 -0600
+
+    Arreglo de constancias
+
+commit 3ca61e8928767a9258bca9198c74834e5e9c26d0
+Merge: 2ffbf67 edd8c63
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 09:55:53 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit edd8c63ff411ce5bdb4c3e83cd54323892f65609
+Merge: 395ce4f cbb921a
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 09:54:35 2026 -0600
+
+    Merge pull request #46 from David-Alegria/creacion_menu_inscripcion_9959_23_11277
+    
+    Creacion menu inscripcion 9959 23 11277
+
+commit cbb921a8a0f955018d350a97675fe45909d9487a
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 09:50:25 2026 -0600
+
+    Creacion de menu para Inscripcion
+
+commit c6aeb86a3c9a6f31d68a36d1ae4d5550c488fb21
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Mon May 11 09:32:46 2026 -0600
+
+    Cambio en la rama
+
+commit 2ffbf67bd2d2af0ffb383d67de22d83f29b391b1
+Merge: b5bfc62 395ce4f
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 09:29:16 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 395ce4f37f08eec2755faf56fb6e9b7d85b10415
+Merge: 093f7ad bd6ef99
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 09:27:57 2026 -0600
+
+    Merge pull request #44 from damadop-commits/mantenimiento_claseBancos_9959_25_18795
+    
+    actualizando funciones 9959-25-18795 11/05
+
+commit bd6ef993da4655b1e06b99883f95bcc59c8977d9
+Merge: 34ceffe 093f7ad
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 09:27:43 2026 -0600
+
+    Merge branch 'main' into mantenimiento_claseBancos_9959_25_18795
+
+commit 34ceffe7b3a1aa26e54873e4c637e55729650184
+Author: Moises De Leon <mdeleonp25@miumg.edu.gt>
+Date:   Mon May 11 09:20:13 2026 -0600
+
+    actualizando funciones 9959-25-18795 11/05
+
+commit b5bfc6275dbf30acbbf90489d01f24ccd1419c31
+Merge: fc9cdbe 093f7ad
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 09:14:33 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 093f7ad8f592dea292ebdd61ae0b399c762d4997
+Merge: 1014fbd 1596b22
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 09:13:49 2026 -0600
+
+    Merge pull request #43 from damadop-commits/recepcion_de_pagos_9959_25_3251_y_9959_25_2015
+    
+    Actualizacion de Modulo
+
+commit 1596b22de0e998c23de0e7290dd13eab5b45f7f8
+Merge: 05e4c4c 1014fbd
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 09:13:37 2026 -0600
+
+    Merge branch 'main' into recepcion_de_pagos_9959_25_3251_y_9959_25_2015
+
+commit 1014fbde1e78d62da779832f4a0882df27662d83
+Merge: 96e12a6 aafeebc
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 09:12:37 2026 -0600
+
+    Merge pull request #42 from williamcanton2179/validacionpagos-9959-23-1290
+    
+    clase validacionpagos y su menu- 9959-23-1290
+
+commit 05e4c4c53976e01bc2bf988d3af4ab921f0c40b7
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Mon May 11 09:07:53 2026 -0600
+
+    Actualizacion de Modulo
+
+commit fc9cdbedb9d71347ca48222c4dd762f7ec0580e6
+Merge: c334a16 96e12a6
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 09:03:29 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit aafeebcffd978eda6c8a430b5d3a0c234186fc86
+Author: Josue-Molina <jmolinar8@miumg.edu.gt>
+Date:   Mon May 11 09:02:53 2026 -0600
+
+    clase validacionpagos y su menu
+
+commit 96e12a6c30c1af9c4b5c29bf16784d9bfed7be0b
+Merge: f81d6ee 0dd8ccd
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 09:02:10 2026 -0600
+
+    Merge pull request #41 from David-Alegria/corrigiendo_errores_clase_carrera_9959_23_11277
+    
+    Corrigiendo errores clase carrera 9959 23 11277
+
+commit c334a163be85c2fa392392e0a159215feb0ac3e1
+Merge: 2fe497f f81d6ee
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 09:01:02 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 0dd8ccdcadb23c0d301986d6438b10220486a669
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 08:58:37 2026 -0600
+
+    Correcion de errores en clase carrera
+
+commit f81d6ee117c3e1e3f67bc87a7a7ebfd8afc125ec
+Merge: a0e1473 658d8e1
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 11 08:52:22 2026 -0600
+
+    Merge pull request #40 from williamcanton2179/9959-25-6813
+    
+    horarios acualizacion de 9959-25-6813
+
+commit 2fe497f523b9a24d603bff543da6bb8c3d448a43
+Merge: 5a83e3a a0e1473
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon May 11 08:33:59 2026 -0600
+
+    correcion de errores
+
+commit a0e147324c7544890fb42d70478972bd17848a4f
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Sun May 10 23:03:53 2026 -0600
+
+    agregando menuregistro y menuasignaciones
+
+commit 1a828dc47f25f23b08a75203042e291fbbae4a01
+Merge: 8f8f584 d48b545
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 21:59:53 2026 -0600
+
+    Merge pull request #38 from David-Alegria/finalizando_mantenimineto_cursos_9959_25_288
+    
+    Finalizando clase cursos y subiendo archivo cursos
+
+commit d48b545bd6d18e2548ec37f26406f2e8a27070c4
+Merge: f0a12f5 8f8f584
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 21:59:45 2026 -0600
+
+    Merge branch 'main' into finalizando_mantenimineto_cursos_9959_25_288
+
+commit 8f8f584ec7dcdb40ec29d389d91c88fc5f4202b8
+Merge: f69d29d 98e7e63
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 21:59:13 2026 -0600
+
+    Merge pull request #37 from David-Alegria/Creacion_CRUD_clase_carrera_9959_23_11277
+    
+    Creacion crud clase carrera 9959 23 11277
+
+commit f69d29d41ff133dd6be24bc85a762b01e460faf2
+Merge: 2f44727 c1d83fc
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 21:58:58 2026 -0600
+
+    Merge pull request #36 from David-Alegria/creando_clase_menu_registro_9959_25_288
+    
+    Subiendo menu principal registro
+
+commit 658d8e142e25e79bd6a09082b9f63e32eba335b6
+Author: 11antony <yllescasantony636@gmail.com>
+Date:   Sun May 10 21:06:57 2026 -0600
+
+    horarios
+
+commit 5a83e3ac1bd9449fc7a381ed33036988796177ef
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Sun May 10 20:47:29 2026 -0600
+
+    actualizacion 2
+
+commit f0a12f58d0e63f7013203e645a63a59e982e6074
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Sun May 10 20:37:42 2026 -0600
+
+    Finalizando clase cursos y subiendo archivo cursos
+
+commit 98e7e63998e204d338e37e98551c1d00a8073c07
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Sun May 10 15:25:13 2026 -0600
+
+    Creacion de CRUD para clase carrera
+
+commit 173d4d4700fb439a3a40c83e4b95bd83b906616a
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Sun May 10 14:30:08 2026 -0600
+
+    correcion de errores
+
+commit 84ddbc11afcd63c7b5d32559b04586ddbd8d3c1d
+Merge: f66695d 2f44727
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Sun May 10 14:26:15 2026 -0600
+
+    correcion de errores
+    q
+
+commit c1d83fce7484122a63507f7e6ed459b4a33ec127
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Sun May 10 14:07:34 2026 -0600
+
+    Subiendo menu principal registro
+
+commit f66695d4ad7ccd374c59342f8ac8856f68ca8d8b
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Sun May 10 13:06:16 2026 -0600
+
+    actualizar
+
+commit 212df3fb487feebab812a18bda72116f7d151835
+Author: Moises De Leon <mdeleonp25@miumg.edu.gt>
+Date:   Sun May 10 12:16:54 2026 -0600
+
+    modificacion bancos 10/05
+
+commit 2f44727c05ef29fd2e24021bf2547cb5e2df3c3f
+Merge: b3eaba0 c67d5f6
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:23:31 2026 -0600
+
+    Merge pull request #34 from williamcanton2179/feature/modulo-asignaciones
+    
+    Modulo de asignaciones terminado-9959-25-8558-William
+
+commit b3eaba085e9bed94b02ebcfd5db2b041de36254e
+Merge: 7c71793 61c8054
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:23:12 2026 -0600
+
+    Merge pull request #33 from damadop-commits/clase_Constancia_Bancaria_9959-25-8978
+    
+    Clase constancia bancaria 9959 25 8978
+
+commit 61c8054b98b7df9e2af460764ae698171dfa99ac
+Merge: e09f0dd 7c71793
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:20:14 2026 -0600
+
+    Merge branch 'main' into clase_Constancia_Bancaria_9959-25-8978
+
+commit 7c71793c43f9a679dd2e1baeba707ec57b8cd7e2
+Merge: c051a77 3c062cb
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:19:02 2026 -0600
+
+    Merge pull request #32 from David-Alegria/modificacion_clase_alumnos_9959_25_288
+    
+    Modifique el codigo y subi un archivo alumnos
+
+commit 3c062cb15b353fe340db45bd9e62ebae5b135844
+Merge: dbf7c77 c051a77
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:18:52 2026 -0600
+
+    Merge branch 'main' into modificacion_clase_alumnos_9959_25_288
+
+commit c051a775a500ba12f27119e48105ba5954f3c7be
+Merge: 6c668a1 1f00c36
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:18:03 2026 -0600
+
+    Merge pull request #31 from David-Alegria/1_mantenimiento_final_clase_maestros_9959_25_13959
+    
+    arreglos en clase maestros 9959-25-13959
+
+commit 1f00c36e721316f0f3ee6e657662ec3a5429fa3a
+Merge: 65e7bfa 6c668a1
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:17:53 2026 -0600
+
+    Merge branch 'main' into 1_mantenimiento_final_clase_maestros_9959_25_13959
+
+commit 6c668a12fe04873fb197e7e23c4f8b912bd223f7
+Merge: 88584b2 e9cc91d
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Sun May 10 10:17:15 2026 -0600
+
+    Merge pull request #30 from damadop-commits/recepcion_de_pagos_9959_25_3251_y_9959_25_2015
+    
+    Recepcion de pagos 9959 25 3251 y 9959 25 2015
+
+commit c67d5f6fc637e20a01e394d1e07b4cfd58d0130f
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Fri May 8 19:41:55 2026 -0600
+
+    Modulo de asignaciones terminado con cursos asignados en Asignaciones.txt
+
+commit dbf7c7737928a6143a594a2a47c1a5de12cf1856
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Thu May 7 22:08:24 2026 -0600
+
+    Modifique el codigo y subi un archivo alumnos
+
+commit e09f0dd567b2e50b5cc30fbd200027b6a8f1cdf2
+Merge: 3a65e89 42521b7
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Thu May 7 22:01:27 2026 -0600
+
+    Axel Andrino: Constancias Bancarias
+
+commit 3a65e892c20cc5d2b155b6bd6e6c42bf4d14eeaf
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Thu May 7 19:42:06 2026 -0600
+
+    Axel Andrino: Constancias Bancarias
+
+commit 65e7bfabfd65f35a5f6fe87f7d0d2311b0cff32d
+Author: Abner Muñoz <abnerxmaa@gmail.com>
+Date:   Thu May 7 18:20:30 2026 -0600
+
+    arreglos en clase maestros 9959-25-13959
+
+commit e9cc91de5687eb61ca8c851537bd14ef5a0265c6
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Thu May 7 17:18:21 2026 -0600
+
+    Subiendo Clase Menu Tesoreria
+
+commit 42521b77e505a5861fd69c080f5788c9f4c97a17
+Merge: ded4d10 88584b2
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Thu May 7 14:55:38 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 88584b26b5364aa3d35fdd0ffd64f654bc52734e
+Merge: 38feb82 664a195
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 05:01:01 2026 -0600
+
+    Merge pull request #29 from David-Alegria/mantenimiento_final_maestros_9959_25_13959
+    
+    Mantenimiento final clase maestros 9959-25-13959
+
+commit 664a195084fa2b9d92d4f4920e67a2f7fb51b385
+Merge: 6ad6b55 38feb82
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 05:00:50 2026 -0600
+
+    Merge branch 'main' into mantenimiento_final_maestros_9959_25_13959
+
+commit 38feb82c8778d3d76d9124648e1800722e3fefff
+Merge: 33eaaf8 283d8fd
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 05:00:06 2026 -0600
+
+    Merge pull request #28 from David-Alegria/mantenimiento_final_clase_alumnos_9959_25_288
+    
+    Subiendo mantenimiento final
+
+commit 283d8fde0db32e86c2ca7c7786ab70c57d146d6f
+Merge: 40913e0 33eaaf8
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 04:59:52 2026 -0600
+
+    Merge branch 'main' into mantenimiento_final_clase_alumnos_9959_25_288
+
+commit 33eaaf82eff424464e5183eb945e189c8c83541f
+Merge: 896dc73 789c671
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 04:59:01 2026 -0600
+
+    Merge pull request #27 from David-Alegria/CRUD_Inscripcion_9959_23_11277
+    
+    Mantenimiento final Clase_inscrip
+
+commit 789c67130bf7e42c52470b5e24bfe463175c1d3f
+Merge: 65eb626 896dc73
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 04:58:51 2026 -0600
+
+    Merge branch 'main' into CRUD_Inscripcion_9959_23_11277
+
+commit 896dc73d9fd073cee85cee6a259ca1adc53909ab
+Merge: da5eb7a f3d5c68
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 04:55:02 2026 -0600
+
+    Merge pull request #25 from damadop-commits/recepcion_de_pagos_9959_25_3251_y_9959_25_2015
+    
+    Recepcion de pagos 9959 25 3251 y 9959 25 2015
+
+commit da5eb7a3cfaa8e5659c16832cbdd605056233c6b
+Merge: 9953de3 da6d7dd
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Thu May 7 04:54:49 2026 -0600
+
+    Merge pull request #24 from williamcanton2179/antonyyllescas-9959-25-68132
+    
+    Antonyyllescas 9959 25 68132
+
+commit 6ad6b55571db5993fa304999d944f2b2664fa5ab
+Author: Abner Muñoz <abnerxmaa@gmail.com>
+Date:   Wed May 6 22:01:44 2026 -0600
+
+    Mantenimiento final clase maestros 9959-25-13959
+
+commit f3d5c6896fbe2a20cc3512d2f4380316144c1286
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 21:46:59 2026 -0600
+
+    Agregando menu y Generador de Constancias(GC hecho por Axel Fenando)
+
+commit 65eb6266390cb9161b8faa1e3bb4469f94764a32
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed May 6 21:35:20 2026 -0600
+
+    Mantenimiento final Clase_inscrip
+
+commit 40913e0feba109d647f6853269674d2e8d93e0cc
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Wed May 6 21:32:26 2026 -0600
+
+    Subiendo mantenimiento final
+
+commit 3fe4985a4a6098c0b4aec276af4dae749708180a
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 18:36:16 2026 -0600
+
+    Guardando localmente Cambios
+
+commit ded4d10a944c6898edee0cfa564d46854f0fc190
+Merge: 754b41e 9953de3
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 10:34:27 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 754b41e56b61e4acfbfebf1f1ea23c54b9e656da
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 10:31:24 2026 -0600
+
+    Actualizando Clase Bancos sin Errores
+
+commit 9953de3056796491c8a552216be5298addb5d45f
+Merge: 0f62e23 9780121
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 6 10:00:25 2026 -0600
+
+    Merge pull request #22 from williamcanton2179/MenuAsignaciones-9959258558-WilliamCanton
+    
+    Entrega: Añadiendo clase MenuAsignaciones
+
+commit 978012125f47548efb8530986e2794b4b34fdf5c
+Author: williamcanton2179 <williamcanton2179@gmail.com>
+Date:   Wed May 6 09:51:38 2026 -0600
+
+    Entrega: Añadiendo clase MenuAsignaciones
+
+commit da6d7ddd0aa64947c04f04115210e8b957e6ad0a
+Author: 11antony <yllescasantony636@gmail.com>
+Date:   Wed May 6 09:42:50 2026 -0600
+
+    actualizacion
+
+commit de6eda4458a28f3e623e8b62a312dbaa14c50121
+Author: 11antony <yllescasantony636@gmail.com>
+Date:   Wed May 6 09:28:45 2026 -0600
+
+    antony marcelo yllescas acualizo
+
+commit 9b59ba3845d8f6784784a1da0715e61d43114a85
+Merge: 3e6ad19 0f62e23
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 09:10:54 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 0f62e23d2ff33b9e0e4cc07d108ee6a86d89871d
+Merge: 4324c3e 2c5a7e0
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 6 09:09:31 2026 -0600
+
+    Merge pull request #20 from damadop-commits/patch-2
+    
+    Implement account creation and saving functionality
+
+commit 2c5a7e0d31fc2d24c948df5ceb9713c02449fd5b
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 09:08:03 2026 -0600
+
+    Implement account creation and saving functionality
+
+commit 3e6ad19317979fe9ec989eb62494fc611429345d
+Merge: 5ccf03c 4324c3e
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 08:47:04 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 4324c3e6fb996c75bbc829270ec49da87074256b
+Merge: 2884d21 7cdef05
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed May 6 08:43:14 2026 -0600
+
+    Merge pull request #18 from damadop-commits/patch-1
+    
+    Delete Bancos directory
+
+commit 7cdef05bd25532d31d140770abb618f91532432c
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed May 6 08:41:05 2026 -0600
+
+    Delete Bancos directory
+
+commit 2884d21175e414fd251d4e31eb4c0dce5e654bf3
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Wed May 6 00:05:10 2026 -0600
+
+    Se agregan clases de usuarios bitacora y se corrige bancos
+
+commit 3d00d92812af571873c033b8cc5ea64ef8997eb9
+Merge: bd0d0fc 0a3d37b
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Tue May 5 21:30:32 2026 -0600
+
+    Merge pull request #15 from williamcanton2179/feature/actualizacion-asignaciones-9959258558
+    
+    Feature/actualizacion asignaciones 9959258558
+
+commit 0a3d37b600d8767061f17b5eae20f1ad51007803
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Tue May 5 13:56:39 2026 -0600
+
+    Implementar lógica de asignación de cursos y exportación a TXT William Canton 9959258558
+
+commit b0ce163eda2a546dd5a3d21d4641addbb350817b
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Tue May 5 13:54:41 2026 -0600
+
+    Eliminar archivo de configuración local del layout
+
+commit 5ccf03c61239a289059e03c670c57d493508e0d2
+Merge: 159e0f5 bd0d0fc
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Mon May 4 10:43:51 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit bd0d0fc75b9d9edf7ac7a830595d60e99566d5cd
+Merge: 7853380 0844b6f
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 4 10:04:08 2026 -0600
+
+    Merge pull request #14 from williamcanton2179/asignaciones-William-9959-25-8558
+    
+    Integración módulo Asignaciones - William 9959-25-8558
+
+commit 7853380a5cc7e4a8275b2ef0115cddf416389943
+Merge: cf9d7e4 58300dd
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 4 10:01:45 2026 -0600
+
+    Merge pull request #13 from damadop-commits/recepcion_de_pagos_9959_25_3251_y_9959_25_2015
+    
+    Recepción de pagos 9959 25 3251 y 9959 25 2015
+
+commit cf9d7e4ace60ac986e0b4ac6ca7b710df4ef110d
+Merge: 4c2bd51 88577f0
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 4 10:01:16 2026 -0600
+
+    Merge pull request #11 from David-Alegria/segundo_mantenimiento_clase_cursos_9959_25_288
+    
+    Segundo mantenimiento clase cursos 9959 25 288
+
+commit 4c2bd51ac36ed6f3066fe3e4fafcf3ff1a4163ae
+Merge: 7fa0d81 07f43c0
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 4 10:00:32 2026 -0600
+
+    Merge pull request #10 from David-Alegria/mantenimiento-clase_carrera_9959-23-11277
+    
+    Mantenimiento clase carrera 9959 23 11277
+
+commit 7fa0d813c827868866bf4531811e4d1fd1c9d092
+Merge: 681f0b3 15c7f7d
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 4 10:00:03 2026 -0600
+
+    Merge pull request #9 from David-Alegria/creacion_clase_maestros_9959_25_13959
+    
+    creacion clase maestros
+
+commit 159e0f58938ad0a120de26229dd4525606616d46
+Merge: dea413c 681f0b3
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Mon May 4 09:59:25 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 681f0b3aba87f870e4e29a50909c3a219065e5e1
+Merge: 76c5a18 10e4fd1
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 4 09:58:50 2026 -0600
+
+    Merge pull request #8 from damadop-commits/creando_clase_bancos_9959_25_18795
+    
+    Creando clase bancos 9959 25 18795
+
+commit 58300dde98c0f654619c6a5092337953f22923a7
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Fri May 1 19:48:37 2026 -0600
+
+    Modulo Recepcion de Pagos + main provisional
+
+commit 0844b6f816c948d4374354a46b554eb642f73c2d
+Author: William Canton <williamcanton2179@gmail.com>
+Date:   Thu Apr 30 22:32:52 2026 -0600
+
+    Integración módulo Asignaciones - William 9959-25-8558
+
+commit 88577f01954e8d990f5d125ba565d6c94a7f1aa6
+Merge: 73327cd 3148f47
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 22:12:53 2026 -0600
+
+    resolviendo conflictos
+
+commit 73327cdc1b61daf927cf63dbb72c4e909341c232
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 22:05:44 2026 -0600
+
+    actualizacion
+
+commit 32980b9c20dbb484aa1bdab42a605074453e6edc
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Thu Apr 30 21:34:18 2026 -0600
+
+    Agrege un vector para almacenar el catalago de cursos de ing en sistemas y el nombre de quien lo creo
+
+commit 07f43c05e599122f30811fe228c1ef5d0f7bc94d
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 21:12:05 2026 -0600
+
+    cambio carrera
+
+commit 3148f475dd3958f9bd0ebca4ab579327aea07f58
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 20:59:34 2026 -0600
+
+    guardando cambios
+
+commit 82e87b7d9f6caf0ffc707bcc2308e360589dd335
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 20:47:44 2026 -0600
+
+    actualizacion
+
+commit a74fe3561585e03ad053799ebc44f6db8e0bb509
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 20:31:06 2026 -0600
+
+    mantenimieto clase carrera 9959-231-11277
+
+commit 8c50482e0806edff667b9df1b2f5e8f69e05c9a0
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 20:15:22 2026 -0600
+
+    mantenimiento clase carrera
+
+commit 3483837d55acfdc5478fc36184d420d9f4db6f8f
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Thu Apr 30 20:03:59 2026 -0600
+
+    actualizacion
+
+commit 41eac16db6ed016d2e2cc004f6d6817a8c88c2c3
+Author: Fernando Andrino <aandrinog@miumg.edu.gt>
+Date:   Thu Apr 30 17:39:11 2026 -0600
+
+    Agrego la clase GeneradorConstancias
+
+commit 2cd5ff47ae5835ef7dd8e6299b4c33a43b0608eb
+Merge: 8a454fb 15c7f7d
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 16:21:52 2026 -0600
+
+    actualizacion
+
+commit 15c7f7d8fe177601cc8749579d87492e7881fe63
+Merge: 8230856 7473562
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 16:20:02 2026 -0600
+
+    actualizacion
+
+commit 10e4fd14a5bd9cf07481ad48b93d4a50be352567
+Merge: 28d85bd 76c5a18
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed Apr 29 16:18:18 2026 -0600
+
+    Merge branch 'edelaguila:main' into creando_clase_bancos_9959_25_18795
+
+commit 28d85bd6350d6d7f67928ea7379fe409ea00794c
+Author: Moises De Leon <mdeleonp25@miumg.edu.gt>
+Date:   Wed Apr 29 16:08:49 2026 -0600
+
+    clase bancos
+
+commit 8a454fb74b7cfe70b41a11cc39bda567714df613
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 16:07:41 2026 -0600
+
+    actualizar
+
+commit b44ec2f62762f27b944525c10d346ca6dbb472d5
+Merge: 5598d02 8230856
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 16:01:54 2026 -0600
+
+    actualizar
+
+commit 5598d02a3597ddd7922400eb71dd22ce77b1626b
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 15:59:40 2026 -0600
+
+    actualizacion
+
+commit dea413c0051c381101cea6076d4a3212218a446f
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed Apr 29 15:29:35 2026 -0600
+
+    Subiendo Rama Bancos Correcta (coordinador)
+
+commit ddac936502226aec0e3a3083dc6b5df051cc98ae
+Merge: 733969a 76c5a18
+Author: damadop-commits <damadop@miumg.edu.gt>
+Date:   Wed Apr 29 10:27:10 2026 -0600
+
+    Merge branch 'edelaguila:main' into main
+
+commit 733969a0ce223d43afdb077a8dd3b3d587ca2dfc
+Author: Moises De Leon <mdeleonp25@miumg.edu.gt>
+Date:   Wed Apr 29 10:13:07 2026 -0600
+
+    clase bancos
+
+commit 76c5a18f9b00dac05c6d88c5cb7774b7dfe0477d
+Merge: 6324d82 7473562
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed Apr 29 10:05:01 2026 -0600
+
+    Merge pull request #6 from David-Alegria/main
+    
+    clase carrera
+
+commit 6324d828a8311d490e5b188d03214c8a3027be98
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed Apr 29 10:03:04 2026 -0600
+
+    Update .gitignore
+
+commit 8d062e1913f062234c19ffd93dc7100c85033f05
+Merge: a140622 7aedc53
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Wed Apr 29 09:57:52 2026 -0600
+
+    actualizando 2
+
+commit 7473562ae857bf6fec7365756925e443aa486f80
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 09:57:04 2026 -0600
+
+    Actualizacion
+
+commit a1406229f7758118a7378eb5c53f29b2f03017ca
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Wed Apr 29 09:55:16 2026 -0600
+
+    Actualizando
+
+commit b30f67340bd4765b20511556dffc6844a7ed3720
+Merge: c4c2034 492d6cb
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 09:44:14 2026 -0600
+
+    actualizacion
+
+commit 492d6cb0dc9c6627bf277690efc27eaebadb2b3a
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 09:42:30 2026 -0600
+
+    actualizar
+
+commit c4c203446e57582b65f599a84ca9cd70186e7395
+Merge: a6b731e 5ddd269
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 09:34:52 2026 -0600
+
+    Actualizar proyecto 2
+
+commit a6b731e6f92bc5bb8a3ba483e5ed28e50a6aa8d7
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Wed Apr 29 09:33:04 2026 -0600
+
+    actualizar proyecto
+
+commit 65d7de00629a775baea78f3fda085dfa71b2b6f8
+Merge: 86926fb 7aedc53
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Wed Apr 29 09:18:13 2026 -0600
+
+    Merge pull request #3 from David-Alegria/main
+    
+    Clase facultades
+
+commit 5ddd2696a54ed0bfa1191b33123926160a9f3ce8
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Wed Apr 29 09:16:41 2026 -0600
+
+    en el año, tenia colocado mes lo cambie a año
+
+commit 8230856741a9c041228180e146fc7d7bfccdf900
+Author: Abner Muñoz <abnerxmaa@gmail.com>
+Date:   Tue Apr 28 23:01:47 2026 -0600
+
+    creacion clase maestros
+
+commit ad7289ceb6d0f64ea08ae1b067d0eeb58ed1ed7f
+Merge: ade13a7 2c7de67
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Tue Apr 28 20:57:10 2026 -0600
+
+    Clase
+
+commit ade13a732218dc3d5822b992815d0458334e3076
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Tue Apr 28 20:54:57 2026 -0600
+
+    Subiendo clase
+
+commit 2c7de67c6c313837300469278fb23eb2394983b4
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Tue Apr 28 20:35:25 2026 -0600
+
+    Creando la clase alumnos con sus datos respectivos compila sin errores
+
+commit aebeef8b97f614a78ff2312d31002a144035559b
+Merge: 7aedc53 2238ba6
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 17:39:41 2026 -0600
+
+    Arreglo de datos
+
+commit 7aedc537b6a9e26bca804ea167a026ba36d93c43
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 17:36:39 2026 -0600
+
+    Guardando cambios
+
+commit 2238ba61b70a4ccaa6861096b1d4d49f8725ff77
+Merge: 80080ed 90628f3
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 17:12:14 2026 -0600
+
+    Resolviendo conflictos
+
+commit 80080ed0e979ffc9ceb5c0c671aace341183688e
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 17:02:34 2026 -0600
+
+    Agregando cmabios a carrera
+
+commit 396717ed394797863b1e04f80fd3e635208b4c59
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 16:46:41 2026 -0600
+
+    Subida de clase carrera
+
+commit 90628f361990b58d082b5ef4e1c74761123ffd67
+Merge: 84c16db 25a0511
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 10:04:12 2026 -0600
+
+    Subida de clase facultades
+
+commit 86926fb4d467264c931276de04c82100259d1abd
+Merge: ed7362d 84c16db
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon Apr 27 09:55:11 2026 -0600
+
+    Merge pull request #2 from David-Alegria/main
+    
+    Clase cursos
+
+commit 84c16dbbc3d8d5f224e10c7ad6e57472cdfd4918
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 09:51:45 2026 -0600
+
+    Subida de Clase cursos con get y set
+
+commit 7af263b31c25ec4c34008970c037f4ff5661bb84
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Mon Apr 27 09:37:40 2026 -0600
+
+    Clase carrea
+
+commit 8fc12b9aef37e5d6c6450b52ac02b10bf4167d7c
+Author: David Alegria <dalegriac@miumg.edu.gt>
+Date:   Sat Apr 25 22:43:56 2026 -0600
+
+    Subida de clase carrera_9959-23-11277
+
+commit 25a05118df0520f93fe5c3798fd2548c7ff9709c
+Author: Abner Muñoz <abnerxmaa@gmail.com>
+Date:   Sat Apr 25 20:45:51 2026 -0600
+
+    Calse facultad 9959-25-13959
+
+commit 917e6af58d0837013d0d21ab71ca712c436707fd
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Thu Apr 23 21:02:44 2026 -0600
+
+    Corrigiendo errores en los set y get de la clase, compila sin errores
+
+commit ee884fe7f938da9de3b5777c03afb8e3c6eb4867
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Wed Apr 22 17:55:36 2026 -0600
+
+    Agregando set y get a la clase cursos
+
+commit ddcb0a16dae6cb1b5402022602e49dcc124d973c
+Author: jcastillov17-byte <jcastillov17@miumg.edu.gt>
+Date:   Wed Apr 22 09:58:06 2026 -0600
+
+    Creando Clase Cursos
+
+commit 9d2a8609e9f1e5725c2774c81261147344360d0b
+Merge: e6055f5 ed7362d
+Author: Abner Muñoz <abnerxmaa@gmail.com>
+Date:   Wed Apr 22 09:35:34 2026 -0600
+
+    Creacion de clase facultades
+
+commit ed7362dcc30f218cde719581ecbe24cb8f3785e3
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Wed Apr 22 05:21:06 2026 -0600
+
+    inicio proyecto final
+
+commit e6055f5779a1489a6560a0b53f451146a845f807
+Author: Abner Muñoz <abnerxmaa@gmail.com>
+Date:   Mon Apr 20 09:44:50 2026 -0600
+
+    Agregando clase Maestro
+
+commit 5324b56018bbf5948abd297fdb579ddfb53a318f
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon Apr 20 08:45:48 2026 -0600
+
+    Initial commit

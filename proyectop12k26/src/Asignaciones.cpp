@@ -38,70 +38,85 @@ void Asignacion::eliminarAsignacion() {
     string carnetBuscar;
     cout << "Ingrese carnet a eliminar: ";
     cin >> carnetBuscar;
+
     ifstream archivoEntrada("Asignaciones.txt");
     ofstream archivoTemporal("temp.txt");
     string linea;
-    bool saltar = false;
+    bool saltarBloque = false;
+    bool encontrado = false;
+    string ID = "ID:" + carnetBuscar;
+
     if (!archivoEntrada.is_open()) return;
+
     while (getline(archivoEntrada, linea)) {
-        if (linea.find("CARNET: " + carnetBuscar) != string::npos) {
-            saltar = true;
+        if (linea.find(ID) != string::npos) {
+            saltarBloque = true;
+            encontrado = true;
             continue;
         }
-        if (saltar) {
-            if (linea.find("==========") != string::npos) saltar = false;
+
+        if (saltarBloque) {
+            if (linea.find("==========================================================") != string::npos) {
+                saltarBloque = false;
+            }
             continue;
         }
-        archivoTemporal << linea << endl;
+
+        if (!linea.empty() && linea != "\r") {
+            archivoTemporal << linea << endl;
+        }
     }
+
     archivoEntrada.close();
     archivoTemporal.close();
+
     remove("Asignaciones.txt");
     rename("temp.txt", "Asignaciones.txt");
-    cout << ">>> Operacion realizada." << endl;
-}
 
-void Asignacion::editarAsignacion() {
-    eliminarAsignacion();
-    cout << "Re-ingrese los datos correctos:" << endl;
-
+    if (encontrado) {
+        cout << "   [+] Asignacion de carnet " << carnetBuscar << " eliminada con exito." << endl;
+    } else {
+        cout << "   [!] No se encontro el registro." << endl;
+    }
 }
 
 void Asignacion::menuAsignacion() {
     int opcionSub;
+    Cursos cursoObj;
+    vector<Cursos> catalogo = cursoObj.catalagoCursosIngSistemas();
+
     do {
-        cout << "\n--- SUB-MODULO ASIGNACIONES (CRUD) ---" << endl;
-        cout << "1. Crear Nueva Asignacion" << endl;
-        cout << "2. Ver Listado" << endl;
-        cout << "3. Editar (Eliminar y Re-crear)" << endl;
-        cout << "4. Eliminar Registro" << endl;
-        cout << "5. Regresar al Menu de Modulos" << endl;
-        cout << "Opcion: ";
+        cout << "\n   --- SUBMENU ASIGNACIONES ---" << endl;
+        cout << "   1. Realizar Asignacion" << endl;
+        cout << "   2. Ver Asignaciones" << endl;
+        cout << "   4. Eliminar Asignacion" << endl;
+        cout << "   5. Regresar" << endl;
+        cout << "   Opcion: ";
         cin >> opcionSub;
 
-        if (opcionSub == 1 || (opcionSub == 3)) {
-            if (opcionSub == 3) eliminarAsignacion();
-
-            string carnet, codCurso;
-            int cantidad;
-            Cursos objCursos;
-            vector<Cursos> catalogo = objCursos.catalagoCursosIngSistemas();
-
-            cout << "Ingrese carnet: ";
+        if (opcionSub == 1) {
+            string carnet;
+            cout << "   Ingrese carnet del alumno: ";
             cin >> carnet;
-
             if (validarCarnetEnArchivo(carnet)) {
-                cout << "\n==========================================================" << endl;
-                cout << "           CURSOS DISPONIBLES (PRIMER CICLO)              " << endl;
-                cout << "==========================================================" << endl;
-                for (size_t i = 0; i < 5; i++) {
-                    cout << left << setw(10) << catalogo[i].getcodigoCurso() << " | " << catalogo[i].getnombreCurso() << endl;
+
+                cout << "\n   --- CURSOS DISPONIBLES (PRIMER CICLO) ---" << endl;
+                cout << left << setw(10) << "CODIGO" << " | " << setw(35) << "NOMBRE DEL CURSO" << " | " << "COSTO" << endl;
+                cout << "   --------------------------------------------------------------" << endl;
+
+                for (int i = 0; i < 5 && i < (int)catalogo.size(); i++) {
+                    cout << "   " << left << setw(7) << catalogo[i].getcodigoCurso()
+                         << " | " << setw(35) << catalogo[i].getnombreCurso()
+                         << " | Q" << fixed << setprecision(2) << catalogo[i].getcostoCurso() << endl;
                 }
-                cout << "   ¿Cuantos cursos desea asignarse?: ";
-                cin >> cantidad;
-                cursosAsignados.clear();
-                for(int i = 0; i < cantidad; i++) {
-                    cout << "   (" << i+1 << "/" << cantidad << ") Ingrese codigo: ";
+
+                int numCursos;
+                cout << "\n   Cuantos cursos desea asignar? ";
+                cin >> numCursos;
+                vector<string> cursosAsignados;
+                for (int i = 0; i < numCursos; i++) {
+                    string codCurso;
+                    cout << "   Codigo curso " << i+1 << ": ";
                     cin >> codCurso;
                     bool encontrado = false;
                     for (auto& curso : catalogo) {
@@ -113,20 +128,29 @@ void Asignacion::menuAsignacion() {
                     }
                     if (!encontrado) { cout << "   [!] Codigo no existe." << endl; i--; }
                 }
+
                 ofstream archivoSalida("Asignaciones.txt", ios::app);
                 if (archivoSalida.is_open()) {
-                    archivoSalida << "\n==========================================================\n";
+                    archivoSalida << "ID:" << carnet << "\n";
                     archivoSalida << "REGISTRO DE ASIGNACION - CARNET: " << carnet << "\n";
                     archivoSalida << "----------------------------------------------------------\n";
+
                     for (const string& nombreC : cursosAsignados) {
                         for(auto& c : catalogo) {
-                            if(c.getnombreCurso() == nombreC)
-                                archivoSalida << left << setw(15) << c.getcodigoCurso() << " | " << nombreC << "\n";
+                            if(c.getnombreCurso() == nombreC) {
+                                archivoSalida << left << setw(10) << c.getcodigoCurso()
+                                              << " | " << setw(35) << nombreC
+                                              << " | Q" << fixed << setprecision(2) << c.getcostoCurso() << "\n";
+                            }
                         }
                     }
+
                     archivoSalida << "==========================================================\n";
                     archivoSalida.close();
+                    cout << "   [+] Asignacion guardada con exito." << endl;
                 }
+            } else {
+                cout << "   [!] Carnet no encontrado en Alumnos.txt" << endl;
             }
         } else if (opcionSub == 2) {
             mostrarAsignaciones();

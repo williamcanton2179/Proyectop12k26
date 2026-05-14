@@ -64,6 +64,7 @@
 		<Unit filename="src/Cursos.cpp" />
 		<Unit filename="src/GeneradorConstancias.cpp" />
 		<Unit filename="src/MenuAsignaciones.cpp" />
+		<Unit filename="src/ModuloPagos.cpp" />
 		<Unit filename="src/Recepcion.cpp" />
 		<Unit filename="src/RegistrarNotas.cpp" />
 		<Unit filename="src/Tesoreria.cpp" />

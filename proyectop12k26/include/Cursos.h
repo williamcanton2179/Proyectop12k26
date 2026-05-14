@@ -5,11 +5,12 @@
 #include <string>
 #include <vector>
 
+//Clase cursos
 class Cursos
 {
     public:
         Cursos();
-        Cursos(std::string nombreCurso, std::string codigoCurso, std::string preRequisitoDeCurso, bool estadoCurso);
+        Cursos(std::string nombreCurso, std::string codigoCurso, std::string preRequisitoDeCurso, double costoCurso, bool estadoCurso);
         //Getters
         std::string getnombreCurso();
         std::string getpreRequisitoDeCurso();
