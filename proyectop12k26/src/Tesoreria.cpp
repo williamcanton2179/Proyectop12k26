@@ -91,17 +91,12 @@ void Tesoreria::menu()
                 break;
             }
 
-           case 3:
+     case 3:
 {
-    system("cls");
-    cout << "===== GENERADOR DE CONSTANCIAS =====" << endl;
-
-    constancia.insertar();
-
-    system("pause");
+    constancia.menu();
+    // No necesita system("pause") aqui porque tu menu() ya los tiene adentro
     break;
 }
-
             case 4:
                 cout << "\nRegresando al menu principal..." << endl;
                 break;

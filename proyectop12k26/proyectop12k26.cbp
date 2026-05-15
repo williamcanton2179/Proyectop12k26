@@ -41,8 +41,10 @@
 		<Unit filename="include/Cursos.h" />
 		<Unit filename="include/GeneradorConstancias.h" />
 		<Unit filename="include/MenuAsignaciones.h" />
+		<Unit filename="include/ModuloPagos.h" />
 		<Unit filename="include/Recepcion.h" />
 		<Unit filename="include/RegistrarNotas.h" />
+		<Unit filename="include/Respaldo.h" />
 		<Unit filename="include/Tesoreria.h" />
 		<Unit filename="include/bitacora.h" />
 		<Unit filename="include/carrera.h" />
@@ -52,6 +54,7 @@
 		<Unit filename="include/maestros.h" />
 		<Unit filename="include/menu inscripcion .h" />
 		<Unit filename="include/menuRegistro.h" />
+		<Unit filename="include/modulomenurespaldo.h" />
 		<Unit filename="include/proyecto.h" />
 		<Unit filename="include/reportes.h" />
 		<Unit filename="include/usuarios.h" />

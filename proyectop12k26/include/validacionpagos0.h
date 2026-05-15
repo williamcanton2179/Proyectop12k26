@@ -13,11 +13,12 @@ class validacionpagos0
         //void asignarCursos(std::string nombrecurso); //double preciocurso);
         void informaciondecursos();
         void pagoAlumno1(double pago1, double preciocurso);
-        void tipodePago(int Tipotarjeta,int &numeroTarjeta, std::string &nombre, std::string &fecha, int &codigoSeguridad);
+        void tipodePago(int Tipotarjeta,long long &numeroTarjeta, std::string &nombre, std::string &fecha, int &codigoSeguridad);
         void leerInformacion(int tarjetaBuscada, int Tipotarjeta);
         void modificarInformacion(int tarjetaBuscada, int Tipotarjeta);
         void menuGestionPagos(int tarjetaBuscada, int Tipotarjeta);
         void borrar(int tarjetabuscada, int Tipotarjeta);
+        double CalculoTotal();
         //void ejecutarMenuPrincipal();
         virtual ~validacionpagos0();
 
@@ -26,6 +27,8 @@ class validacionpagos0
     private:
         std::vector<std::string>cursos;
         std::vector<double>precios1;
+        std::string idEstudiante;
+        std::string carnetEstudiante;
 
         double pagototal;
         double pagoalumno;
