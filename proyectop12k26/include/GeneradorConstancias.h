@@ -13,13 +13,16 @@ private:
     float monto;
     int tipoPersona;
 
+    // Funciones auxiliares de diseño
     void imprimirEncabezadoBanco();
+    void disenoConstanciaListado();
+    bool idExiste(string searchId); // <-- Nueva función de validación
 
 public:
     GeneradorConstancias();
     ~GeneradorConstancias();
 
-void recibirDatos(string n, string c, float m, int t);
+    void recibirDatos(string n, string c, float m, int t);
     void menu();
     void insertar();
     void desplegar();
@@ -27,7 +30,6 @@ void recibirDatos(string n, string c, float m, int t);
     void borrar();
     void seleccionarEImprimir();
     void disenoConstancia();
-
 
     bool validarConstancia(int numeroBoleta);
 };

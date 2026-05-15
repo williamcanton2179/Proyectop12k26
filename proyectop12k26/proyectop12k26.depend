@@ -384,7 +384,7 @@
 	<conio.h>
 	<vector>
 
-1778685513 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\cursos.cpp
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\cursos.cpp
 	"Cursos.h"
 	<string>
 	<vector>
@@ -393,7 +393,7 @@
 	<iomanip>
 	<conio.h>
 
-1778685513 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\cursos.h
+1778724196 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\cursos.h
 	<string>
 	<vector>
 
@@ -452,14 +452,14 @@
 	<string>
 	<vector>
 
-1778685513 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
+1778793899 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\generadorconstancias.cpp
 	"GeneradorConstancias.h"
 	<cstdlib>
 	<ctime>
 	<iostream>
 	<fstream>
 
-1778685513 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
+1778784698 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\generadorconstancias.h
 	<iostream>
 	<string>
 	<fstream>
@@ -490,7 +490,7 @@
 
 1778683344 
 
-1778688122 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\bancos.cpp
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\bancos.cpp
 	"Bancos.h"
 	"GeneradorConstancias.h"
 	<iostream>
@@ -519,7 +519,7 @@
 	"Asignaciones.h"
 	"GeneradorConstancias.h"
 
-1778687906 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\horarios.cpp
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\horarios.cpp
 	"Horarios.h"
 
 1778687906 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\horarios.h
@@ -549,7 +549,7 @@
 1778685513 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\inscipcion.h
 	<string>
 
-1778687906 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\recepcion.cpp
+1778717753 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\recepcion.cpp
 	"Recepcion.h"
 	<iostream>
 	<string>
@@ -2552,7 +2552,7 @@
 	<string>
 	"Cursos.h"
 
-1778685513 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\asignaciones.cpp
 	"Asignaciones.h"
 	<iostream>
 	<fstream>
@@ -2601,26 +2601,29 @@
 	<cstdio>
 	"reportes.h"
 
-1778687906 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\menuasignaciones.cpp
 	"MenuAsignaciones.h"
 	"ModuloPagos.h"
+	"Horarios.h"
+	"modulomenurespaldo.h"
 	<iostream>
 
 1778685513 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\modulopagos.h
 	"validacionpagos0.h"
 
-1778687932 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\validacionpagos0.h
+1778724196 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\validacionpagos0.h
 	<string>
 	<vector>
 
-1778687932 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\menuregistro.cpp
 	"menuRegistro.h"
+	"menu inscripcion .h"
 	"Alumnos.h"
 	"maestros.h"
 	<iostream>
 	<conio.h>
 
-1778687906 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
+1778782206 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\tesoreria.cpp
 	"Tesoreria.h"
 	"Bancos.h"
 	"Recepcion.h"
@@ -2628,6 +2631,11 @@
 	<iostream>
 	<string>
 
+<<<<<<< HEAD
+1778724196 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\modulomenurespaldo.h
+
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\validacionpagos0.cpp
+=======
 1778544021 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\modulopagos.h
 	"validacionpagos0.h"
 
@@ -2638,6 +2646,7 @@
 1778722411 c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\include\modulomenurespaldo.h
 
 1778722411 source:c:\users\david\documents\programacion-1\proyectop12k26\proyectop12k26\src\validacionpagos0.cpp
+>>>>>>> 87d32f486815fb295836389d56ee2c8bd69aa791
 	"validacionpagos0.h"
 	<string>
 	<iostream>
@@ -2645,3 +2654,25 @@
 	<iomanip>
 	<sstream>
 
+<<<<<<< HEAD
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\modulopagos.cpp
+	"ModuloPagos.h"
+	<iostream>
+
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\modulomenurespaldo.cpp
+	"../include/modulomenurespaldo.h"
+	"../include/respaldo.h"
+
+1778724196 c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\include\respaldo.h
+	<string>
+
+1778724196 source:c:\users\axel\desktop\programacion1\proyectop12k26\proyectop12k26\src\respaldo.cpp
+	"../include/respaldo.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<iomanip>
+	<ctime>
+
+=======
+>>>>>>> 87d32f486815fb295836389d56ee2c8bd69aa791
