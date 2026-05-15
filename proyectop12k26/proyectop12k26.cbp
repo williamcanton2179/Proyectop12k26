@@ -69,6 +69,7 @@
 		<Unit filename="src/MenuAsignaciones.cpp" />
 		<Unit filename="src/ModuloPagos.cpp" />
 		<Unit filename="src/Recepcion.cpp" />
+		<Unit filename="src/Recepcion.cpp.save" />
 		<Unit filename="src/RegistrarNotas.cpp" />
 		<Unit filename="src/Tesoreria.cpp" />
 		<Unit filename="src/bitacora.cpp" />
@@ -78,6 +79,10 @@
 		<Unit filename="src/inscipcion.cpp" />
 		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/menu inscripcion .cpp" />
+		<Unit filename="src/menuNotas.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="src/menuRegistro.cpp" />
 		<Unit filename="src/modulomenurespaldo.cpp" />
 		<Unit filename="src/proyecto.cpp" />

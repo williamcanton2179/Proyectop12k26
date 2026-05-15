@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <sstream>
 
+const int ID_CUENTA_UMG = 50622293;
 using namespace std;
 
 Bancos::Bancos()
@@ -20,14 +21,14 @@ bool Bancos::InfoTransferencia(string nombreCliente, long long numeroTarjeta, in
     int idArch;
     long long tarjetaArch;
     string clienteArch, bancoArch;
-    double saldoArch, movimientoArch;
+    double saldoArch;
     bool encontrado = false;
 
     file.open("CuentasBancarias.txt", ios::in);
 
     if(file.is_open())
     {
-        while (file >> idArch >> clienteArch >> saldoArch >> movimientoArch >> tarjetaArch >> bancoArch)
+        while (file >> idArch >> clienteArch >> saldoArch >> tarjetaArch >> bancoArch)
         {
             if(tarjetaArch == numeroTarjeta && clienteArch == nombreCliente)
             {
@@ -66,7 +67,7 @@ bool Bancos::InfoPagoPlanilla(string nombreCliente, int idCuenta, int codigoCate
     fstream file;
     int idArch;
     string clienteArch, bancoArch;
-    double saldoArch, movArch;
+    double saldoArch;
     long long tarjetaArch;
     bool encontrado = false;
 
@@ -74,7 +75,7 @@ bool Bancos::InfoPagoPlanilla(string nombreCliente, int idCuenta, int codigoCate
 
     if (file.is_open())
     {
-        while (file >> idArch >> clienteArch >> saldoArch >> movArch >> tarjetaArch >> bancoArch)
+        while (file >> idArch >> clienteArch >> saldoArch >> tarjetaArch >> bancoArch)
         {
             if (idArch == idCuenta && clienteArch == nombreCliente)
             {
@@ -106,40 +107,135 @@ bool Bancos::InfoPagoPlanilla(string nombreCliente, int idCuenta, int codigoCate
     }
 }
 
-
-bool Bancos::procesoTransferencia(long long numeroTarjeta, double monto)
+bool Bancos::procesoTransferencia(long long numeroTarjetaOrigen, double monto)
 {
-    fstream file;
+    fstream file, tempFile;
     int idArch;
     long long tarjetaArch;
     string clienteArch, bancoArch;
-    double saldoArch, movimientoArch;
-    bool transaccion = false;
+    double saldoArch;
+
+    bool origenProcesado = false;
+    bool destinoProcesado = false;
 
     file.open("CuentasBancarias.txt", ios::in);
+    tempFile.open("Temp.txt", ios::out);
 
-    if(file.is_open())
+    if (file.is_open() && tempFile.is_open())
     {
-        while (file >> idArch >> clienteArch >> saldoArch >> movimientoArch >> tarjetaArch >> bancoArch)
+        while (file >> idArch >> clienteArch >> saldoArch >> tarjetaArch >> bancoArch)
         {
-            if(tarjetaArch == numeroTarjeta && monto<=saldoArch)
+            if (tarjetaArch == numeroTarjetaOrigen)
             {
-                ///modificar el saldo en el archivo bancos
-                transaccion = true;;
-                break;
+                if (saldoArch >= monto)
+                {
+                    saldoArch -= monto;
+                    origenProcesado = true;
+                }
+                else
+                {
+                    cout << "Error: Saldo insuficiente en la cuenta de origen." << endl;
+                }
             }
-            else
+            else if (idArch == ID_CUENTA_UMG)
             {
-                transaccion = false;
+                saldoArch += monto;
+                destinoProcesado = true;
             }
+            tempFile << left << setw(15) << idArch
+                     << left << setw(20) << clienteArch
+                     << left << setw(15) << saldoArch
+                     << left << setw(20) << tarjetaArch
+                     << left << setw(20) << bancoArch << "\n";
         }
+
         file.close();
+        tempFile.close();
+
+if (origenProcesado && destinoProcesado)
+        {
+            remove("CuentasBancarias.txt");
+            rename("Temp.txt", "CuentasBancarias.txt");
+            return true;
+        }
+        else
+        {
+            remove("Temp.txt");
+
+            if (!destinoProcesado && origenProcesado) {
+                cout << "Error critico: Transaccion cancelada. La cuenta UMG no existe en la base de datos." << endl;
+            }
+            return false;
+        }
     }
+    return false;
 }
 
-bool Bancos::procesoPagoPlanilla(int idCuentaReq, double monto)
+bool Bancos::procesoPagoPlanilla(int idCuenta, double monto)
 {
-    //pendiente
+    fstream file, tempFile;
+    int idArch;
+    long long tarjetaArch;
+    string clienteArch, bancoArch;
+    double saldoArch;
+
+    bool origenProcesado = false;
+    bool destinoProcesado = false;
+
+    file.open("CuentasBancarias.txt", ios::in);
+    tempFile.open("Temp.txt", ios::out);
+
+    if (file.is_open() && tempFile.is_open())
+    {
+        while (file >> idArch >> clienteArch >> saldoArch >> tarjetaArch >> bancoArch)
+        {
+            if (idArch == ID_CUENTA_UMG)
+            {
+                if (saldoArch >= monto)
+                {
+                    saldoArch -= monto;
+                    origenProcesado = true;
+                }
+                else
+                {
+                    cout << "Error: Saldo insuficiente en la cuenta de UMG." << endl;
+                }
+            }
+            else if (idArch == idCuenta)
+            {
+                saldoArch += monto;
+                destinoProcesado = true;
+            }
+
+            tempFile << left << setw(15) << idArch
+                     << left << setw(20) << clienteArch
+                     << left << setw(15) << saldoArch
+                     << left << setw(20) << tarjetaArch
+                     << left << setw(20) << bancoArch << "\n";
+        }
+
+        file.close();
+        tempFile.close();
+
+        if (origenProcesado && destinoProcesado)
+        {
+            remove("CuentasBancarias.txt");
+            rename("Temp.txt", "CuentasBancarias.txt");
+            return true;
+        }
+        else
+        {
+            remove("Temp.txt");
+
+            if (!destinoProcesado && origenProcesado) {
+                cout << "Error critico: Transaccion cancelada. La cuenta destino no existe." << endl;
+            }
+            return false;
+        }
+    }
+
+    cout << "Error: No se pudo acceder a la base de datos." << endl;
+    return false;
 }
 
 double Bancos::montoCobro(int Carnet)
@@ -157,7 +253,6 @@ bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
     this->idCuenta = generadorTarjetasCuentas();
     this->nombreCliente = nombreCliente;
     this->saldo = monto;
-    this->movimiento = monto;
     this->nombreBanco = nombreBanco;
     this->numeroTarjeta = 0;
 
@@ -188,11 +283,11 @@ bool Bancos::crearCuenta(string nombreCliente, double monto, string nombreBanco)
     system("pause");
 
     cout << ">>> FIN DE CONSTANCIA <<<\n" << endl;
-    return guardarCuenta(idCuenta, nombreCliente, saldo, movimiento, numeroTarjeta, nombreBanco);
+    return guardarCuenta(idCuenta, nombreCliente, saldo, numeroTarjeta, nombreBanco);
 }
 
 
-bool Bancos::guardarCuenta(int idCuenta, string nombreCliente, double saldo, double movimiento, long long numeroTarjeta, string nombreBanco)
+bool Bancos::guardarCuenta(int idCuenta, string nombreCliente, double saldo, long long numeroTarjeta, string nombreBanco)
 {
     fstream file;
     file.open("CuentasBancarias.txt", ios::app | ios::out);
@@ -202,7 +297,6 @@ bool Bancos::guardarCuenta(int idCuenta, string nombreCliente, double saldo, dou
         file << left << setw(15) << idCuenta
              << left << setw(20) << nombreCliente
              << left << setw(15) << saldo
-             << left << setw(15) << movimiento
              << left << setw(20) << numeroTarjeta
              << left << setw(20) << nombreBanco
              << "\n";
