@@ -1,19 +1,15 @@
-// Antony Marcelo Yllescas Figueroa-
+// Antony Marcelo Yllescas Figueroa-......
 // 9959-25-6813-
 #ifndef HORARIOS_H
 #define HORARIOS_H
-
 #include <iostream>
 #include <vector>
 #include <string>
 #include <fstream>
-
 #include "Cursos.h"
 #include "Asignaciones.h"
 #include "GeneradorConstancias.h"
-
 using namespace std;
-
 class Horarios
 {
 private:
@@ -21,7 +17,6 @@ private:
     string nombreCurso;
     string horaInicio;
     string horaFin;
-
 public:
     Horarios();
     Horarios(string dia,string nombreCurso,string horaInicio,string horaFin);
@@ -31,5 +26,4 @@ public:
     static void modificar(vector<Horarios>& lista);
     static void menu();
 };
-
 #endif

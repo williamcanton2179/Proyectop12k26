@@ -1,5 +1,5 @@
 #include "Horarios.h"
-//antony marcelo yllescas fiqueroa 9959-25-6813
+//antony marcelo yllescas fiqueroa 9959-25-6813.......
 Horarios::Horarios()
 {
     this->dia = "";
@@ -117,31 +117,22 @@ void Horarios::mostrar(vector<Horarios> lista)
             <<endl;
     }
 }
-
 void Horarios::modificar(vector<Horarios>& lista)
 {
     if(lista.empty())
     {
         cout<<"No hay horarios."<<endl;
-
         return;
     }
-
     mostrar(lista);
-
     int opcion;
-
     cout<<"Seleccione clase a modificar: ";
-
     cin>>opcion;
-
     if(opcion<1 || opcion>lista.size())
     {
         cout<<"Opcion invalida."<<endl;
-
         return;
     }
-
     cout<<"1. Cambiar hora"<<endl;
     cout<<"2. Cambiar dia"<<endl;
 
@@ -171,7 +162,6 @@ void Horarios::modificar(vector<Horarios>& lista)
 
         return;
     }
-
     cout<<"Horario modificado correctamente."<<endl;
 }
 
@@ -215,19 +205,14 @@ void Horarios::menu()
     bool finDeSemana = false;
 
     GeneradorConstancias constancia;
-
     Asignacion asignacion;
-
     Cursos catalogo;
-
     vector<Horarios> horario;
-
     while(true)
     {
         cout<<"______________________________________"<<endl;
         cout<<"     SISTEMA UNIVERSITARIO UMG        "<<endl;
         cout<<"______________________________________"<<endl;
-
         cout<<"1. Validar constancia"<<endl;
         cout<<"2. Elegir jornada"<<endl;
         cout<<"3. Generar horario"<<endl;
@@ -235,53 +220,38 @@ void Horarios::menu()
         cout<<"5. Modificar horario"<<endl;
         cout<<"6. Guardar horario"<<endl;
         cout<<"7. Salir"<<endl;
-
         cout<<"Seleccione opcion: ";
-
         cin>>opcion;
-
         switch(opcion)
         {
         case 1:
         {
             int boleta;
-
             cout<<"Ingrese numero de boleta: ";
-
             cin>>boleta;
-
             if(constancia.validarConstancia(boleta))
             {
                 pagoValidado = true;
-
                 cout<<"CONSTANCIA VALIDADA."<<endl;
             }
             else
             {
                 pagoValidado = false;
-
                 cout<<"CONSTANCIA INVALIDA."<<endl;
             }
-
             break;
         }
-
         case 12222:
         {
             asignacion.menuAsignacion();
-
             break;
         }
-
         case 2:
         {
             int jornada;
-
             cout<<"1. Entre semana"<<endl;
             cout<<"2. Fin de semana"<<endl;
-
             cin>>jornada;
-
             if(jornada==2)
             {
                 finDeSemana = true;
@@ -290,17 +260,13 @@ void Horarios::menu()
             {
                 finDeSemana = false;
             }
-
             break;
         }
-
         case 3:
         {
             vector<Cursos> catalogoCompleto =
                 catalogo.catalagoCursosIngSistemas();
-
             vector<Cursos> cursosSeleccionados;
-
             for(int i=0; i<asignacion.cursosAsignados.size(); i++)
             {
                 for(int j=0; j<catalogoCompleto.size(); j++)
@@ -314,49 +280,37 @@ void Horarios::menu()
                     }
                 }
             }
-
             horario = generar(
                 cursosSeleccionados,
                 pagoValidado,
                 finDeSemana
             );
-
             break;
         }
-
         case 4:
         {
             mostrar(horario);
-
             break;
         }
-
         case 5:
         {
             modificar(horario);
-
             break;
         }
-
         case 6:
         {
             guardarEnArchivo(horario);
-
             break;
         }
-
         case 7:
         {
             cout<<"Saliendo..."<<endl;
-
             return;
         }
-
         default:
         {
             cout<<"Opcion invalida."<<endl;
         }
-
         }
     }
 }
