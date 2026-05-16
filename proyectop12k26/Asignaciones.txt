@@ -15,3 +15,9 @@ REGISTRO DE ASIGNACION - CARNET: 9959-26-1159
 004        | Introduccion a los sistemas de computo | Q204.00
 005        | Logica de Sistemas                  | Q204.00
 ==========================================================
+ID:9959-26-1050
+REGISTRO DE ASIGNACION - CARNET: 9959-26-1050
+----------------------------------------------------------
+006        | Precalculo                          | Q204.00
+007        | Algebra Lineal                      | Q204.00
+==========================================================
