@@ -1,0 +1,6 @@
+HORARIO DEL ESTUDIANTE
+Lunes | Sistemas Operativos II | 07:00 - 09:00
+Lunes | Programacion II | 10:00 - 12:00
+Lunes | Calculo I | 13:00 - 15:00
+Martes | Microeconomia | 07:00 - 09:00
+Martes | Compiladores | 10:00 - 12:00
