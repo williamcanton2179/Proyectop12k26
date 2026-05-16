@@ -22,7 +22,7 @@ class Bancos
 
         // Métodos de Gestión de Cuenta
         bool crearCuenta(string nombreCliente, double monto, string nombreBanco);
-        bool guardarCuenta(int idCuenta, string nombreCliente, double saldo, long long numeroTarjeta, string nombreBanco);
+        bool guardarCuenta(int idCuenta, string nombreCliente, double saldo, double movimiento, long long numeroTarjeta, string nombreBanco);
         int generadorTarjetasCuentas();
 
     private:

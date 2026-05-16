@@ -1,4 +1,4 @@
-#include "maestros.h"
+#include "maestros.h" // Creado por Abner Muñoz 9959-25-13959
 #include "Carrera.h"
 #include "Cursos.h"
 #include <iostream>
@@ -9,8 +9,7 @@
 #include <iomanip>
 #include <sstream>
 using namespace std;
-// Creado por Abner Muñoz
-// Despegar ya funcionando
+// FUncionamiento completo
 Maestros::Maestros()
 {
     id = "";
@@ -39,8 +38,7 @@ void Maestros::menu()
         cout << "\t\t\t 5. Borrar maestro" << endl;
         cout << "\t\t\t 6. Asignar carrera y curso" << endl;
         cout << "\t\t\t 7. Ingresar notas" << endl;
-        cout << "\t\t\t 8. Ver salarios" << endl;
-        cout << "\t\t\t 9. Salir" << endl;
+        cout << "\t\t\t 8. Salir" << endl;
         cout << "\t\t\t-------------------------------" << endl;
         cout << "Ingresa tu Opcion: ";
         cin >> choice;
@@ -68,16 +66,13 @@ void Maestros::menu()
                 ingresarNotas();
                 break;
             case 8:
-                mostrarTodosLosSalarios();
-                break;
-            case 9:
                 cout << "\n\t\t\t Saliendo del sistema..." << endl;
                 exit(0);
             default:
                 cout << "\n\t\t\t Opcion invalida...";
         }
         system("pause");
-    } while (choice != 9);
+    } while (choice != 8);
 }
 
 void Maestros::insertar()
@@ -96,59 +91,40 @@ void Maestros::insertar()
 
     generarCodigo();
 
-    ofstream file;
-    file.open("Maestros.txt", ios::app);
+    fstream file;
+    file.open("Maestros.txt", ios::app | ios::out);
+    file << left << setw(15) << id
+         << left << setw(20) << nombre
+         << left << setw(20) << apellido
+         << left << setw(15) << dpi
+         << left << setw(10) << codigo
+         << left << setw(20) << "SIN ASIGNAR"
+         << left << setw(10) << "0" << "\n";
+    file.close();
 
-    if (file.is_open()) {
-        file << id << "|"
-             << nombre << "|"
-             << apellido << "|"
-             << dpi << "|"
-             << codigo << "|"
-             << "SIN ASIGNAR|"
-             << "0" << "\n";
-        file.close();
-
-        cout << "\n\t\t\t¡Maestro registrado exitosamente!" << endl;
-        cout << "Codigo de seguridad: " << codigo << endl;
-    } else {
-        cout << "\n\t\t\tError al abrir el archivo" << endl;
-    }
+    cout << "\n\t\t\t¡Maestro registrado exitosamente!" << endl;
+    cout << "Codigo de seguridad: " << codigo << endl;
 }
 
 void Maestros::desplegar()
 {
     system("cls");
-    ifstream file;
+    fstream file;
     int total = 0;
 
     cout << "\n----------------- LISTA DE MAESTROS -----------------" << endl;
     file.open("Maestros.txt", ios::in);
 
-    if (!file.is_open()) {
+    if (!file) {
         cout << "\n\t\t\tNo hay maestros registrados..." << endl;
+        file.close();
     } else {
-        string linea;
+        string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede;
+        int temp_codigo, temp_cursos;
 
+        file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
 
-        while (getline(file, linea)) {
-            if (linea.empty()) continue;
-
-            stringstream ss(linea);
-            string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede, temp_cursos_str;
-            int temp_codigo, temp_cursos;
-
-            getline(ss, temp_id, '|');
-            getline(ss, temp_nombre, '|');
-            getline(ss, temp_apellido, '|');
-            getline(ss, temp_dpi, '|');
-            ss >> temp_codigo;
-            ss.ignore();
-            getline(ss, temp_sede, '|');
-            getline(ss, temp_cursos_str, '|');
-
-            temp_cursos = atoi(temp_cursos_str.c_str());
-
+        while (!file.eof()) {
             total++;
             cout << "\n\t\t\t ID: " << temp_id << endl;
             cout << "\t\t\t Nombre: " << temp_nombre << " " << temp_apellido << endl;
@@ -157,6 +133,8 @@ void Maestros::desplegar()
             cout << "\t\t\t Carrera: " << temp_sede << endl;
             cout << "\t\t\t Cursos: " << temp_cursos << endl;
             cout << "\t\t\t ------------------------------------" << endl;
+
+            file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
         }
 
         if (total == 0) {
@@ -171,190 +149,207 @@ void Maestros::desplegar()
 void Maestros::modificar()
 {
     system("cls");
-    ifstream file;
-    ofstream fileTemp;
+    fstream file, file1;
     string search_id;
     int found = 0;
 
     cout << "\n----------------- MODIFICAR MAESTRO -----------------" << endl;
     file.open("Maestros.txt", ios::in);
 
-    if (!file.is_open()) {
+    if (!file) {
         cout << "\n\t\t\tNo hay informacion..." << endl;
         file.close();
-        return;
-    }
+    } else {
+        cout << "\n Ingrese ID del maestro a modificar: ";
+        cin >> search_id;
 
-    cout << "\n Ingrese ID del maestro a modificar: ";
-    cin >> search_id;
+        file1.open("Record.txt", ios::app | ios::out);
 
-    fileTemp.open("Temp.txt", ios::out);
-
-    string linea;
-
-    while (getline(file, linea)) {
-        if (linea.empty()) continue;
-
-        stringstream ss(linea);
-        string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede, temp_cursos_str;
+        string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede;
         int temp_codigo, temp_cursos;
 
-        getline(ss, temp_id, '|');
-        getline(ss, temp_nombre, '|');
-        getline(ss, temp_apellido, '|');
-        getline(ss, temp_dpi, '|');
-        ss >> temp_codigo;
-        ss.ignore();
-        getline(ss, temp_sede, '|');
-        getline(ss, temp_cursos_str, '|');
-        temp_cursos = atoi(temp_cursos_str.c_str());
+        file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
 
-        if (search_id == temp_id) {
-            found++;
-            cout << "\n\t\t\t Modificando datos..." << endl;
+        while (!file.eof()) {
+            if (search_id != temp_id) {
+                file1 << left << setw(15) << temp_id
+                      << left << setw(20) << temp_nombre
+                      << left << setw(20) << temp_apellido
+                      << left << setw(15) << temp_dpi
+                      << left << setw(10) << temp_codigo
+                      << left << setw(20) << temp_sede
+                      << left << setw(10) << temp_cursos << "\n";
+            } else {
+                found++;
+                cout << "\n\t\t\t Modificando datos..." << endl;
 
-            cout << "Nuevo ID: ";
-            cin >> id;
-            cout << "Nuevo nombre: ";
-            cin >> nombre;
-            cout << "Nuevo apellido: ";
-            cin >> apellido;
-            cout << "Nuevo DPI: ";
-            cin >> dpi;
+                cout << "Nuevo ID: ";
+                cin >> id;
+                cout << "Nuevo nombre: ";
+                cin >> nombre;
+                cout << "Nuevo apellido: ";
+                cin >> apellido;
+                cout << "Nuevo DPI: ";
+                cin >> dpi;
 
-            generarCodigo();
+                generarCodigo();
 
-            fileTemp << id << "|"
-                     << nombre << "|"
-                     << apellido << "|"
-                     << dpi << "|"
-                     << codigo << "|"
-                     << temp_sede << "|"
-                     << temp_cursos << "\n";
+                file1 << left << setw(15) << id
+                      << left << setw(20) << nombre
+                      << left << setw(20) << apellido
+                      << left << setw(15) << dpi
+                      << left << setw(10) << codigo
+                      << left << setw(20) << temp_sede
+                      << left << setw(10) << temp_cursos << "\n";
 
-            cout << "\n\t\t\t¡Modificacion exitosa!" << endl;
-        } else {
-            fileTemp << linea << "\n";
+                cout << "\n\t\t\t¡Modificacion exitosa!" << endl;
+            }
+            file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
         }
-    }
 
-    if (found == 0) {
-        cout << "\n\t\t\t ID no encontrado..." << endl;
-    }
+        if (found == 0) {
+            cout << "\n\t\t\t ID no encontrado..." << endl;
+        }
 
-    fileTemp.close();
-    file.close();
-    remove("Maestros.txt");
-    rename("Temp.txt", "Maestros.txt");
+        file1.close();
+        file.close();
+        remove("Maestros.txt");
+        rename("Record.txt", "Maestros.txt");
+    }
 }
 
 void Maestros::buscar()
 {
     system("cls");
-    ifstream file;
+    fstream file;
     int found = 0;
 
     cout << "\n----------------- BUSCAR MAESTRO -----------------" << endl;
     file.open("Maestros.txt", ios::in);
 
-    if (!file.is_open()) {
+    if (!file) {
         cout << "\n\t\t\tNo hay informacion..." << endl;
-        return;
-    }
+    } else {
+        string search_id;
+        cout << "\n Ingrese ID del maestro a buscar: ";
+        cin >> search_id;
 
-    string search_id;
-    cout << "\n Ingrese ID del maestro a buscar: ";
-    cin >> search_id;
-
-    string linea;
-
-    while (getline(file, linea)) {
-        if (linea.empty()) continue;
-
-        stringstream ss(linea);
-        string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede, temp_cursos_str;
+        string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede;
         int temp_codigo, temp_cursos;
 
-        getline(ss, temp_id, '|');
-        getline(ss, temp_nombre, '|');
-        getline(ss, temp_apellido, '|');
-        getline(ss, temp_dpi, '|');
-        ss >> temp_codigo;
-        ss.ignore();
-        getline(ss, temp_sede, '|');
-        getline(ss, temp_cursos_str, '|');
-        temp_cursos = atoi(temp_cursos_str.c_str());
+        file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
 
-        if (search_id == temp_id) {
-            found++;
-            cout << "\n\t\t\t === DATOS DEL MAESTRO ===" << endl;
-            cout << "\t\t\t ID: " << temp_id << endl;
-            cout << "\t\t\t Nombre: " << temp_nombre << " " << temp_apellido << endl;
-            cout << "\t\t\t DPI: " << temp_dpi << endl;
-            cout << "\t\t\t Codigo: " << temp_codigo << endl;
-            cout << "\t\t\t Carrera: " << temp_sede << endl;
-            cout << "\t\t\t Cursos: " << temp_cursos << endl;
+        while (!file.eof()) {
+            if (search_id == temp_id) {
+                found++;
+                cout << "\n\t\t\t === DATOS DEL MAESTRO ===" << endl;
+                cout << "\t\t\t ID: " << temp_id << endl;
+                cout << "\t\t\t Nombre: " << temp_nombre << " " << temp_apellido << endl;
+                cout << "\t\t\t DPI: " << temp_dpi << endl;
+                cout << "\t\t\t Codigo: " << temp_codigo << endl;
+                cout << "\t\t\t Carrera: " << temp_sede << endl;
+                cout << "\t\t\t Cursos: " << temp_cursos << endl;
+            }
+            file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
         }
-    }
 
-    if (found == 0) {
-        cout << "\n\t\t\t Maestro no encontrado..." << endl;
+        if (found == 0) {
+            cout << "\n\t\t\t Maestro no encontrado..." << endl;
+        }
+        file.close();
     }
-    file.close();
 }
 
 void Maestros::borrar()
 {
     system("cls");
-    ifstream file;
-    ofstream fileTemp;
+    fstream file, file1;
     string delete_id;
     int found = 0;
 
     cout << "\n----------------- ELIMINAR MAESTRO -----------------" << endl;
     file.open("Maestros.txt", ios::in);
 
-    if (!file.is_open()) {
+    if (!file) {
         cout << "\n\t\t\tNo hay informacion..." << endl;
-        return;
-    }
+        file.close();
+    } else {
+        cout << "\n Ingrese ID del maestro a eliminar: ";
+        cin >> delete_id;
 
-    cout << "\n Ingrese ID del maestro a eliminar: ";
-    cin >> delete_id;
+        file1.open("Record.txt", ios::app | ios::out);
 
-    fileTemp.open("Temp.txt", ios::out);
+        string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede;
+        int temp_codigo, temp_cursos;
 
-    string linea;
+        file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
 
-    while (getline(file, linea)) {
-        if (linea.empty()) continue;
-
-        stringstream ss(linea);
-        string temp_id;
-        getline(ss, temp_id, '|');
-
-        if (delete_id != temp_id) {
-            fileTemp << linea << "\n";
-        } else {
-            found++;
-            cout << "\n\t\t\t¡Maestro eliminado!" << endl;
+        while (!file.eof()) {
+            if (delete_id != temp_id) {
+                file1 << left << setw(15) << temp_id
+                      << left << setw(20) << temp_nombre
+                      << left << setw(20) << temp_apellido
+                      << left << setw(15) << temp_dpi
+                      << left << setw(10) << temp_codigo
+                      << left << setw(20) << temp_sede
+                      << left << setw(10) << temp_cursos << "\n";
+            } else {
+                found++;
+                cout << "\n\t\t\t¡Maestro eliminado!" << endl;
+            }
+            file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo >> temp_sede >> temp_cursos;
         }
-    }
 
-    if (found == 0) {
-        cout << "\n\t\t\t ID no encontrado..." << endl;
-    }
+        if (found == 0) {
+            cout << "\n\t\t\t ID no encontrado..." << endl;
+        }
 
-    fileTemp.close();
-    file.close();
-    remove("Maestros.txt");
-    rename("Temp.txt", "Maestros.txt");
+        file1.close();
+        file.close();
+        remove("Maestros.txt");
+        rename("Record.txt", "Maestros.txt");
+    }
+}
+
+void Maestros::ingresarDatosPersonales()
+{
+    cout << "Nombre: " << nombre << endl;
+    cout << "Apellido: " << apellido << endl;
+    cout << "DPI: " << dpi << endl;
 }
 
 void Maestros::generarCodigo()
 {
     srand(time(0));
     codigo = 1000 + rand() % 9000;
+}
+
+void Maestros::asignarHorario()
+{
+    cout << "\n--- Asignacion de Horario ---" << endl;
+    cout << "Seleccione la sede:" << endl;
+    cout << "1- Sede Zona Portales (Bono Q400)" << endl;
+    cout << "2- Central (Bono Q500)" << endl;
+    cout << "3- Sede Antigua (Bono Q300)" << endl;
+    cout << "4- Sede San Jose Pinula (Bono Q200)" << endl;
+    cout << "Opcion: ";
+    int opcionSede;
+    cin >> opcionSede;
+
+    diasSemana = 3;
+    horasClase = 2;
+
+    switch (opcionSede) {
+        case 1: sede = "Sede Zona Portales"; break;
+        case 2: sede = "Central"; break;
+        case 3: sede = "Sede Antigua"; break;
+        case 4: sede = "Sede San Jose Pinula"; break;
+        default: sede = "No especificada"; break;
+    }
+
+    cout << "Sede asignada: " << sede << endl;
+    cout << "Dias a la semana: " << diasSemana << endl;
+    cout << "Horas por clase: " << horasClase << endl;
 }
 
 void Maestros::mostrarCarreras()
@@ -388,88 +383,6 @@ void Maestros::mostrarCursosPorCarrera(string codigoCarrera)
     }
 }
 
-void Maestros::asignarHorario()
-{
-    cout << "\n--- Asignacion de Horario ---" << endl;
-    cout << "Seleccione la sede:" << endl;
-    cout << "1- Sede Zona Portales (Bono Q400)" << endl;
-    cout << "2- Central (Bono Q500)" << endl;
-    cout << "3- Sede Antigua (Bono Q300)" << endl;
-    cout << "4- Sede San Jose Pinula (Bono Q200)" << endl;
-    cout << "Opcion: ";
-    int opcionSede;
-    cin >> opcionSede;
-
-    diasSemana = 3;
-    horasClase = 2;
-
-    switch (opcionSede) {
-        case 1: sede = "Sede Zona Portales"; break;
-        case 2: sede = "Central"; break;
-        case 3: sede = "Sede Antigua"; break;
-        case 4: sede = "Sede San Jose Pinula"; break;
-        default: sede = "No especificada"; break;
-    }
-
-    cout << "Sede asignada: " << sede << endl;
-    cout << "Dias a la semana: " << diasSemana << endl;
-    cout << "Horas por clase: " << horasClase << endl;
-}
-
-double Maestros::calcularSalario()
-{
-    double salarioBase = (diasSemana * horasClase * 4 * 150);
-    double bonoSede = 0;
-    double bonoCursos = cursosAsignados.size() * 200;
-
-    if (sede == "Central")
-        bonoSede = 500;
-    else if (sede == "Sede Antigua")
-        bonoSede = 300;
-    else if (sede == "Sede Zona Portales")
-        bonoSede = 400;
-    else if (sede == "Sede San Jose Pinula")
-        bonoSede = 200;
-
-    return salarioBase + bonoSede + bonoCursos;
-}
-
-void Maestros::guardarSalarioEnArchivo()
-{
-    ofstream archivoSalario;
-    archivoSalario.open("Salarios_Maestros.txt", ios::app);
-
-    if (archivoSalario.is_open()) {
-        double salarioTotal = calcularSalario();
-
-        archivoSalario << "Maestro: " << nombre << " " << apellido << " | ";
-        archivoSalario << "ID: " << id << " | ";
-        archivoSalario << "Carrera: " << carreraAsignada.getnombreCarrera() << " | ";
-        archivoSalario << "Sede: " << sede << " | ";
-        archivoSalario << "Salario: Q" << salarioTotal << endl;
-
-        archivoSalario.close();
-    }
-}
-
-void Maestros::mostrarTodosLosSalarios()
-{
-    system("cls");
-    cout << "\n========= HISTORIAL DE SALARIOS =========" << endl;
-
-    ifstream archivoSalario("Salarios_Maestros.txt");
-
-    if (!archivoSalario.is_open()) {
-        cout << "\n\t\t\tNo hay registros de salarios aun..." << endl;
-    } else {
-        string linea;
-        while (getline(archivoSalario, linea)) {
-            cout << linea << endl;
-        }
-        archivoSalario.close();
-    }
-}
-
 void Maestros::asignarCurso()
 {
     system("cls");
@@ -479,33 +392,21 @@ void Maestros::asignarCurso()
     cout << "Ingrese su codigo de seguridad: ";
     cin >> codigoIngresado;
 
-    ifstream file;
-    string linea;
+    fstream file;
+    string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede;
+    int temp_codigo, temp_cursos;
     bool encontrado = false;
 
     file.open("Maestros.txt", ios::in);
 
-    if (!file.is_open()) {
+    if (!file) {
         cout << "\n\t\t\tNo hay maestros registrados..." << endl;
         file.close();
         return;
     }
 
-    // Primero buscar el maestro por codigo
-    while (getline(file, linea)) {
-        if (linea.empty()) continue;
-
-        stringstream ss(linea);
-        string temp_id, temp_nombre, temp_apellido, temp_dpi, temp_sede, temp_cursos_str;
-        int temp_codigo, temp_cursos;
-
-        getline(ss, temp_id, '|');
-        getline(ss, temp_nombre, '|');
-        getline(ss, temp_apellido, '|');
-        getline(ss, temp_dpi, '|');
-        ss >> temp_codigo;
-
-        if (temp_codigo == codigoIngresado) {
+    while (file >> temp_id >> temp_nombre >> temp_apellido >> temp_dpi >> temp_codigo>> temp_sede >> temp_cursos){
+        if (temp_codigo == temp_cursos){
             encontrado = true;
             id = temp_id;
             nombre = temp_nombre;
@@ -553,48 +454,108 @@ void Maestros::asignarCurso()
 
                 asignarHorario();
 
-                double salario = calcularSalario();
-
                 cout << "\n=== RESUMEN DE ASIGNACION ===" << endl;
                 cout << "Maestro: " << nombre << " " << apellido << endl;
                 cout << "Carrera: " << carreraAsignada.getnombreCarrera() << endl;
                 cout << "Curso: " << cursoSeleccionado.getnombreCurso() << endl;
                 cout << "Sede: " << sede << endl;
-                cout << "Salario mensual: Q" << salario << endl;
+                cout << "Salario mensual: Q" << calcularSalario() << endl;
 
-                // Guardar salario en archivo
-                guardarSalarioEnArchivo();
+                fstream fileOut, tempFile;
+                fileOut.open("Maestros.txt", ios::in);
+                tempFile.open("Temp.txt", ios::out);
 
-                // Actualizar el archivo de maestros
-                ifstream fileRead;
-                ofstream fileTemp;
-                fileRead.open("Maestros.txt", ios::in);
-                fileTemp.open("Temp.txt", ios::out);
+                string t_id, t_nombre, t_apellido, t_dpi, t_sede;
+                int t_codigo, t_cursos;
 
-                string line;
-                while (getline(fileRead, line)) {
-                    if (line.empty()) continue;
+                fileOut >> t_id >> t_nombre >> t_apellido >> t_dpi >> t_codigo >> t_sede >> t_cursos;
 
-                    stringstream ss2(line);
-                    string tid;
-                    getline(ss2, tid, '|');
-
-                    if (tid == id) {
-                        fileTemp << id << "|" << nombre << "|" << apellido << "|" << dpi << "|"
-                                 << codigo << "|" << carreraAsignada.getnombreCarrera() << "|"
-                                 << cursosAsignados.size() << "\n";
+                while (!fileOut.eof()) {
+                    if (t_codigo == codigoIngresado) {
+                        tempFile << left << setw(15) << t_id
+                                << left << setw(20) << t_nombre
+                                << left << setw(20) << t_apellido
+                                << left << setw(15) << t_dpi
+                                << left << setw(10) << t_codigo
+                                << left << setw(20) << carreraAsignada.getnombreCarrera()
+                                << left << setw(10) << cursosAsignados.size() << "\n";
                     } else {
-                        fileTemp << line << "\n";
+                        tempFile << left << setw(15) << t_id
+                                << left << setw(20) << t_nombre
+                                << left << setw(20) << t_apellido
+                                << left << setw(15) << t_dpi
+                                << left << setw(10) << t_codigo
+                                << left << setw(20) << t_sede
+                                << left << setw(10) << t_cursos << "\n";
                     }
+                    fileOut >> t_id >> t_nombre >> t_apellido >> t_dpi >> t_codigo >> t_sede >> t_cursos;
                 }
 
-                fileRead.close();
-                fileTemp.close();
+                fileOut.close();
+                tempFile.close();
                 remove("Maestros.txt");
                 rename("Temp.txt", "Maestros.txt");
             }
         }
     }
+}
+
+double Maestros::calcularSalario()
+{
+    double salarioBase = (diasSemana * horasClase * 4 * 150);
+    double bonoSede = 0;
+    double bonoCursos = cursosAsignados.size() * 200;
+
+    if (sede == "Central")
+        bonoSede = 500;
+    else if (sede == "Sede Antigua")
+        bonoSede = 300;
+    else if (sede == "Sede Zona Portales")
+        bonoSede = 400;
+    else if (sede == "Sede San Jose Pinula")
+        bonoSede = 200;
+
+    double salarioTotal = salarioBase+ bonoSede + bonoCursos;
+
+    guardarSalarioEnArchivo();
+
+    return salarioTotal;
+}
+void Maestros::guardarSalarioEnArchivo(){
+    ofstream archivoSalario;
+    archivoSalario.open("Salarios_Maestros.txt", ios::app);
+
+    if (archivoSalario.is_open()) {
+        double salarioTotal = calcularSalario();
+
+        archivoSalario << "Maestro: " << nombre << " " << apellido << " | ";
+        archivoSalario << "ID: " << id << " | ";
+        archivoSalario << "Carrera: " << carreraAsignada.getnombreCarrera() << " | ";
+        archivoSalario << "Sede: " << sede << " | ";
+        archivoSalario << "Salario: Q" << salarioTotal << endl;
+
+        archivoSalario.close();
+
+        cout << "\n\t\t\t¡Salario guardado en 'Salarios_Maestros.txt'!" << endl;
+    } else {
+        cout << "\n\t\t\tError: No se pudo abrir el archivo" << endl;
+    }
+}
+void Maestros::mostrarTodosLosSalarios(){
+    system("cls");
+    cout << "\n =====Historial de Salario =====" << endl;
+
+    ifstream archivoSalario("Salario_Maestros.txt");
+    if(!archivoSalario.is_open()){
+        cout << "\n\t\t No hay registros de salarios aún." << endl;
+    } else{
+        string linea;
+        while (getline(archivoSalario, linea)){
+            cout << linea << endl;
+        }
+        archivoSalario.close();
+    }
+    system("pause");
 }
 
 void Maestros::ingresarNotas()
@@ -608,8 +569,7 @@ void Maestros::ingresarNotas()
     cout << "Ingrese carnet del alumno: ";
     cin >> carnet;
     cout << "Ingrese nombre del alumno: ";
-    cin.ignore();
-    getline(cin, nombreAlumno);
+    cin >> nombreAlumno;
     cout << "\n--- Ingrese las notas ---" << endl;
     cout << "Nota 1 (0-100): ";
     cin >> nota1;
@@ -620,20 +580,59 @@ void Maestros::ingresarNotas()
 
     notaFinal = (nota1 + nota2 + nota3) / 3;
 
-    ofstream file;
-    file.open("Notas.txt", ios::app);
-    file << carnet << "|" << nombreAlumno << "|" << nota1 << "|" << nota2 << "|" << nota3 << "|" << notaFinal;
+    fstream file;
+    file.open("Notas.txt", ios::app | ios::out);
+    file << left << setw(15) << carnet
+         << left << setw(25) << nombreAlumno
+         << left << setw(10) << nota1
+         << left << setw(10) << nota2
+         << left << setw(10) << nota3
+         << left << setw(10) << notaFinal;
 
     if (notaFinal >= 60) {
-        file << "|APROBADO" << "\n";
+        file << left << setw(10) << "APROBADO" << "\n";
         cout << "\n\t\t\t Alumno APROBADO con " << notaFinal << " puntos" << endl;
     } else {
-        file << "|REPROBADO" << "\n";
+        file << left << setw(10) << "REPROBADO" << "\n";
         cout << "\n\t\t\t Alumno REPROBADO con " << notaFinal << " puntos" << endl;
     }
 
     file.close();
     cout << "\n\t\t\t¡Notas guardadas exitosamente!" << endl;
+
+    char verNotas;
+    cout << "\n¿Desea ver las notas del alumno? (s/n): ";
+    cin >> verNotas;
+
+    if (verNotas == 's' || verNotas == 'S') {
+        fstream fileRead;
+        fileRead.open("Notas.txt", ios::in);
+
+        if (!fileRead) {
+            cout << "\n\t\t\tNo hay notas registradas..." << endl;
+        } else {
+            string temp_carnet, temp_nombre, temp_estado;
+            double temp_n1, temp_n2, temp_n3, temp_nf;
+
+            cout << "\n--- HISTORIAL DE NOTAS ---" << endl;
+            fileRead >> temp_carnet >> temp_nombre >> temp_n1 >> temp_n2 >> temp_n3 >> temp_nf >> temp_estado;
+
+            while (!fileRead.eof()) {
+                if (temp_carnet == carnet) {
+                    cout << "\nCarnet: " << temp_carnet << endl;
+                    cout << "Alumno: " << temp_nombre << endl;
+                    cout << "Nota 1: " << temp_n1 << endl;
+                    cout << "Nota 2: " << temp_n2 << endl;
+                    cout << "Nota 3: " << temp_n3 << endl;
+                    cout << "Nota Final: " << temp_nf << endl;
+                    cout << "Estado: " << temp_estado << endl;
+                    break;
+                }
+                fileRead >> temp_carnet >> temp_nombre >> temp_n1 >> temp_n2 >> temp_n3 >> temp_nf >> temp_estado;
+            }
+            fileRead.close();
+        }
+    }
 }
 
 void Maestros::mostrarCursosAsignados()
@@ -714,11 +713,4 @@ void Maestros::setId(string id)
 void Maestros::setDpi(string dpi)
 {
     this->dpi = dpi;
-}
-
-void Maestros::ingresarDatosPersonales()
-{
-    cout << "Nombre: " << nombre << endl;
-    cout << "Apellido: " << apellido << endl;
-    cout << "DPI: " << dpi << endl;
 }

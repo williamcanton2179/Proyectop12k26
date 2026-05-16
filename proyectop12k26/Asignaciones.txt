@@ -1,23 +1,13 @@
-ID:9959-26-1159
+Carnet: 9959-26-1159 | Cursos: 001 002 003 004 005 
+
+==========================================================
 REGISTRO DE ASIGNACION - CARNET: 9959-26-1159
 ----------------------------------------------------------
-001        | Desarrollo Humano y Profesional     | Q204.00
-002        | Metodologia de la Investigacion     | Q204.00
-003        | Contabilidad I                      | Q204.00
-004        | Introduccion a los sistemas de computo | Q204.00
-005        | Logica de Sistemas                  | Q204.00
-==========================================================
-ID:9959-26-1159
-REGISTRO DE ASIGNACION - CARNET: 9959-26-1159
+CODIGO          | NOMBRE DEL CURSO
 ----------------------------------------------------------
-002        | Metodologia de la Investigacion     | Q204.00
-003        | Contabilidad I                      | Q204.00
-004        | Introduccion a los sistemas de computo | Q204.00
-005        | Logica de Sistemas                  | Q204.00
-==========================================================
-ID:9959-26-1050
-REGISTRO DE ASIGNACION - CARNET: 9959-26-1050
-----------------------------------------------------------
-006        | Precalculo                          | Q204.00
-007        | Algebra Lineal                      | Q204.00
+001             | Desarrollo Humano y Profesional
+002             | Metodologia de la Investigacion
+003             | Contabilidad I
+004             | Introduccion a los sistemas de computo
+005             | Logica de Sistemas
 ==========================================================
