@@ -18,5 +18,5 @@ usuario        100            LOGS
 usuario        100            LOGS           
 usuario        100            LOGS           
 usuario        100            LOGS           
+usuario        100            LOGF           
 usuario        100            LOGS           
-usuario        100            LOGS           usuario        100            LOGS           

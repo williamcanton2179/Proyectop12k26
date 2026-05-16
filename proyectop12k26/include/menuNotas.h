@@ -19,6 +19,5 @@ private:
     string                  usuarioActivo;  // Nombre del usuario actualmente logueado
 
 public:
-    bool iniciar();          // Inicializa sesión y carga/registra alumnos
     void ejecutarMenu();     // Muestra y procesa el menú principal del sistema
 };

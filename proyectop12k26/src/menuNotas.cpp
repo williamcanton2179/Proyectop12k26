@@ -2,33 +2,6 @@
 #include <iostream>
 using namespace std;
 
-bool SistemaNotas::iniciar() {
-    // Intenta iniciar sesión. Si falla, cierra el sistema.
-    if (!sesion.loginUsuarios()) {
-        cout << "Acceso denegado. Cerrando sistema." << endl;
-        return false;
-    }
-
-    // Guarda el nombre del usuario que inició sesión
-    usuarioActivo = sesion.getNombre();
-
-    int cantAlumnos;
-    cout << "\n¿Cuantos alumnos desea registrar en el sistema? ";
-    cin >> cantAlumnos;
-    cin.ignore();
-
-    // Registra la cantidad de alumnos solicitada por el usuario
-    for (int i = 0; i < cantAlumnos; i++) {
-        Alumnos a;
-        a.menuRegistro();           // Muestra el menú de registro de cada alumno
-        cin.clear();
-        cin.ignore(1000, '\n');     // Limpia el buffer de entrada
-        listaAlumnos.push_back(a);  // Agrega el alumno a la lista
-    }
-
-    return true;
-}
-
 void SistemaNotas::ejecutarMenu() {
     int opcion;
 
@@ -99,18 +72,4 @@ void SistemaNotas::ejecutarMenu() {
                 cout << "\nOpcion invalida." << endl;
         }
     } while (opcion != 9);
-}
-
-int main() {
-    // Crea una instancia del sistema de gestión de notas
-    SistemaNotas sistema;
-
-    // Intenta inicializar el sistema (login + registro de alumnos)
-    if (!sistema.iniciar())
-        return 1;   // Sale del programa si la inicialización falla
-
-    // Ejecuta el menú principal del sistema
-    sistema.ejecutarMenu();
-
-    return 0;   // Finaliza el programa correctamente
 }
