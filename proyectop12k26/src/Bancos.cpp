@@ -41,7 +41,7 @@ bool Bancos::InfoTransferencia(string nombreCliente, long long numeroTarjeta, in
         }
         file.close();
     }
-    this->movimiento=montoCobro(numeroCarnet);
+    this->movimiento=montoCobro(nombreCliente);
     if(encontrado)
     {
         cout<<"Cuenta encontrada con exito."<<endl;
@@ -238,9 +238,36 @@ bool Bancos::procesoPagoPlanilla(int idCuenta, double monto)
     return false;
 }
 
-double Bancos::montoCobro(int Carnet)
+double Bancos::montoCobro(string nombreAlumno)
 {
-    //pendiente
+    fstream file;
+    long long tarjetaArch;
+    string nombreArch;
+    string mesArch;
+    double montoArch;
+
+    double montoEncontrado = 0.0;
+
+    file.open("tarjetdebito.txt", ios::in);
+
+    if (file.is_open())
+    {
+        while (file >> tarjetaArch >> nombreArch >> mesArch >> montoArch)
+        {
+            if (nombreArch == nombreAlumno)
+            {
+                montoEncontrado = montoArch;
+                break;
+            }
+        }
+        file.close();
+    }
+    else
+    {
+        cout << "Error: No se pudo abrir el archivo tarjetdebito.txt" << endl;
+    }
+
+    return montoEncontrado;
 }
 
 double Bancos::montoPago(int codigo)

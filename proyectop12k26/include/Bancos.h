@@ -17,7 +17,7 @@ class Bancos
         bool InfoPagoPlanilla(string nombreCliente, int idCuenta, int codigoCatedratico);
         bool procesoTransferencia(long long numeroTarjeta, double monto);
         bool procesoPagoPlanilla(int idCuenta, double monto);
-        double montoCobro(int carnet);
+        double montoCobro(string nombreAlumno);
         double montoPago(int codigo);
 
         // Métodos de Gestión de Cuenta
