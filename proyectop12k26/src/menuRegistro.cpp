@@ -4,6 +4,8 @@
 #include "menu inscripcion .h"
 #include "Alumnos.h"
 #include "maestros.h"
+#include "Cursos.h"
+#include "Carrera.h"
 #include <iostream>
 #include <conio.h>
 
@@ -19,6 +21,10 @@ void menuRegistro::menuPrincipalRegistro()
     Alumnos obtenerRegistroAlumno;
     Maestros obtenerRegistroCatedratico;
     menuInscripcion inscripcion;
+    Carrera  obtenerMenuCarrera;
+    Cursos obtenerMenuCursos;
+
+
 
 
     do{
@@ -29,8 +35,10 @@ void menuRegistro::menuPrincipalRegistro()
         cout << "\t\t\t\t\t1.Alumno" << endl;
         cout << "\t\t\t\t\t2.Catedratico" << endl;
         cout << "\t\t\t\t\t3.Inscripcion" << endl;
+        cout << "\t\t\t\t\t4.Cursos" << endl;
+        cout << "\t\t\t\t\t5.Carrera" << endl;
         cout << "\t\t\t\t\t---------------------------------" << endl;
-        cout << "\t\t\t\t\t Opciones a Escoger: [1/2/3]" << endl;
+        cout << "\t\t\t\t\t Opciones a Escoger: [1/2/3/4/5]" << endl;
         cout << "\t\t\t\t\t---------------------------------" << endl;
         cout << "\n\t\t\t\t¿Que opcion desea escoger?: "; cin >> escogerOpcion;
         switch (escogerOpcion)
@@ -44,9 +52,13 @@ void menuRegistro::menuPrincipalRegistro()
         case 3:
             inscripcion.menuIncripcionPrincipal();
             break;
+        case 4:
+            obtenerMenuCursos.menuCurso();
+        case 5:
+            obtenerMenuCarrera.menu();
         default:
             cout << "\n\t\t\t\t Opcion invalida... Por favor pruebe otra vez" << endl;
         }
         getch();
-    }while(escogerOpcion != 2);
+    }while(escogerOpcion != 5);
 }
