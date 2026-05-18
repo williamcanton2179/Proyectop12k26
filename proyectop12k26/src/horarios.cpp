@@ -216,7 +216,7 @@ void Horarios::menu()
 
     GeneradorConstancias constancia;
 
-    Asignacion asignacion;
+    Asignacion asignacion;//arreglado
 
     Cursos catalogo;
 
