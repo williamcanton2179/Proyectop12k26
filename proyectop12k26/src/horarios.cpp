@@ -1,5 +1,5 @@
 #include "Horarios.h"
-//antony marcelo yllescas fiqueroa 9959-25-6813
+//antony marcelo yllescas fiqueroa 9959-25-6813...
 Horarios::Horarios()
 {
     this->dia = "";
