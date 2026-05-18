@@ -1,3 +1,5 @@
+//Josue Antonio Molina Recancoj
+//9959-23-1290
 #include "validacionpagos0.h"
 #include <string>
 #include <iostream>

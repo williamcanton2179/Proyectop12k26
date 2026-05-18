@@ -1,3 +1,6 @@
+//Josue Antonio Molina Recancoj
+//9959-23-1290
+
 #ifndef VALIDACIONPAGOS0_H
 #define VALIDACIONPAGOS0_H
 #include<string>
