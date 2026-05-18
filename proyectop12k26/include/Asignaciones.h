@@ -1,3 +1,5 @@
+//William David Canton Fernandez
+//9959-25-8558
 #ifndef ASIGNACION_H
 #define ASIGNACION_H
 #include <vector>

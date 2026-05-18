@@ -1,3 +1,5 @@
+//William David Canton Fernandez
+//9959-25-8558
 #include "MenuAsignaciones.h"
 #include "ModuloPagos.h"
 #include "Horarios.h"
