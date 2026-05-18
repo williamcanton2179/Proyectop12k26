@@ -1,5 +1,6 @@
 #include "Horarios.h"
-//antony marcelo yllescas fiqueroa 9959-25-6813...
+//antony marcelo yllescas fiqueroa 9959-25-6813
+
 Horarios::Horarios()
 {
     this->dia = "";
@@ -42,7 +43,7 @@ vector<Horarios> Horarios::generar(vector<Cursos> cursos,bool pagoValidado,bool 
 
     int indiceCurso = 0;
 
-    for(int d=0; d<dias.size(); d++)
+    for(size_t d = 0; d < dias.size(); d++)
     {
         int cantidadClases;
 
@@ -52,7 +53,7 @@ vector<Horarios> Horarios::generar(vector<Cursos> cursos,bool pagoValidado,bool 
         }
         else
         {
-            if(dias[d]=="Lunes" || dias[d]=="Miercoles")
+            if(dias[d] == "Lunes" || dias[d] == "Miercoles")
             {
                 cantidadClases = 3;
             }
@@ -64,48 +65,60 @@ vector<Horarios> Horarios::generar(vector<Cursos> cursos,bool pagoValidado,bool 
 
         int hora = 7;
 
-        for(int c=0; c<cantidadClases; c++)
+        for(int c = 0; c < cantidadClases; c++)
         {
-            if(indiceCurso>=cursos.size())
+            if(indiceCurso >= cursos.size())
             {
                 break;
             }
 
             int inicio = hora;
-
             int fin = inicio + 2;
 
-            string hInicio = (inicio<10?"0":"") + to_string(inicio) + ":00";
+            string hInicio =
+                (inicio < 10 ? "0" : "") +
+                to_string(inicio) +
+                ":00";
 
-            string hFin = (fin<10?"0":"") + to_string(fin) + ":00";
+            string hFin =
+                (fin < 10 ? "0" : "") +
+                to_string(fin) +
+                ":00";
 
-            lista.push_back(Horarios(
-                dias[d],
-                cursos[indiceCurso].getnombreCurso(),
-                hInicio,
-                hFin
-            ));
+            lista.push_back(
+                Horarios(
+                    dias[d],
+                    cursos[indiceCurso].getnombreCurso(),
+                    hInicio,
+                    hFin
+                )
+            );
 
             indiceCurso++;
 
-            hora = fin + 1;
+            hora = fin;
         }
     }
-
-    cout<<"Horario generado correctamente."<<endl;
 
     return lista;
 }
 
 void Horarios::mostrar(vector<Horarios> lista)
 {
+    if(lista.empty())
+    {
+        cout<<"No hay horarios generados."<<endl;
+        return;
+    }
+
     cout<<"______________________________________"<<endl;
     cout<<"       HORARIO DEL ESTUDIANTE         "<<endl;
     cout<<"______________________________________"<<endl;
 
-    for(size_t i=0; i<lista.size(); i++)
+    for(size_t i = 0; i < lista.size(); i++)
     {
-        cout<<i+1
+        cout
+            <<i+1
             <<". "
             <<lista[i].dia
             <<" | "
@@ -123,7 +136,6 @@ void Horarios::modificar(vector<Horarios>& lista)
     if(lista.empty())
     {
         cout<<"No hay horarios."<<endl;
-
         return;
     }
 
@@ -132,13 +144,11 @@ void Horarios::modificar(vector<Horarios>& lista)
     int opcion;
 
     cout<<"Seleccione clase a modificar: ";
-
     cin>>opcion;
 
-    if(opcion<1 || opcion>lista.size())
+    if(opcion < 1 || opcion > lista.size())
     {
         cout<<"Opcion invalida."<<endl;
-
         return;
     }
 
@@ -146,29 +156,27 @@ void Horarios::modificar(vector<Horarios>& lista)
     cout<<"2. Cambiar dia"<<endl;
 
     int tipo;
-
     cin>>tipo;
 
-    if(tipo==1)
+    if(tipo == 1)
     {
         cout<<"Nueva hora inicio: ";
-
         cin>>lista[opcion-1].horaInicio;
 
         cout<<"Nueva hora fin: ";
-
         cin>>lista[opcion-1].horaFin;
     }
-    else if(tipo==2)
+    else if(tipo == 2)
     {
         cout<<"Nuevo dia: ";
 
-        cin>>lista[opcion-1].dia;
+        cin.ignore();
+
+        getline(cin, lista[opcion-1].dia);
     }
     else
     {
         cout<<"Opcion invalida."<<endl;
-
         return;
     }
 
@@ -177,18 +185,24 @@ void Horarios::modificar(vector<Horarios>& lista)
 
 void Horarios::guardarEnArchivo(vector<Horarios> lista)
 {
+    if(lista.empty())
+    {
+        cout<<"No hay horarios para guardar."<<endl;
+        return;
+    }
+
     ofstream archivo("HorarioSemanal.txt");
 
     if(!archivo)
     {
         cout<<"Error al crear archivo."<<endl;
-
         return;
     }
 
     archivo<<"HORARIO DEL ESTUDIANTE"<<endl;
+    archivo<<"===================================="<<endl;
 
-    for(size_t i=0; i<lista.size(); i++)
+    for(size_t i = 0; i < lista.size(); i++)
     {
         archivo
             <<lista[i].dia
@@ -211,12 +225,9 @@ void Horarios::menu()
     int opcion;
 
     bool pagoValidado = false;
-
     bool finDeSemana = false;
 
     GeneradorConstancias constancia;
-
-    Asignacion asignacion;//arreglado
 
     Cursos catalogo;
 
@@ -237,7 +248,6 @@ void Horarios::menu()
         cout<<"7. Salir"<<endl;
 
         cout<<"Seleccione opcion: ";
-
         cin>>opcion;
 
         switch(opcion)
@@ -247,7 +257,6 @@ void Horarios::menu()
             int boleta;
 
             cout<<"Ingrese numero de boleta: ";
-
             cin>>boleta;
 
             if(constancia.validarConstancia(boleta))
@@ -266,13 +275,6 @@ void Horarios::menu()
             break;
         }
 
-        case 12222:
-        {
-            asignacion.menuAsignacion();
-
-            break;
-        }
-
         case 2:
         {
             int jornada;
@@ -282,7 +284,7 @@ void Horarios::menu()
 
             cin>>jornada;
 
-            if(jornada==2)
+            if(jornada == 2)
             {
                 finDeSemana = true;
             }
@@ -293,26 +295,71 @@ void Horarios::menu()
 
             break;
         }
-
         case 3:
         {
+            ifstream archivo("Asignaciones.txt");
+            if(!archivo)
+            {
+                cout<<"No se pudo abrir el archivo."<<endl;
+                cout<<"Coloque Asignaciones.txt en bin/Debug/"<<endl;
+                break;
+            }
             vector<Cursos> catalogoCompleto =
                 catalogo.catalagoCursosIngSistemas();
 
             vector<Cursos> cursosSeleccionados;
 
-            for(int i=0; i<asignacion.cursosAsignados.size(); i++)
+            string linea;
+
+            while(getline(archivo, linea))
             {
-                for(int j=0; j<catalogoCompleto.size(); j++)
+                size_t posicion = linea.find("|");
+
+                if(posicion != string::npos)
                 {
-                    if(asignacion.cursosAsignados[i] ==
-                       catalogoCompleto[j].getnombreCurso())
+                    string nombreCurso =
+                        linea.substr(posicion + 1);
+
+                    while(!nombreCurso.empty() &&
+                          nombreCurso[0] == ' ')
                     {
-                        cursosSeleccionados.push_back(
-                            catalogoCompleto[j]
-                        );
+                        nombreCurso.erase(0,1);
+                    }
+
+                    while(!nombreCurso.empty() &&
+                         (nombreCurso.back() == ' ' ||
+                          nombreCurso.back() == '\r' ||
+                          nombreCurso.back() == '\n'))
+                    {
+                        nombreCurso.pop_back();
+                    }
+
+                    cout<<"Curso encontrado: "
+                        <<nombreCurso<<endl;
+
+                    for(size_t j = 0;
+                        j < catalogoCompleto.size();
+                        j++)
+                    {
+                        if(nombreCurso ==
+                           catalogoCompleto[j].getnombreCurso())
+                        {
+                            cursosSeleccionados.push_back(
+                                catalogoCompleto[j]
+                            );
+
+                            cout<<"Curso agregado."<<endl;
+                        }
                     }
                 }
+            }
+
+            archivo.close();
+
+            if(cursosSeleccionados.empty())
+            {
+                cout<<"No hay cursos asignados."<<endl;
+                break;
             }
 
             horario = generar(
@@ -321,34 +368,33 @@ void Horarios::menu()
                 finDeSemana
             );
 
+            cout<<"Horario generado correctamente."
+                <<endl;
+
             break;
         }
 
         case 4:
         {
             mostrar(horario);
-
             break;
         }
 
         case 5:
         {
             modificar(horario);
-
             break;
         }
 
         case 6:
         {
             guardarEnArchivo(horario);
-
             break;
         }
 
         case 7:
         {
             cout<<"Saliendo..."<<endl;
-
             return;
         }
 
@@ -356,8 +402,6 @@ void Horarios::menu()
         {
             cout<<"Opcion invalida."<<endl;
         }
-
         }
     }
 }
-//ff

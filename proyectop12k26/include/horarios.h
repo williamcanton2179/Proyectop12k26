@@ -9,7 +9,6 @@
 #include <fstream>
 
 #include "Cursos.h"
-#include "Asignaciones.h"
 #include "GeneradorConstancias.h"
 
 using namespace std;
@@ -24,13 +23,23 @@ private:
 
 public:
     Horarios();
-    Horarios(string dia,string nombreCurso,string horaInicio,string horaFin);
-    static vector<Horarios> generar(vector<Cursos> cursos,bool pagoValidado,bool finDeSemana);
+
+    Horarios(
+        string dia,
+        string nombreCurso,
+        string horaInicio,
+        string horaFin
+    );
+
+    static vector<Horarios> generar(
+        vector<Cursos> cursos,
+        bool pagoValidado,
+        bool finDeSemana
+    );
+
     static void mostrar(vector<Horarios> lista);
     static void guardarEnArchivo(vector<Horarios> lista);
     static void modificar(vector<Horarios>& lista);
     static void menu();
 };
-
 #endif
-//yyy
