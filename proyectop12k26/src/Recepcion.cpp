@@ -1,537 +1,747 @@
+
 #include "Recepcion.h"
-#include <iostream>              //Creado por 9959-25-3251 y 9959-25-2015
-#include <string>
-#include<fstream>
-#include<stdlib.h>
-#include<cstdlib>
-#include<conio.h>
-#include<iomanip>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <cstdlib>
+#include <conio.h>
+#include <sstream>
+#include <algorithm>
 
 using namespace std;
 
-void Recepcion::validarAlumno(Alumnos alumno)
+string Recepcion::limpiarTexto(string texto)
 {
-    string nombreIngresado;
-    string carnetIngresado;
+    transform(texto.begin(), texto.end(), texto.begin(), ::tolower);
 
-    cout << "\n===== RECEPCION ALUMNO / SISTEMA DE PAGOS =====" << endl;
-;
-    cout << "Ingrese nombre completo registrado: ";
-    getline(cin, nombreIngresado);
-
-    cout << "Ingrese carnet registrado: ";
-    getline(cin, carnetIngresado);
-
-    if(nombreIngresado == alumno.getnombreAlumno() &&
-       carnetIngresado == alumno.getcarnetPersonal())
+    string limpio = "";
+    for(char c : texto)
     {
-        double montoPago = 300.00;
-
-        cout << "\nDatos correctos." << endl;
-        cout << "Acceso autorizado." << endl;
-
-        cout << "Simulacion de Datos a Enviar a Banco...." <<endl;
-
-        cout << "\n===== DATOS ENVIADOS A BANCOS =====" << endl;
-        cout << "Nombre: " << alumno.getnombreAlumno() << endl;
-        cout << "Carnet: " << alumno.getcarnetPersonal() << endl;
-        cout << "Monto: Q" << montoPago << endl;
-
-        cout << "\nEsperando integracion con clase Bancos..." << endl;
+        if(c != '|' && c != '-')
+        {
+            limpio += c;
+        }
     }
-    else
-    {
-        cout << "\nError: datos incorrectos." << endl;
-        cout << "Acceso denegado." << endl;
-    }
+
+    while(!limpio.empty() && limpio[0] == ' ')
+        limpio.erase(0,1);
+
+    while(!limpio.empty() && limpio[limpio.size()-1] == ' ')
+        limpio.erase(limpio.size()-1,1);
+
+    return limpio;
 }
 
-void Recepcion::validarMaestro(Maestros maestro)
+string Recepcion::limpiarCarnet(string texto)
 {
-    string nombreInsertado;
-    string codigoInsertado;
+    string limpio = "";
 
-    cout << "\n===== MODULO DOCENTE =====" << endl;
-
-    cout << "Ingrese nombre del docente: ";
-    getline(cin, nombreInsertado);
-
-    cout<<"Ingrese codigo del docente: ";
-    getline(cin, codigoInsertado);
-
-    if(nombreInsertado == maestro.getNombre() &&
-        stoi(codigoInsertado) == maestro.getCodigo())
+    for(char c : texto)
     {
-        double salario =4500;
-        cout <<"Docente ingresado correctamente"<<endl;
-
-        cout<<"=====Datos de Pago====="<<endl;
-        cout << "Nombre: " << maestro.getNombre() << endl;
-        cout << "Codigo: " << maestro.getCodigo() << endl;
-        cout <<"Monto a pagar: " <<salario <<endl;
-
-        cout<<"Enviando la informacion a bancos..." <<endl;
-
-        }
-        else
+        if(isalnum(c))
         {
-            cout <<" Error, docente no encontrado" <<endl;
+            limpio += c;
+        }
+    }
+
+    return limpio;
+}
+
+bool Recepcion::nombreCoincide(string nombreArchivo, string nombreIngresado)
+{
+    nombreArchivo = limpiarTexto(nombreArchivo);
+    nombreIngresado = limpiarTexto(nombreIngresado);
+
+    return nombreArchivo.find(nombreIngresado) != string::npos;
+}
+
+bool Recepcion::existeAlumno(string carnetBuscar)
+{
+    ifstream file("RecepcionAlumnos.txt");
+
+    if(!file.is_open())
+        return false;
+
+    string nombreArchivo, carnetArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, carnetArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(limpiarCarnet(carnetArchivo) == limpiarCarnet(carnetBuscar))
+        {
+            file.close();
+            return true;
+        }
+    }
+
+    file.close();
+    return false;
+}
+
+bool Recepcion::existeDocente(string codigoBuscar)
+{
+    ifstream file("RecepcionDocentes.txt");
+
+    if(!file.is_open())
+        return false;
+
+    string nombreArchivo, codigoArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, codigoArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(codigoArchivo == codigoBuscar)
+        {
+            file.close();
+            return true;
+        }
+    }
+
+    file.close();
+    return false;
+}
+
+bool Recepcion::alumnoRegistrado(string nombreBuscar, string carnetBuscar)
+{
+    ifstream file("Alumnos.txt");
+
+    if(!file.is_open())
+        return false;
+
+    string linea;
+
+    while(getline(file, linea))
+    {
+        if(linea.empty())
+            continue;
+
+        stringstream ss(linea);
+
+        string carnetArchivo, nombreArchivo, carrera, correo, contra;
+
+        getline(ss, carnetArchivo, '|');
+        getline(ss, nombreArchivo, '|');
+        getline(ss, carrera, '|');
+        getline(ss, correo, '|');
+        getline(ss, contra);
+
+        if(limpiarCarnet(carnetArchivo) == limpiarCarnet(carnetBuscar))
+        {
+            if(nombreCoincide(nombreArchivo, nombreBuscar))
+            {
+                file.close();
+                return true;
+            }
+            else
+            {
+                file.close();
+                return false;
+            }
+        }
+    }
+
+    file.close();
+    return false;
+}
+
+bool Recepcion::maestroRegistrado(string nombreBuscar, string codigoBuscar)
+{
+    ifstream file("Maestros.txt");
+
+    if(!file.is_open())
+        return false;
+
+    string linea;
+
+    while(getline(file, linea))
+    {
+        if(linea.empty())
+            continue;
+
+        stringstream ss(linea);
+
+        string idArchivo, nombreArchivo, apellidoArchivo, dpiArchivo, codigoArchivo;
+
+        getline(ss, idArchivo, '|');
+        getline(ss, nombreArchivo, '|');
+        getline(ss, apellidoArchivo, '|');
+        getline(ss, dpiArchivo, '|');
+        getline(ss, codigoArchivo, '|');
+
+        string nombreCompleto = nombreArchivo + " " + apellidoArchivo;
+
+        if(codigoArchivo == codigoBuscar)
+        {
+            if(nombreCoincide(nombreCompleto, nombreBuscar))
+            {
+                file.close();
+                return true;
+            }
+            else
+            {
+                file.close();
+                return false;
+            }
+        }
+    }
+
+    file.close();
+    return false;
+}
+
+double Recepcion::obtenerPagoAlumno(string carnetBuscar)
+{
+    ifstream file("Asignaciones.txt");
+
+    if(!file.is_open())
+        return 0;
+
+    string linea;
+    double total = 0;
+    bool encontrado = false;
+
+    while(getline(file, linea))
+    {
+        string lineaLimpia = limpiarCarnet(linea);
+
+        if(lineaLimpia.find(limpiarCarnet(carnetBuscar)) != string::npos)
+        {
+            encontrado = true;
         }
 
-};
+        if(encontrado)
+        {
+            if(linea.find("Q") != string::npos)
+            {
+                string numero = "";
+
+                for(char c : linea)
+                {
+                    if(isdigit(c) || c == '.')
+                    {
+                        numero += c;
+                    }
+                }
+
+                if(!numero.empty())
+                {
+                    total += atof(numero.c_str());
+                }
+            }
+
+            if(linea.find("====") != string::npos)
+            {
+                break;
+            }
+        }
+    }
+
+    file.close();
+    return total;
+}
+
+double Recepcion::obtenerPagoMaestro(string codigoBuscar)
+{
+    return 4500.00;
+}
 
 void Recepcion::menu()
 {
-    int modulo;
-    int choice;
+    int modulo, choice;
 
     do
     {
         system("cls");
 
-        cout << "===== SISTEMA DE RECEPCION =====" << endl;
+        cout << "===== SISTEMA RECEPCION =====" << endl;
         cout << "1. Modulo Estudiantes" << endl;
         cout << "2. Modulo Docentes" << endl;
         cout << "3. Salir" << endl;
-
-        cout << "\nSeleccione una opcion: ";
+        cout << "Seleccione opcion: ";
         cin >> modulo;
 
-        cin.ignore();
-
-        // MODULO ESTUDIANTES
-        if(modulo == 1)
+        switch(modulo)
         {
-            system("cls");
+            case 1:
+                system("cls");
+                cout << "===== MODULO ESTUDIANTES =====" << endl;
+                cout << "1. Insertar" << endl;
+                cout << "2. Desplegar" << endl;
+                cout << "3. Modificar" << endl;
+                cout << "4. Buscar" << endl;
+                cout << "5. Borrar" << endl;
+                cout << "Seleccione opcion: ";
+                cin >> choice;
 
-            cout << "===== MODULO ESTUDIANTES =====" << endl;
-            cout << "1. Insertar Pagos" << endl;
-            cout << "2. Desplegar Pagos" << endl;
-            cout << "3. Modificar Pagos" << endl;
-            cout << "4. Buscar Pagos" << endl;
-            cout << "5. Borrar Pagos" << endl;
+                switch(choice)
+                {
+                    case 1: insertarpagosAlumnos(); break;
+                    case 2: desplegarpagosAlumnos(); break;
+                    case 3: modificarpagosAlumnos(); break;
+                    case 4: buscarpagosAlumnos(); break;
+                    case 5: borrarpagosAlumnos(); break;
+                    default: cout << "Opcion invalida." << endl;
+                }
 
-            cout << "\nIngrese opcion: ";
-            cin >> choice;
+                system("pause");
+                break;
 
-            switch(choice)
-            {
-                case 1:
-                    insertarpagosAlumnos();
-                    break;
+            case 2:
+                system("cls");
+                cout << "===== MODULO DOCENTES =====" << endl;
+                cout << "1. Insertar" << endl;
+                cout << "2. Desplegar" << endl;
+                cout << "3. Modificar" << endl;
+                cout << "4. Buscar" << endl;
+                cout << "5. Borrar" << endl;
+                cout << "Seleccione opcion: ";
+                cin >> choice;
 
-                case 2:
-                    desplegarpagosAlumnos();
-                    break;
+                switch(choice)
+                {
+                    case 1: insertarpagosDocentes(); break;
+                    case 2: desplegarpagosDocentes(); break;
+                    case 3: modificarpagosDocentes(); break;
+                    case 4: buscarpagosDocentes(); break;
+                    case 5: borrarpagosDocentes(); break;
+                    default: cout << "Opcion invalida." << endl;
+                }
 
-                case 3:
-                    modificarpagosAlumnos();
-                    break;
+                system("pause");
+                break;
 
-                case 4:
-                    buscarpagosAlumnos();
-                    break;
+            case 3:
+                cout << "Saliendo del sistema..." << endl;
+                break;
 
-                case 5:
-                    borrarpagosAlumnos();
-                    break;
-
-                default:
-                    cout << "Opcion invalida";
-            }
+            default:
+                cout << "Opcion invalida." << endl;
+                system("pause");
         }
-
-        // MODULO DOCENTES
-        else if(modulo == 2)
-        {
-            system("cls");
-
-            cout << "===== MODULO DOCENTES =====" << endl;
-            cout << "1. Insertar Pagos" << endl;
-            cout << "2. Desplegar Pagos" << endl;
-            cout << "3. Modificar Pagos" << endl;
-            cout << "4. Buscar Pagos" << endl;
-            cout << "5. Borrar Pagos" << endl;
-
-            cout << "\nIngrese opcion: ";
-            cin >> choice;
-
-            switch(choice)
-            {
-                case 1:
-                    insertarpagosDocentes();
-                    break;
-
-                case 2:
-                    desplegarpagosDocentes();
-                    break;
-
-                case 3:
-                    modificarpagosDocentes();
-                    break;
-
-                case 4:
-                    buscarpagosDocentes();
-                    break;
-
-                case 5:
-                    borrarpagosDocentes();
-                    break;
-
-                default:
-                    cout << "Opcion invalida";
-            }
-        }
-
-        else if(modulo == 3)
-        {
-            cout << "\nSaliendo del sistema..." << endl;
-        }
-
-        else
-        {
-            cout << "\nOpcion invalida." << endl;
-        }
-
-        getch();
 
     } while(modulo != 3);
 }
+
 void Recepcion::insertarpagosAlumnos()
 {
-	system("cls");
-	fstream file;
-	cout<<"-----Agregar detalles del Estudiante-----"<<endl;
-	cout<<"Ingrese Nombre del Estudiante: ";
-	cin>>name;
-	cout<<"Ingresa Carnet del Estudiante: ";
-	cin>>carnet;
-	cout<<"Ingresa el Monto Pagado: ";
-	cin>>monto;
-	file.open("Recepcion.txt", ios::app | ios::out);
-	file <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< carnet << std::left<<std::setw(15)<< monto<< "\n";
-	file.close();
+    system("cls");
+
+    cin.ignore();
+
+    cout << "Nombre del alumno: ";
+    getline(cin, name);
+
+    cout << "Carnet: ";
+    getline(cin, carnet);
+
+    if(existeAlumno(carnet))
+    {
+        cout << "Este alumno ya tiene pago registrado." << endl;
+        return;
+    }
+
+    if(!alumnoRegistrado(name, carnet))
+    {
+        cout << "Alumno no registrado." << endl;
+        return;
+    }
+
+    double pago = obtenerPagoAlumno(carnet);
+
+    if(pago <= 0)
+    {
+        cout << "No tiene cursos asignados." << endl;
+        return;
+    }
+
+    cout << "\nNombre: " << name << endl;
+    cout << "Carnet: " << carnet << endl;
+    cout << "Usted debe pagar: Q" << pago << endl;
+
+    ofstream file("RecepcionAlumnos.txt", ios::app);
+    file << name << "|" << carnet << "|" << pago << endl;
+    file.close();
+
+    cout << "\nPago registrado exitosamente." << endl;
 }
+
 void Recepcion::desplegarpagosAlumnos()
 {
-	system("cls");
-	fstream file;
-	int total=0;
-	cout<<"----- Tabla de Detalles del Estudiante -----"<<endl;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"No se encontro informacion";
-		file.close();
-	}
-	else
-	{
-		file >> name >> carnet >> monto;
-		while(!file.eof())
-		{
-			total++;
-			cout<<"Nombre del Estudiante: "<<name<<endl;
-			cout<<"Carnet del Estudiante: "<<carnet<<endl;
-			cout<<"Monto Pagado del Estudiante: "<<monto<<endl;
-			file >> name >> carnet >>monto;
-		}
-		if(total==0)
-		{
-			cout<<"No hay informacion...";
-		}
-	}
-	file.close();
-}
-void Recepcion::modificarpagosAlumnos()
-{
-	system("cls");
-	fstream file,file1;
-	string participant_carnet;
-	int found=0;
-	cout<<"-----Modificacion Detalles del Estudiante-----"<<endl;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"No hay informacion..,";
-		file.close();
-	}
-	else
-	{
-		cout<<"Ingrese carnet del Estudiante que quiere modificar: ";
-		cin>>participant_carnet;
-		file1.open("Record.txt",ios::app | ios::out);
-		file >> name >> carnet >> monto;
-		while(!file.eof())
-		{
-			if(participant_carnet!=carnet)
-			{
-			 file <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< carnet <<std::left<<std::setw(15)<< monto << "\n";
-			}
-			else
-			{
-				cout<<"Ingrese Nombre del Estudiante: ";
-				cin>>name;
-				cout<<"Ingrese Carnet del Estudiante: ";
-				cin>>carnet;
-				cout<<"Ingrese Monto Pagado del Estudiante: ";
-				cin>>monto;
-				file1<<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< carnet <<std::left<<std::setw(15)<< monto << "\n";
-				found++;
-			}
-			file >> name >> carnet >> monto;
+    system("cls");
 
-		}
-		file1.close();
-		file.close();
-		remove("Recepcion.txt");
-		rename("Record.txt","Usuarios.txt");
-	}
+    ifstream file("RecepcionAlumnos.txt");
+
+    if(!file.is_open())
+    {
+        cout << "No hay pagos registrados de alumnos." << endl;
+        return;
+    }
+
+    string nombreArchivo, carnetArchivo, montoArchivo;
+
+    cout << left << setw(30) << "Nombre"
+         << setw(20) << "Carnet"
+         << setw(15) << "Pago" << endl;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, carnetArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        cout << left << setw(30) << nombreArchivo
+             << setw(20) << carnetArchivo
+             << setw(15) << montoArchivo << endl;
+    }
+
+    file.close();
 }
+
 void Recepcion::buscarpagosAlumnos()
 {
-	system("cls");
-	fstream file;
-	int found=0;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"-----Datos del Estudiante-----"<<endl;
-		cout<<"No hay informacion...";
-	}
-	else
-	{
-		string participant_carnet;
-		cout<<"-----Datos del Estudiante buscado-----"<<endl;
-		cout<<"Ingrese carnet del Estudiante que quiere buscar: ";
-		cin>>participant_carnet;
-		file >> name >> carnet >> monto;
-		while(!file.eof())
-		{
-			if(participant_carnet==carnet)
-			{
+    system("cls");
 
-				cout<<"Nombre del Estudiante: "<<name<<endl;
-				cout<<"Carnet del Estudiante: "<<carnet<<endl;
-				cout<<"Monto Pagado del Estudiante: "<<monto<<endl;
-				found++;
-			}
-			file >> name >> carnet >> monto;
-		}
-		if(found==0)
-		{
-			cout<<"Persona no encontrada...";
-		}
-		file.close();
-	}
+    cin.ignore();
+
+    string carnetBuscar;
+    bool encontrado = false;
+
+    cout << "Ingrese carnet a buscar: ";
+    getline(cin, carnetBuscar);
+
+    ifstream file("RecepcionAlumnos.txt");
+
+    string nombreArchivo, carnetArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, carnetArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(limpiarCarnet(carnetArchivo) == limpiarCarnet(carnetBuscar))
+        {
+            cout << "Nombre: " << nombreArchivo << endl;
+            cout << "Carnet: " << carnetArchivo << endl;
+            cout << "Pago: Q" << montoArchivo << endl;
+
+            encontrado = true;
+            break;
+        }
+    }
+
+    if(!encontrado)
+        cout << "Alumno no encontrado." << endl;
+
+    file.close();
 }
+
+void Recepcion::modificarpagosAlumnos()
+{
+    system("cls");
+
+    cin.ignore();
+
+    string carnetBuscar;
+    bool encontrado = false;
+
+    cout << "Ingrese carnet del alumno a modificar: ";
+    getline(cin, carnetBuscar);
+
+    ifstream file("RecepcionAlumnos.txt");
+    ofstream temp("TempAlumnos.txt");
+
+    string nombreArchivo, carnetArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, carnetArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(limpiarCarnet(carnetArchivo) == limpiarCarnet(carnetBuscar))
+        {
+            encontrado = true;
+
+            cout << "Nuevo nombre: ";
+            getline(cin, nombreArchivo);
+
+            montoArchivo = to_string(obtenerPagoAlumno(carnetArchivo));
+        }
+
+        temp << nombreArchivo << "|" << carnetArchivo << "|" << montoArchivo << endl;
+    }
+
+    file.close();
+    temp.close();
+
+    remove("RecepcionAlumnos.txt");
+    rename("TempAlumnos.txt", "RecepcionAlumnos.txt");
+
+    if(encontrado)
+        cout << "Registro modificado exitosamente." << endl;
+    else
+        cout << "Alumno no encontrado." << endl;
+}
+
 void Recepcion::borrarpagosAlumnos()
 {
-	system("cls");
-	fstream file,file1;
-	string participant_carnet;
-	int found=0;
-	cout<<"-----Detalles del Estudiante a Borrar-----"<<endl;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"No hay informacion...";
-		file.close();
-	}
-	else
-	{
-		cout<<"Ingrese el carnet de la Persona que quiere borrar: ";
-		cin>>participant_carnet;
-		file1.open("Record.txt",ios::app | ios::out);
-		file >> name >> carnet >>monto;
-		while(!file.eof())
-		{
-			if(participant_carnet!= carnet)
-			{
-				file1<<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< carnet <<std::left<<std::setw(15)<< monto << "\n";
-			}
-			else
-			{
-				found++;
-				cout << "Borrado de informacion exitoso";
-			}
-			file >> name >> carnet >> monto;
-		}
-		if(found==0)
-		{
-			cout<<"Carnet del Estudiante no encontrado...";
-		}
-		file1.close();
-		file.close();
-		remove("Recepcion.txt");
-		rename("Record.txt","Usuarios.txt");
-	}
+    system("cls");
+
+    cin.ignore();
+
+    string carnetBuscar;
+    bool encontrado = false;
+
+    cout << "Ingrese carnet del alumno a borrar: ";
+    getline(cin, carnetBuscar);
+
+    ifstream file("RecepcionAlumnos.txt");
+    ofstream temp("TempAlumnos.txt");
+
+    string nombreArchivo, carnetArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, carnetArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(limpiarCarnet(carnetArchivo) == limpiarCarnet(carnetBuscar))
+        {
+            encontrado = true;
+        }
+        else
+        {
+            temp << nombreArchivo << "|" << carnetArchivo << "|" << montoArchivo << endl;
+        }
+    }
+
+    file.close();
+    temp.close();
+
+    remove("RecepcionAlumnos.txt");
+    rename("TempAlumnos.txt", "RecepcionAlumnos.txt");
+
+    if(encontrado)
+        cout << "Registro eliminado exitosamente." << endl;
+    else
+        cout << "Alumno no encontrado." << endl;
 }
+
 void Recepcion::insertarpagosDocentes()
 {
-	system("cls");
-	fstream file;
-	cout<<"-----Agregar detalles del Docente-----"<<endl;
-	cout<<"Ingrese Nombre del Docente: ";
-	cin>>name;
-	cout<<"Ingresa Codigo del Docente: ";
-	cin>>codigo;
-	cout<<"Ingresa el Monto Pagado: ";
-	cin>>monto;
-	file.open("Recepcion.txt", ios::app | ios::out);
-	file <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< codigo << std::left<<std::setw(15)<< monto<< "\n";
-	file.close();
+    system("cls");
+
+    cin.ignore();
+
+    cout << "Nombre del docente: ";
+    getline(cin, name);
+
+    cout << "Codigo: ";
+    getline(cin, codigo);
+
+    if(existeDocente(codigo))
+    {
+        cout << "Este docente ya tiene pago registrado." << endl;
+        return;
+    }
+
+    if(!maestroRegistrado(name, codigo))
+    {
+        cout << "Docente no registrado." << endl;
+        return;
+    }
+
+    double pago = obtenerPagoMaestro(codigo);
+
+    cout << "\nNombre: " << name << endl;
+    cout << "Codigo: " << codigo << endl;
+    cout << "Usted recibira: Q" << pago << endl;
+
+    ofstream file("RecepcionDocentes.txt", ios::app);
+    file << name << "|" << codigo << "|" << pago << endl;
+    file.close();
+
+    cout << "\nPago registrado exitosamente." << endl;
 }
+
 void Recepcion::desplegarpagosDocentes()
 {
-	system("cls");
-	fstream file;
-	int total=0;
-	cout<<"----- Tabla de Detalles del Docente -----"<<endl;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"No se encontro informacion";
-		file.close();
-	}
-	else
-	{
-		file >> name >> codigo >> monto;
-		while(!file.eof())
-		{
-			total++;
-			cout<<"Nombre del Docente: "<<name<<endl;
-			cout<<"Codigo del Docente: "<<codigo<<endl;
-			cout<<"Monto Pagado del Estudiante: "<<monto<<endl;
-			file >> name >> codigo >>monto;
-		}
-		if(total==0)
-		{
-			cout<<"No hay informacion...";
-		}
-	}
-	file.close();
-}
-void Recepcion::modificarpagosDocentes()
-{
-	system("cls");
-	fstream file,file1;
-	string participant_codigo;
-	int found=0;
-	cout<<"-----Modificacion Detalles del Docente-----"<<endl;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"No hay informacion..,";
-		file.close();
-	}
-	else
-	{
-		cout<<"Ingrese codigo del Docente que quiere modificar: ";
-		cin>>participant_codigo;
-		file1.open("Record.txt",ios::app | ios::out);
-		file >> name >> codigo >> monto;
-		while(!file.eof())
-		{
-			if(participant_codigo!=codigo)
-			{
-			 file <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< codigo <<std::left<<std::setw(15)<< monto << "\n";
-			}
-			else
-			{
-				cout<<"Ingrese Nombre del Docente: ";
-				cin>>name;
-				cout<<"Ingrese Codigo del Docente: ";
-				cin>>codigo;
-				cout<<"Ingrese Monto Pagado del Estudiante: ";
-				cin>>monto;
-				file1<<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< codigo <<std::left<<std::setw(15)<< monto << "\n";
-				found++;
-			}
-			file >> name >> codigo >> monto;
+    system("cls");
 
-		}
-		file1.close();
-		file.close();
-		remove("Recepcion.txt");
-		rename("Record.txt","Usuarios.txt");
-	}
+    ifstream file("RecepcionDocentes.txt");
+
+    if(!file.is_open())
+    {
+        cout << "No hay pagos registrados de docentes." << endl;
+        return;
+    }
+
+    string nombreArchivo, codigoArchivo, montoArchivo;
+
+    cout << left << setw(30) << "Nombre"
+         << setw(20) << "Codigo"
+         << setw(15) << "Pago" << endl;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, codigoArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        cout << left << setw(30) << nombreArchivo
+             << setw(20) << codigoArchivo
+             << setw(15) << montoArchivo << endl;
+    }
+
+    file.close();
 }
+
 void Recepcion::buscarpagosDocentes()
 {
-	system("cls");
-	fstream file;
-	int found=0;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"-----Datos del Docente-----"<<endl;
-		cout<<"No hay informacion...";
-	}
-	else
-	{
-		string participant_codigo;
-		cout<<"-----Datos del Docente buscado-----"<<endl;
-		cout<<"Ingrese codigo del Docente que quiere buscar: ";
-		cin>>participant_codigo;
-		file >> name >> codigo >> monto;
-		while(!file.eof())
-		{
-			if(participant_codigo==codigo)
-			{
+    system("cls");
 
-				cout<<"Nombre del Docente: "<<name<<endl;
-				cout<<"Carnet del Docente: "<<codigo<<endl;
-				cout<<"Monto Pagado del Docente: "<<monto<<endl;
-				found++;
-			}
-			file >> name >> codigo >> monto;
-		}
-		if(found==0)
-		{
-			cout<<"Persona no encontrada...";
-		}
-		file.close();
-	}
+    cin.ignore();
+
+    string codigoBuscar;
+    bool encontrado = false;
+
+    cout << "Ingrese codigo a buscar: ";
+    getline(cin, codigoBuscar);
+
+    ifstream file("RecepcionDocentes.txt");
+
+    string nombreArchivo, codigoArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, codigoArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(codigoArchivo == codigoBuscar)
+        {
+            cout << "Nombre: " << nombreArchivo << endl;
+            cout << "Codigo: " << codigoArchivo << endl;
+            cout << "Pago: Q" << montoArchivo << endl;
+
+            encontrado = true;
+            break;
+        }
+    }
+
+    if(!encontrado)
+        cout << "Docente no encontrado." << endl;
+
+    file.close();
 }
+
+void Recepcion::modificarpagosDocentes()
+{
+    system("cls");
+
+    cin.ignore();
+
+    string codigoBuscar;
+    bool encontrado = false;
+
+    cout << "Ingrese codigo del docente a modificar: ";
+    getline(cin, codigoBuscar);
+
+    ifstream file("RecepcionDocentes.txt");
+
+    if(!file.is_open())
+    {
+        cout << "No hay registros de docentes." << endl;
+        return;
+    }
+
+    ofstream temp("TempDocentes.txt");
+
+    string nombreArchivo, codigoArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, codigoArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(codigoArchivo == codigoBuscar)
+        {
+            encontrado = true;
+
+            cout << "Nuevo nombre del docente: ";
+            getline(cin, nombreArchivo);
+
+            double nuevoPago = obtenerPagoMaestro(codigoArchivo);
+
+            stringstream ss;
+            ss << nuevoPago;
+            montoArchivo = ss.str();
+        }
+
+        temp << nombreArchivo << "|"
+             << codigoArchivo << "|"
+             << montoArchivo << endl;
+    }
+
+    file.close();
+    temp.close();
+
+    remove("RecepcionDocentes.txt");
+    rename("TempDocentes.txt", "RecepcionDocentes.txt");
+
+    if(encontrado)
+    {
+        cout << "Registro modificado exitosamente." << endl;
+    }
+    else
+    {
+        cout << "Docente no encontrado." << endl;
+    }
+}
+
 void Recepcion::borrarpagosDocentes()
 {
-	system("cls");
-	fstream file,file1;
-	string participant_codigo;
-	int found=0;
-	cout<<"-----Detalles del Docente a Borrar-----"<<endl;
-	file.open("Recepcion.txt",ios::in);
-	if(!file)
-	{
-		cout<<"No hay informacion...";
-		file.close();
-	}
-	else
-	{
-		cout<<"Ingrese el codigo del Docente que quiere borrar: ";
-		cin>>participant_codigo;
-		file1.open("Record.txt",ios::app | ios::out);
-		file >> name >> codigo >>monto;
-		while(!file.eof())
-		{
-			if(participant_codigo!= codigo)
-			{
-				file1<<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< codigo <<std::left<<std::setw(15)<< monto << "\n";
-			}
-			else
-			{
-				found++;
-				cout << "Borrado de informacion exitoso";
-			}
-			file >> name >> carnet >> monto;
-		}
-		if(found==0)
-		{
-			cout<<"Codigo del Docente no encontrado...";
-		}
-		file1.close();
-		file.close();
-		remove("Recepcion.txt");
-		rename("Record.txt","Usuarios.txt");
-	}
+    system("cls");
+
+    cin.ignore();
+
+    string codigoBuscar;
+    bool encontrado = false;
+
+    cout << "Ingrese codigo del docente a borrar: ";
+    getline(cin, codigoBuscar);
+
+    ifstream file("RecepcionDocentes.txt");
+
+    if(!file.is_open())
+    {
+        cout << "No hay registros de docentes." << endl;
+        return;
+    }
+
+    ofstream temp("TempDocentes.txt");
+
+    string nombreArchivo, codigoArchivo, montoArchivo;
+
+    while(getline(file, nombreArchivo, '|') &&
+          getline(file, codigoArchivo, '|') &&
+          getline(file, montoArchivo))
+    {
+        if(codigoArchivo == codigoBuscar)
+        {
+            encontrado = true;
+        }
+        else
+        {
+            temp << nombreArchivo << "|"
+                 << codigoArchivo << "|"
+                 << montoArchivo << endl;
+        }
+    }
+
+    file.close();
+    temp.close();
+
+    remove("RecepcionDocentes.txt");
+    rename("TempDocentes.txt", "RecepcionDocentes.txt");
+
+    if(encontrado)
+    {
+        cout << "Registro eliminado exitosamente." << endl;
+    }
+    else
+    {
+        cout << "Docente no encontrado." << endl;
+    }
 }

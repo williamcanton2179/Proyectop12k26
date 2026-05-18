@@ -1,3 +1,4 @@
+
 #ifndef RECEPCION_H
 #define RECEPCION_H
 
@@ -10,29 +11,44 @@ using namespace std;
 
 class Recepcion
 {
-    private:
-        string name, carnet, codigo, monto;
+private:
+    string name, carnet, codigo;
 
-    public:
+    // VALIDACIONES
+    bool existeAlumno(string carnetBuscar);
+    bool existeDocente(string codigoBuscar);
 
-        void validarAlumno(Alumnos alumno);
+    bool alumnoRegistrado(string nombreBuscar, string carnetBuscar);
+    bool maestroRegistrado(string nombreBuscar, string codigoBuscar);
 
+    // APOYO
+    string limpiarTexto(string texto);
+    string limpiarCarnet(string texto);
+    bool nombreCoincide(string nombreArchivo, string nombreIngresado);
 
-        void validarMaestro(Maestros maestro);
+    // ===== AGREGAR ESTO =====
+    double obtenerPagoAlumno(string carnetBuscar);
+    double obtenerPagoMaestro(string codigoBuscar);
 
-        //crud
-        void menu();
-        void insertarpagosAlumnos();
-        void desplegarpagosAlumnos();
-        void modificarpagosAlumnos();
-        void buscarpagosAlumnos();
-        void borrarpagosAlumnos();
-        void insertarpagosDocentes();
-        void desplegarpagosDocentes();
-        void modificarpagosDocentes();
-        void buscarpagosDocentes();
-        void borrarpagosDocentes();
+public:
+    void validarAlumno(Alumnos alumno);
+    void validarMaestro(Maestros maestro);
 
+    void menu();
+
+    // CRUD ALUMNOS
+    void insertarpagosAlumnos();
+    void desplegarpagosAlumnos();
+    void modificarpagosAlumnos();
+    void buscarpagosAlumnos();
+    void borrarpagosAlumnos();
+
+    // CRUD DOCENTES
+    void insertarpagosDocentes();
+    void desplegarpagosDocentes();
+    void modificarpagosDocentes();
+    void buscarpagosDocentes();
+    void borrarpagosDocentes();
 };
 
 #endif
