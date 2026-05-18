@@ -1,0 +1,67 @@
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Desarrollo Humano y Profesional     | Q204.00 | Accion: Asignado (Ref: 001)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Metodologia de la Investigacion     | Q204.00 | Accion: Asignado (Ref: 002)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Contabilidad I                      | Q204.00 | Accion: Asignado (Ref: 003)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Introduccion a los sistemas de computo | Q204.00 | Accion: Asignado (Ref: 004)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Logica de Sistemas                  | Q204.00 | Accion: Asignado (Ref: 005)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Metodologia de la Investigacion     | Q204.00 | Accion: Asignado (Ref: 002)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Contabilidad I                      | Q204.00 | Accion: Asignado (Ref: 003)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Introduccion a los sistemas de computo | Q204.00 | Accion: Asignado (Ref: 004)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Logica de Sistemas                  | Q204.00 | Accion: Asignado (Ref: 005)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Precalculo                          | Q204.00 | Accion: Asignado (Ref: 006)
+[16/05/2026 16:40:29] Carnet: 9959-26-1159 | Carrera/Curso: Algebra Lineal                      | Q204.00 | Accion: Asignado (Ref: 007)
+[16/05/2026 16:40:31] Carnet: 3625146958473928    Byron_Cevallos      Mayo           408             | Carrera/Curso:  | Accion: 
+[16/05/2026 16:40:31] Carnet: 3625146958473928    Byron_cevallos      Junio          408             | Carrera/Curso:  | Accion: 
+[16/05/2026 16:40:31] Carnet: 1245782356897946    Mercedes_lopez      Mayo           1020            | Carrera/Curso:  | Accion: 
+[16/05/2026 16:40:31] Carnet: 1245782356897946    Mercedes_Lopez      julio          1020            | Carrera/Curso:  | Accion: 
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Desarrollo Humano y Profesional     | Q204.00 | Accion: Asignado (Ref: 001)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Metodologia de la Investigacion     | Q204.00 | Accion: Asignado (Ref: 002)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Contabilidad I                      | Q204.00 | Accion: Asignado (Ref: 003)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Introduccion a los sistemas de computo | Q204.00 | Accion: Asignado (Ref: 004)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Logica de Sistemas                  | Q204.00 | Accion: Asignado (Ref: 005)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Metodologia de la Investigacion     | Q204.00 | Accion: Asignado (Ref: 002)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Contabilidad I                      | Q204.00 | Accion: Asignado (Ref: 003)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Introduccion a los sistemas de computo | Q204.00 | Accion: Asignado (Ref: 004)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Logica de Sistemas                  | Q204.00 | Accion: Asignado (Ref: 005)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Precalculo                          | Q204.00 | Accion: Asignado (Ref: 006)
+[16/05/2026 16:51:23] Carnet: 9959-26-1159 | Carrera/Curso: Algebra Lineal                      | Q204.00 | Accion: Asignado (Ref: 007)
+[16/05/2026 16:51:25] Carnet: 3625146958473928    Byron_Cevallos      Mayo           408             | Carrera/Curso:  | Accion: 
+[16/05/2026 16:51:25] Carnet: 3625146958473928    Byron_cevallos      Junio          408             | Carrera/Curso:  | Accion: 
+[16/05/2026 16:51:25] Carnet: 1245782356897946    Mercedes_lopez      Mayo           1020            | Carrera/Curso:  | Accion: 
+[16/05/2026 16:51:25] Carnet: 1245782356897946    Mercedes_Lopez      julio          1020            | Carrera/Curso:  | Accion: 
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Desarrollo Humano y Profesional     | Q204.00 | Accion: Asignado (Ref: 001)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Metodologia de la Investigacion     | Q204.00 | Accion: Asignado (Ref: 002)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Contabilidad I                      | Q204.00 | Accion: Asignado (Ref: 003)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Introduccion a los sistemas de computo | Q204.00 | Accion: Asignado (Ref: 004)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Logica de Sistemas                  | Q204.00 | Accion: Asignado (Ref: 005)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Metodologia de la Investigacion     | Q204.00 | Accion: Asignado (Ref: 002)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Contabilidad I                      | Q204.00 | Accion: Asignado (Ref: 003)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Introduccion a los sistemas de computo | Q204.00 | Accion: Asignado (Ref: 004)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Logica de Sistemas                  | Q204.00 | Accion: Asignado (Ref: 005)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Precalculo                          | Q204.00 | Accion: Asignado (Ref: 006)
+[18/05/2026 08:30:13] Carnet: 9959-26-1159 | Carrera/Curso: Algebra Lineal                      | Q204.00 | Accion: Asignado (Ref: 007)
+[18/05/2026 08:30:13] Carnet: 3625146958473928    Byron_Cevallos      Mayo           408             | Carrera/Curso:  | Accion: 
+[18/05/2026 08:30:13] Carnet: 3625146958473928    Byron_cevallos      Junio          408             | Carrera/Curso:  | Accion: 
+[18/05/2026 08:30:13] Carnet: 1245782356897946    Mercedes_lopez      Mayo           1020            | Carrera/Curso:  | Accion: 
+[18/05/2026 08:30:13] Carnet: 1245782356897946    Mercedes_Lopez      julio          1020            | Carrera/Curso:  | Accion: 
+[18/05/2026 09:29:20] Carnet: 9959-26-1159 | Carrera/Curso: Precalculo                          | Q204.00 | Accion: Asignado (Ref: 006)
+[18/05/2026 09:29:20] Carnet: 9959-26-1159 | Carrera/Curso: Algebra Lineal                      | Q204.00 | Accion: Asignado (Ref: 007)
+[18/05/2026 09:29:20] Carnet: 9959-26-1159 | Carrera/Curso: Precalculo                          | Q204.00 | Accion: Asignado (Ref: 006)
+[18/05/2026 09:29:20] Carnet: 9959-26-1159 | Carrera/Curso: Algebra Lineal                      | Q204.00 | Accion: Asignado (Ref: 007)
+[18/05/2026 09:29:20] Carnet: 9959-26-1159 | Carrera/Curso: Matematica Discreta                 | Q204.00 | Accion: Asignado (Ref: 010)
+[18/05/2026 09:29:23] Carnet: 3625146958473928    Byron_Cevallos      Mayo           408             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:29:23] Carnet: 3625146958473928    Byron_cevallos      Junio          408             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:29:23] Carnet: 7845123265987451    Carlos_VillavicencioJunio          600             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:29:23] Carnet: 7845123265987451    Carlos_VillavicencioJulio          612             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:29:23] Carnet: 1245782356897946    Mercedes_lopez      Mayo           1020            | Carrera/Curso:  | Accion: 
+[18/05/2026 09:29:23] Carnet: 1245782356897946    Mercedes_Lopez      julio          1020            | Carrera/Curso:  | Accion: 
+[18/05/2026 09:30:01] Carnet: 9959-26-1159 | Carrera/Curso: Precalculo                          | Q204.00 | Accion: Asignado (Ref: 006)
+[18/05/2026 09:30:01] Carnet: 9959-26-1159 | Carrera/Curso: Algebra Lineal                      | Q204.00 | Accion: Asignado (Ref: 007)
+[18/05/2026 09:30:01] Carnet: 9959-26-1159 | Carrera/Curso: Precalculo                          | Q204.00 | Accion: Asignado (Ref: 006)
+[18/05/2026 09:30:01] Carnet: 9959-26-1159 | Carrera/Curso: Algebra Lineal                      | Q204.00 | Accion: Asignado (Ref: 007)
+[18/05/2026 09:30:01] Carnet: 9959-26-1159 | Carrera/Curso: Matematica Discreta                 | Q204.00 | Accion: Asignado (Ref: 010)
+[18/05/2026 09:30:02] Carnet: 3625146958473928    Byron_Cevallos      Mayo           408             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:30:02] Carnet: 3625146958473928    Byron_cevallos      Junio          408             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:30:02] Carnet: 7845123265987451    Carlos_VillavicencioJunio          600             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:30:02] Carnet: 7845123265987451    Carlos_VillavicencioJulio          612             | Carrera/Curso:  | Accion: 
+[18/05/2026 09:30:02] Carnet: 1245782356897946    Mercedes_lopez      Mayo           1020            | Carrera/Curso:  | Accion: 
+[18/05/2026 09:30:02] Carnet: 1245782356897946    Mercedes_Lopez      julio          1020            | Carrera/Curso:  | Accion: 
